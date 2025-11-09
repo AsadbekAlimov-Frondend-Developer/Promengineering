@@ -6,7 +6,7 @@
 }
 
 @font-face {
-    font-family: 'Sora';
+    font-family: 'Sora', sans-serif;
     src: url('../fonts/Jura,Manrope,Poppins,Sora/Sora/Sora-VariableFont_wght.ttf') format('truetype');
     font-weight: 100 900;
     font-style: normal;
@@ -17,10 +17,11 @@ body {
     font-family: 'Manrope', sans-serif;
 }
 
-// h1,
-// h2,
-// h3 {
-// }
+h1,
+h2,
+h3 {
+    font-family: "Sora", sans-serif;
+}
 
 
 
@@ -28,7 +29,6 @@ body {
     scroll-behavior: smooth;
     background: #000;
     transition: all 0.5s ease;
-    font-family: "Sora", sans-serif;
 }
 
 .wrapper {
@@ -158,6 +158,34 @@ body {
             background-size: cover;
         }
     }
+
+    // 
+    .image_7 {
+        position: absolute;
+        width: 100%;
+        height: 514px;
+        flex-shrink: 0;
+        left: 0;
+        top: 5957px;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: -1;
+
+        // 
+        @media screen and (max-width: 768px) {
+            background-image: url(../images/footer-mobile_bg-fon.png);
+        }
+    }
+}
+
+button {
+    outline: none;
+    border: none;
+    font-family: "Sora", sans-serif;
+}
+
+.btn {
+    font-family: "Sora", sans-serif;
 }
 
 h1,
@@ -884,6 +912,7 @@ textarea {
                 font-size: 20px;
                 font-weight: 600;
                 line-height: 150%;
+                font-family: "Manrope", sans-serif;
             }
         }
 
@@ -997,7 +1026,7 @@ textarea {
         h3 {
             color: #83CACC;
             text-align: right;
-            font-family: 'Sora';
+            font-family: 'Sora', sans-serif;
             font-size: 40px;
             font-style: normal;
             font-weight: 400;
@@ -1508,7 +1537,7 @@ textarea {
         width: 307px;
         height: 363px;
         flex-shrink: 0;
-        background-image: url(../images/certificate.png);
+
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -1731,7 +1760,7 @@ textarea {
         @media screen and (max-width: 768px) {
             display: flex;
             color: #FFF;
-            font-family: 'Sora';
+            font-family: 'Sora', sans-serif;
             font-size: 28px;
             font-style: normal;
             font-weight: 400;
@@ -1931,7 +1960,7 @@ textarea {
             span {
 
                 color: var(--2, #83CACC);
-                font-family: 'Sora';
+                font-family: 'Sora', sans-serif;
                 font-size: 40px;
                 font-style: normal;
                 font-weight: 400;
@@ -1939,7 +1968,8 @@ textarea {
             }
 
             color: #FFF;
-            font-family: 'Sora';
+            font-family: 'Sora',
+            sans-serif;
             font-size: 40px;
             font-style: normal;
             font-weight: 400;
@@ -2302,12 +2332,13 @@ textarea {
             border-radius: 0;
             padding: 0;
             margin-bottom: 0;
+            background: none;
         }
 
         .contact_title {
             width: 648px;
             color: #FFF;
-            font-family: 'Sora';
+            font-family: 'Sora', sans-serif;
             font-size: 40px;
             font-style: normal;
             font-weight: 400;
@@ -2322,6 +2353,8 @@ textarea {
                 line-height: 120%;
                 margin-bottom: 19px;
                 color: var(--Color, #83CACC);
+                font-family: 'Sora', sans-serif;
+
             }
         }
 
@@ -2450,7 +2483,7 @@ textarea {
             @media screen and (max-width: 768px) {
                 display: flex;
                 align-items: center;
-                gap: 9px;
+                gap: 21px;
                 margin-bottom: 58px;
             }
 
@@ -2490,7 +2523,7 @@ textarea {
             border-radius: 36px;
             background: linear-gradient(90deg, #02584E -4.33%, #11B5BB 100%);
             color: #FFF;
-            font-family: 'Sora';
+            font-family: 'Sora', sans-serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -2558,12 +2591,23 @@ textarea {
     margin-bottom: 218px;
 
     // 
+    @media screen and (max-width: 768px) {
+        margin-bottom: 50px;
+    }
+
+    //  
     .footer_block {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         position: relative;
         padding-top: 111px;
+
+        // 
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            padding-top: 0;
+        }
     }
 
     .footer_block::before {
@@ -2575,7 +2619,7 @@ textarea {
         margin-left: -130px;
         height: 1px;
         background: linear-gradient(90deg, #032122 0%, #1BB1B7 57.69%, #032122 100%);
-        
+
         // 
         @media screen and (max-width: 768px) {
             background: none;
@@ -2589,6 +2633,17 @@ textarea {
         gap: 70px;
 
         // 
+        @media screen and (max-width: 768px) {
+            img {
+                width: 100%;
+                height: 60px;
+                align-self: stretch;
+                aspect-ratio: 343/60;
+                margin-bottom: 51px;
+            }
+        }
+
+        // 
         .location {
             width: 360px;
             color: #FFF;
@@ -2597,6 +2652,11 @@ textarea {
             font-style: normal;
             font-weight: 400;
             line-height: 140%;
+
+            // 
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
         }
     }
 
@@ -2605,6 +2665,17 @@ textarea {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        // 
+        @media screen and (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 28px;
+            align-self: stretch;
+            margin-bottom: 51px;
+        }
 
         // 
         li {
@@ -2616,7 +2687,11 @@ textarea {
                 font-style: normal;
                 font-weight: 500;
                 line-height: 150%;
+
                 /* 24px */
+                @media screen and (max-width: 768px) {
+                    line-height: 140%;
+                }
             }
         }
     }
@@ -2628,11 +2703,26 @@ textarea {
         gap: 16px;
 
         // 
+        @media screen and (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+            align-self: stretch;
+            margin-bottom: 20px;
+        }
+
+        // 
         .email {
             display: flex;
             align-items: center;
             gap: 8px;
             align-self: stretch;
+
+            // 
+            // @media screen and (max-width: 768px) {
+
+            // }
         }
 
         // 
@@ -2651,12 +2741,38 @@ textarea {
             font-style: normal;
             font-weight: 400;
             line-height: 140%;
+            // 
         }
 
         .icons {
             display: flex;
             align-items: center;
             gap: 3px;
+
+            @media screen and (max-width: 768px) {
+                display: flex;
+                align-items: center;
+                gap: 11px;
+            }
+        }
+    }
+
+    // 
+    .mobile-location {
+        display: none;
+
+        // 
+        @media screen and (max-width: 768px) {
+            display: block;
+            width: 210px;
+            color: #FFF;
+            font-family: 'Manrope';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            /* 22.4px */
+            margin-bottom: 41px;
         }
     }
 
@@ -2671,9 +2787,23 @@ textarea {
             display: flex;
             flex-direction: column;
             gap: 16px;
-            text-align: end;
+            justify-content: end;
+            align-items: end;
+
+            // 
+            @media screen and (max-width: 768px) {
+                text-align: start;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: start;
+                gap: 16px;
+                flex-shrink: 0;
+                margin-bottom: 26px;
+            }
 
             a {
+                width: fit-content;
                 color: #FFF;
                 font-variant-numeric: lining-nums proportional-nums;
                 font-family: 'Manrope';
@@ -2681,7 +2811,8 @@ textarea {
                 font-style: normal;
                 font-weight: 400;
                 line-height: 150%;
-                text-decoration: underline;
+                border-bottom: 1px solid #FFF;
+                padding-left: 2.5px;
             }
         }
 
