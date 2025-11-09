@@ -76,10 +76,32 @@ body {
         width: 100%;
         height: 2208px;
         flex-shrink: 0;
-        aspect-ratio: 20/23;
+        aspect-ratio: 960 / 917;
         left: 0;
-        top: 1737px;
-        background-image: url(../images/product-bg.png);
+        top: 4320px;
+        background-image: url(../images/certificate_bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        z-index: -1;
+
+        // 
+        @media screen and (max-width: 480px) {
+            height: 726px;
+            top: 2200px;
+            background-image: url(../images/mobile_product-bg.png);
+        }
+    }
+
+    .image_4 {
+        position: absolute;
+        width: 100%;
+        height: 1834px;
+        flex-shrink: 0;
+        aspect-ratio: 960/917;
+        left: 0;
+        top: 2681px;
+        background-image: url(../images/certificate_bg.png);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
