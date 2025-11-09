@@ -1450,6 +1450,7 @@ textarea {
         align-items: stretch;
         justify-content: space-between;
         margin-bottom: 24px;
+
         // 
         @media screen and (max-width: 480px) {
             margin-bottom: 36px;
@@ -1647,5 +1648,64 @@ textarea {
                 }
             }
         }
+    }
+}
+
+
+
+// certificate end
+
+.company {
+    margin-bottom: 387px;
+    // 
+    @media screen and (max-width: 480px) {
+        margin-bottom: 98px;
+    }
+    .section-title {
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 74px;
+        color: var(--2, #83CACC);
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+    }
+
+    .block {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        // 
+        .block {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 100%;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            border-right: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+            border-image: linear-gradient(90deg, #0C4E51 0%, #1BB1B7 57.69%, #0C4E51 100%);
+            border-image-slice: 1;
+
+            // img {
+            // }
+
+            /* Har 4-element -> qator oxirida border bo‘lmasin */
+            &:nth-child(4n) {
+                border-right: none;
+            }
+
+            /* Oxirgi qatorda past border bo‘lmasin */
+            &:nth-child(n+9) {
+                border-bottom: none;
+            }
+        }
+
     }
 }

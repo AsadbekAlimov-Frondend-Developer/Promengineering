@@ -14,9 +14,20 @@ if (window.innerWidth <= 768) {
   new Swiper('.products_slider', {
     slidesPerView: 1,
     spaceBetween: 20,
-    loop:true,
+    loop: true,
     pagination: {
       el: '.product_swiper-pagination',
     }
+  });
+}
+
+// 
+var $titles = $('.company .section-title');
+
+if ($titles.length) {
+  $titles.each(function () {
+    var text = $(this).text();
+    var newText = text.replace(/,(\s*)/, ',$1<br>');
+    $(this).html(newText);
   });
 }

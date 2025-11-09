@@ -1357,4 +1357,51 @@ textarea {
     width: 17px;
     height: 17px;
   }
+}
+
+.company {
+  margin-bottom: 387px;
+}
+@media screen and (max-width: 480px) {
+  .company {
+    margin-bottom: 98px;
+  }
+}
+.company .section-title {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 74px;
+  color: var(--2, #83CACC);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+.company .block {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.company .block .block {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+}
+.company .block .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  -o-border-image: linear-gradient(90deg, #0C4E51 0%, #1BB1B7 57.69%, #0C4E51 100%);
+     border-image: linear-gradient(90deg, #0C4E51 0%, #1BB1B7 57.69%, #0C4E51 100%);
+  border-image-slice: 1;
+  /* Har 4-element -> qator oxirida border bo‘lmasin */
+  /* Oxirgi qatorda past border bo‘lmasin */
+}
+.company .block .box:nth-child(4n) {
+  border-right: none;
+}
+.company .block .box:nth-child(n+9) {
+  border-bottom: none;
 }/*# sourceMappingURL=index.css.map */
