@@ -120,6 +120,27 @@ body {
     background-size: cover;
   }
 }
+.bg_big_images .image_6 {
+  position: absolute;
+  width: 65%;
+  height: 563px;
+  flex-shrink: 0;
+  /* left: 0; */
+  right: 0;
+  top: 7703px;
+  background-image: url(../images/contact_bg-fon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  filter: blur(80.1499938965px);
+}
+@media screen and (max-width: 768px) {
+  .bg_big_images .image_6 {
+    height: 459px;
+    top: 4888px;
+    background-size: cover;
+  }
+}
 
 h1,
 h2,
@@ -1844,4 +1865,260 @@ textarea {
     width: 17px;
     height: 17px;
   }
+}
+
+.contact {
+  margin-bottom: 253px;
+}
+@media screen and (max-width: 768px) {
+  .contact {
+    margin-bottom: 127px;
+  }
+}
+.contact .contact_block {
+  width: 100%;
+  height: 383px;
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 40px;
+  border: 1px solid #26BAC8;
+  background: #000;
+  padding-left: 68px;
+  padding-top: 57px;
+  padding-right: 56px;
+  padding-bottom: 65px;
+  margin-bottom: 85px;
+  /* Checked holat — rasmni shu yerga qo'yamiz */
+}
+@media screen and (max-width: 768px) {
+  .contact .contact_block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    align-self: stretch;
+    height: -moz-fit-content;
+    height: fit-content;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin-bottom: 0;
+  }
+}
+.contact .contact_block .contact_title {
+  width: 648px;
+  color: #FFF;
+  font-family: "Sora";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 81px;
+}
+@media screen and (max-width: 768px) {
+  .contact .contact_block .contact_title {
+    width: 100%;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 120%;
+    margin-bottom: 19px;
+    color: var(--Color, #83CACC);
+  }
+}
+.contact .contact_block .contact_description {
+  color: #FFF;
+  width: 454px;
+  font-family: "Manrope";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+@media screen and (max-width: 768px) {
+  .contact .contact_block .contact_description {
+    width: 247px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
+.contact .contact_block .contact_input {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  padding: 6px 32px;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 59px;
+  border: 1px solid #FFF;
+  background-color: transparent;
+  color: #FFF;
+}
+@media screen and (max-width: 768px) {
+  .contact .contact_block .contact_input {
+    display: flex;
+    height: 44px;
+    padding: 6px 32px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+  }
+}
+.contact .contact_block .contact_input::-moz-placeholder {
+  color: #FFF;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Manrope";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.contact .contact_block .contact_input::placeholder {
+  color: #FFF;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Manrope";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+@media screen and (max-width: 768px) {
+  .contact .contact_block .contact_input::-moz-placeholder {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  .contact .contact_block .contact_input::placeholder {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
+.contact .contact_block .contact_input:first-child {
+  margin-bottom: 19px;
+}
+.contact .contact_block .contact_input:nth-child(2n) {
+  margin-bottom: 52px;
+}
+@media screen and (max-width: 768px) {
+  .contact .contact_block .contact_input:nth-child(2n) {
+    margin-bottom: 19px;
+  }
+}
+.contact .contact_block #contact-checkbox {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #00171F;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: #E1E1E1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 65%;
+}
+@media screen and (max-width: 768px) {
+  .contact .contact_block #contact-checkbox {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+}
+.contact .contact_block #contact-checkbox:checked {
+  background-image: url("../images/checkbox.svg");
+}
+.contact .contact_block .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 13px;
+}
+@media screen and (max-width: 768px) {
+  .contact .contact_block .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 58px;
+  }
+}
+.contact .contact_block .checkbox label {
+  color: #FFF;
+  font-family: "Manrope";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media screen and (max-width: 768px) {
+  .contact .contact_block form {
+    width: 100%;
+  }
+}
+.contact .contact_block .contact_btn {
+  width: 100%;
+  display: flex;
+  height: 54px;
+  padding: 12px 141px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 36px;
+  background: linear-gradient(90deg, #02584E -4.33%, #11B5BB 100%);
+  color: #FFF;
+  font-family: "Sora";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+@media screen and (max-width: 768px) {
+  .contact .contact_block .contact_btn {
+    display: flex;
+    width: 100%;
+    height: 52px;
+    padding: 12px 54px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 42px;
+    background: linear-gradient(90deg, #02584E -4.33%, #11B5BB 100%);
+  }
+}
+.contact .contact_about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .contact .contact_about {
+    display: none;
+  }
+}
+.contact .contact_about .about_item {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.contact .contact_about .about_item .description {
+  width: 338px;
+  color: #FFF;
+  font-family: "Manrope";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 30px */
 }/*# sourceMappingURL=index.css.map */
