@@ -63,16 +63,14 @@ body {
 .bg_big_images .image_3 {
   position: absolute;
   width: 100%;
-  height: 2208px;
+  height: 1834px;
   flex-shrink: 0;
-  aspect-ratio: 960/917;
   left: 0;
-  top: 4320px;
-  background-image: url(../images/certificate_bg.png);
+  top: 1890px;
+  background-image: url(../images/product-bg.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  z-index: -1;
+  z-index: -2;
 }
 @media screen and (max-width: 480px) {
   .bg_big_images .image_3 {
@@ -84,22 +82,18 @@ body {
 .bg_big_images .image_4 {
   position: absolute;
   width: 100%;
-  height: 1834px;
+  height: 2208px;
   flex-shrink: 0;
-  aspect-ratio: 960/917;
   left: 0;
-  top: 2681px;
+  top: 4290px;
   background-image: url(../images/certificate_bg.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
   z-index: -1;
 }
 @media screen and (max-width: 480px) {
   .bg_big_images .image_4 {
-    height: 726px;
-    top: 2200px;
-    background-image: url(../images/mobile_product-bg.png);
+    background: none;
   }
 }
 
@@ -1217,7 +1211,6 @@ textarea {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  box-shadow: 0 4px 25.3px 0 rgba(0, 0, 0, 0.14) inset;
   position: relative;
 }
 @media screen and (max-width: 480px) {
