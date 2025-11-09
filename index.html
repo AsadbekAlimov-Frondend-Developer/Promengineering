@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promengineering</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css" rel="stylesheet">
+    <!-- font -->
+    <!--  -->
+    <link rel="stylesheet" href="assets/style/index.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="bg_big_images">
+            <div class="image_1"></div>
+            <div class="image_2"></div>
+            <div class="image_3"></div>
+        </div>
+        <div class="main-header">
+            <header class="header">
+                <div class="container">
+                    <div class="navbar_blocks active">
+                        <div class="logo">
+                            <img src="assets/images/navbar_logo.svg" alt="logo">
+                        </div>
+                        <div class="nav_box">
+                            <ul class="nav_item">
+                                <li class="nav_list">
+                                    <a href="#">О компании</a>
+                                </li>
+
+                                <li class="nav_list">
+                                    <a href="#">Продукция</a>
+                                </li>
+                                <li class="nav_list">
+                                    <a href="#">Услуги</a>
+                                </li>
+                                <li class="nav_list">
+                                    <a href="#">Контакты</a>
+                                </li>
+                            </ul>
+                            <div class="nav_contacts">
+                                <div class="phone">
+                                    <span>+7 958 642-73-92</span>
+                                </div>
+                                <div class="icons">
+                                    <div class="icon">
+                                        <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <mask id="mask0_0_192" style="mask-type:alpha" maskUnits="userSpaceOnUse"
+                                                x="5" y="5" width="24" height="24">
+                                                <rect x="5" y="5" width="24" height="23.7241"
+                                                    fill="url(#pattern0_0_192)" />
+                                            </mask>
+                                            <g mask="url(#mask0_0_192)">
+                                                <rect x="5" y="5" width="24" height="24" fill="white" />
+                                            </g>
+                                            <defs>
+                                                <pattern id="pattern0_0_192" patternContentUnits="objectBoundingBox"
+                                                    width="1" height="1">
+                                                    <use xlink:href="#image0_0_192"
+                                                        transform="matrix(0.0114943 0 0 0.0116279 -0.091954 -0.0813953)" />
+                                                </pattern>
+                                                <image id="image0_0_192" width="100" height="100"
+                                                    preserveAspectRatio="none"
+                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAGK0lEQVR4nO2de4hVVRSHP8eslCnLsieBTVFi2cseZGAWUplWUlFBKllhZtD7QVTURI/phVpBSQVSYvQYSnxkRE96mUUEmURRRjblJGGWY+XUjg2rkMHrPfeetc9e5979wQ/6w85Ze6075+y99lr7QCKRSCQSiUQikUgkKtEfGA6MB6YDdwIdwGPAXOBpYB7wIHAjMA04A2gD+lW8aiIzOwFnAg8D7wEbAVen1gNvAbOBc+XaiQzsKr/+N4C/cgSgmv4AXgFmAHvHHrRFTgCeF0e5guUD/5zY0NT45/rZwEcRguAq6BNgMtBCkzEaeMdAANw2AnMiTcBe8nhwJVGnzNIakouBXww42dWo32QK3TD4KeYCA451OfUiMISScyjwlQFnOiWtBkZRUsbJgsw1mH6XbEGpuAjYbMB5LpD+BC6kJFwC/G3AaS6w/gGuwjjTmiQYboug+B+gScY3+GPKVVCvZBxMcQSwwYBzXCT5TPSRGGEX4BsDTnEGpsRDMUCnAWc4I3o19mbYZQac4IxpZqxg7NugCz+n8D6JkpB8ycDgnVEtipEWiT1oZ1wTiwqGf2mtCDCANcDrwGtS1LDJgFPz6POidh7PUTb8Z+DUrdynDfjJgGPz6IIiArJc0WC/YTVyG/eabsCpebQy9DR4tHIe6PQq99sRWGfAsXnk37fBeFbRUF9xmIX7DTg1j14OuRXbo7hPvXvG+7aVPIPsk497hgjIFEUjn6zx3ksMODaPrggRkIWKBvqa3VqYYMCpeeRr0NQrzzXTJL4+qxZaSp5R7pWsuBrHKBrn63fr4SYDjs2jSZoBuUHRsO46bdhDfmmupHpEMyCLFQ3zM7V66Tbg2Hr1gWI8+E7ZuMFNmNDcKO/i3AwMsA4YV4cNKw04Na8O1gjIIQEMu6vGGdYLBpypoa0lUWtmUgDDvq4h6dZhwJFa8snS3MwMZNxJGe49xoATNdWuEZDrAxm3LMO9jzbgRE3N0gjI7QENPC3D/ecZcKSWntAIyH0BDfQzpwEZWqV/MOBMDc3XCMiswEbenMGGibKh5Uou/9eem/YCei2OymDH3QYcauKRdU0Bhn4hi79q65FFBpyaR3NQ6p4twthHM9gySEqFXEl1i9WFYSWdnzEobxpwbj26VCMgIws0eAMwIoNNvhrlqTquv0L2tw8CHojQ05Jlml+V7QvujPq2hqKAqTUUXvhyomF9/v+dZeOrqFKj/VFiVcG/pOXyaMqC71z6sMr1eqtkmFuB6wKvd3o0S0tjNOUsk0dTFlokcfdjhWtdnfE6O0jPS4j9+49R5NoIAXFyyFjWoCD/doZkk/+7xuN1jHeAHBOouRj1J+OpHpHhIgaltUZ7+8vqPu/ZV6utFl73i5xP+hTYj+LR2rr2f2n7aBsXO+vaBRxLcWjOLlXfH5aqBzdJSZJKsUAVjre2MdWX/tLl5Azofa2CgYKSqoeHMtJSxrVHNs9qfeFnYbBi95Y/vzEYBxjcl1greyq7KY1xkKyBStO33mm4EG2+vOuq7UJWYpjM6LRs+lW7yLrSmsR6A8066dAak3EdMlAWgtqHdN5LQWi2toVWt/S2eIePlUxvm2SVJ8imUVegv1hfIF4IIaoZXYPpHgpkrIEBO8P6PtDsryIPGRi0M6wsO5+qfGlg0K7Z2qArMdzAoJ1RrQ3VAh2j1teVXH5X8hQiYPkzEy6ifP1a4Qxp0qNgXRX5CpgoTDYweGdMnTlSNbkp08dYXAFaKoURUfC/gnToJf9rgewqRqPsbclOUXMsfDhstgFHuMjaKNWSJmikL+W4OrSqynGEhTLCgENcJG2Wwuyspa2FUPaTeFyOGmP/5QdzvKs4yPVyKvZig/vzTuSTp+fFPli/EkNzHovkvzX7NnCb1Dpt16cPfaGhLeHP5CtBW9pojil1nuo8W7ZIs2zUHCjdvusiFd/5s1ROpiTcmmFQXfKB+ak5P4c9QD5K/4yceB1y+rpU+ifrOSoqKodJ63LfY16XSN+Fr0IJQQtwnKT7O3NWoq+RDt522X6Olu7QPHPR9zfcIaU1sVIGrfKlzbOAy6VysUMej7Pkv33R3JXSrDqqhvOBE4lEIpFIJBKJRIJm5F+MS8cx6ETt4QAAAABJRU5ErkJggg==" />
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="icon">
+                                        <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <mask id="mask0_0_196" style="mask-type:alpha" maskUnits="userSpaceOnUse"
+                                                x="5" y="4" width="24" height="24">
+                                                <rect x="5" y="4" width="24" height="24" fill="url(#pattern0_0_196)" />
+                                            </mask>
+                                            <g mask="url(#mask0_0_196)">
+                                                <rect x="5" y="4" width="24" height="24" fill="white" />
+                                            </g>
+                                            <defs>
+                                                <pattern id="pattern0_0_196" patternContentUnits="objectBoundingBox"
+                                                    width="1" height="1">
+                                                    <use xlink:href="#image0_0_196"
+                                                        transform="translate(-0.0319149 -0.0319149) scale(0.0106383)" />
+                                                </pattern>
+                                                <image id="image0_0_196" width="100" height="100"
+                                                    preserveAspectRatio="none"
+                                                    xlink:href="data:image/png;base64,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" />
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu">
+                            <div class="menu-btn active">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46"
+                                    fill="none">
+                                    <line x1="13" y1="15" x2="33.5" y2="15" stroke="white" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <line x1="13" y1="22.5" x2="33.5" y2="22.5" stroke="white" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <line x1="13" y1="30" x2="33.5" y2="30" stroke="white" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- mobile menu  -->
+                    <div class="hamburger nav-mobile_menu">
+                        <div class="mobile-navbar_blocks">
+                            <div class="logo">
+                                <img src="assets/images/navbar_logo.svg" alt="logo">
+                            </div>
+
+                            <div class="menu">
+
+                                <div class="menu-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46"
+                                        fill="none">
+                                        <path d="M16.0977 16.0919L29.0056 28.9999" stroke="#1BB1B7" stroke-width="2"
+                                            stroke-linecap="round" />
+                                        <path d="M16.0938 28.9999L29.0017 16.0919" stroke="#1BB1B7" stroke-width="2"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile-nav_box">
+                            <ul class="nav_item">
+                                <li class="nav_list">
+                                    <a href="#">О компании</a>
+                                    <img src="assets/images/nav_menu-border.png" alt="nav_menu-border">
+                                </li>
+
+                                <li class="nav_list">
+                                    <a href="#">Продукция</a>
+                                    <img src="assets/images/nav_menu-border.png" alt="nav_menu-border">
+                                </li>
+                                <li class="nav_list">
+                                    <a href="#">Услуги</a>
+                                    <img src="assets/images/nav_menu-border.png" alt="nav_menu-border">
+                                </li>
+                                <li class="nav_list">
+                                    <a href="#">Контакты</a>
+                                    <img src="assets/images/nav_menu-border.png" alt="nav_menu-border">
+                                </li>
+                            </ul>
+                            <!-- <div class="nav_contacts">
+                            <div class="phone">
+                                <span>+7 958 642-73-92</span>
+                            </div>
+                            <div class="icons">
+                                 <div class="icon">
+                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <mask id="mask0_0_192" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5"
+                                            y="5" width="24" height="24">
+                                            <rect x="5" y="5" width="24" height="23.7241" fill="url(#pattern0_0_192)" />
+                                        </mask>
+                                        <g mask="url(#mask0_0_192)">
+                                            <rect x="5" y="5" width="24" height="24" fill="white" />
+                                        </g>
+                                        <defs>
+                                            <pattern id="pattern0_0_192" patternContentUnits="objectBoundingBox"
+                                                width="1" height="1">
+                                                <use xlink:href="#image0_0_192"
+                                                    transform="matrix(0.0114943 0 0 0.0116279 -0.091954 -0.0813953)" />
+                                            </pattern>
+                                            <image id="image0_0_192" width="100" height="100" preserveAspectRatio="none"
+                                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAGK0lEQVR4nO2de4hVVRSHP8eslCnLsieBTVFi2cseZGAWUplWUlFBKllhZtD7QVTURI/phVpBSQVSYvQYSnxkRE96mUUEmURRRjblJGGWY+XUjg2rkMHrPfeetc9e5979wQ/6w85Ze6075+y99lr7QCKRSCQSiUQikUgkKtEfGA6MB6YDdwIdwGPAXOBpYB7wIHAjMA04A2gD+lW8aiIzOwFnAg8D7wEbAVen1gNvAbOBc+XaiQzsKr/+N4C/cgSgmv4AXgFmAHvHHrRFTgCeF0e5guUD/5zY0NT45/rZwEcRguAq6BNgMtBCkzEaeMdAANw2AnMiTcBe8nhwJVGnzNIakouBXww42dWo32QK3TD4KeYCA451OfUiMISScyjwlQFnOiWtBkZRUsbJgsw1mH6XbEGpuAjYbMB5LpD+BC6kJFwC/G3AaS6w/gGuwjjTmiQYboug+B+gScY3+GPKVVCvZBxMcQSwwYBzXCT5TPSRGGEX4BsDTnEGpsRDMUCnAWc4I3o19mbYZQac4IxpZqxg7NugCz+n8D6JkpB8ycDgnVEtipEWiT1oZ1wTiwqGf2mtCDCANcDrwGtS1LDJgFPz6POidh7PUTb8Z+DUrdynDfjJgGPz6IIiArJc0WC/YTVyG/eabsCpebQy9DR4tHIe6PQq99sRWGfAsXnk37fBeFbRUF9xmIX7DTg1j14OuRXbo7hPvXvG+7aVPIPsk497hgjIFEUjn6zx3ksMODaPrggRkIWKBvqa3VqYYMCpeeRr0NQrzzXTJL4+qxZaSp5R7pWsuBrHKBrn63fr4SYDjs2jSZoBuUHRsO46bdhDfmmupHpEMyCLFQ3zM7V66Tbg2Hr1gWI8+E7ZuMFNmNDcKO/i3AwMsA4YV4cNKw04Na8O1gjIIQEMu6vGGdYLBpypoa0lUWtmUgDDvq4h6dZhwJFa8snS3MwMZNxJGe49xoATNdWuEZDrAxm3LMO9jzbgRE3N0gjI7QENPC3D/ecZcKSWntAIyH0BDfQzpwEZWqV/MOBMDc3XCMiswEbenMGGibKh5Uou/9eem/YCei2OymDH3QYcauKRdU0Bhn4hi79q65FFBpyaR3NQ6p4twthHM9gySEqFXEl1i9WFYSWdnzEobxpwbj26VCMgIws0eAMwIoNNvhrlqTquv0L2tw8CHojQ05Jlml+V7QvujPq2hqKAqTUUXvhyomF9/v+dZeOrqFKj/VFiVcG/pOXyaMqC71z6sMr1eqtkmFuB6wKvd3o0S0tjNOUsk0dTFlokcfdjhWtdnfE6O0jPS4j9+49R5NoIAXFyyFjWoCD/doZkk/+7xuN1jHeAHBOouRj1J+OpHpHhIgaltUZ7+8vqPu/ZV6utFl73i5xP+hTYj+LR2rr2f2n7aBsXO+vaBRxLcWjOLlXfH5aqBzdJSZJKsUAVjre2MdWX/tLl5Azofa2CgYKSqoeHMtJSxrVHNs9qfeFnYbBi95Y/vzEYBxjcl1greyq7KY1xkKyBStO33mm4EG2+vOuq7UJWYpjM6LRs+lW7yLrSmsR6A8066dAak3EdMlAWgtqHdN5LQWi2toVWt/S2eIePlUxvm2SVJ8imUVegv1hfIF4IIaoZXYPpHgpkrIEBO8P6PtDsryIPGRi0M6wsO5+qfGlg0K7Z2qArMdzAoJ1RrQ3VAh2j1teVXH5X8hQiYPkzEy6ifP1a4Qxp0qNgXRX5CpgoTDYweGdMnTlSNbkp08dYXAFaKoURUfC/gnToJf9rgewqRqPsbclOUXMsfDhstgFHuMjaKNWSJmikL+W4OrSqynGEhTLCgENcJG2Wwuyspa2FUPaTeFyOGmP/5QdzvKs4yPVyKvZig/vzTuSTp+fFPli/EkNzHovkvzX7NnCb1Dpt16cPfaGhLeHP5CtBW9pojil1nuo8W7ZIs2zUHCjdvusiFd/5s1ROpiTcmmFQXfKB+ak5P4c9QD5K/4yceB1y+rpU+ifrOSoqKodJ63LfY16XSN+Fr0IJQQtwnKT7O3NWoq+RDt522X6Olu7QPHPR9zfcIaU1sVIGrfKlzbOAy6VysUMej7Pkv33R3JXSrDqqhvOBE4lEIpFIJBKJRIJm5F+MS8cx6ETt4QAAAABJRU5ErkJggg==" />
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <div class="icon">
+                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <mask id="mask0_0_196" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5"
+                                            y="4" width="24" height="24">
+                                            <rect x="5" y="4" width="24" height="24" fill="url(#pattern0_0_196)" />
+                                        </mask>
+                                        <g mask="url(#mask0_0_196)">
+                                            <rect x="5" y="4" width="24" height="24" fill="white" />
+                                        </g>
+                                        <defs>
+                                            <pattern id="pattern0_0_196" patternContentUnits="objectBoundingBox"
+                                                width="1" height="1">
+                                                <use xlink:href="#image0_0_196"
+                                                    transform="translate(-0.0319149 -0.0319149) scale(0.0106383)" />
+                                            </pattern>
+                                            <image id="image0_0_196" width="100" height="100" preserveAspectRatio="none"
+                                                xlink:href="data:image/png;base64,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" />
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div> -->
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="hero">
+                <div class="container">
+                    <div class="hero_block">
+                        <h1 class="title">Новые технологии СОЖ* и смазочных материалов</h1>
+                        <img class="hero-mobile_bg" src="assets/images/hero-mobile_bg.png" alt="">
+                        <p class="description">Компания Промминжиниринг занимается разработкой СОЖ и технологические
+                            жидкостина базе российских сырья и присадок. Это гарантирует стабильные поставки, сохранение
+                            цены и независимость от секционных пакетов.</p>
+
+                        <div class="hero_block-btns">
+                            <a href="#" class="btn">Оставить заявку</a>
+                            <a href="#" class="btn">Сертификаты</a>
+                        </div>
+                        <div class="rating">
+                            <span class="rating-title"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.775 10.375L6.97501 7.62505V4.92505L10.775 2.17505L12.15 4.60005L9.02501 5.90005V6.65005L12.15 7.95005L10.775 10.375ZM7.10001 4.72069e-05L6.62501 4.67505L4.27501 6.02505L1.2286e-05 4.10005L1.40001 1.70005L4.10001 3.75005L4.75001 3.37505L4.30001 0.0250484L7.10001 4.72069e-05ZM1.2286e-05 8.45005L4.27501 6.52505L6.62501 7.87505L7.10001 12.55L4.32501 12.5L4.75001 9.17505L4.10001 8.80005L1.40001 10.825L1.2286e-05 8.45005Z"
+                                        fill="#1BB1B7" />
+                                </svg>
+                                СОЖ — смазочно-охлаждающие жидкости.</span>
+                            <div class="rating_block">
+                                <div class="rating-box">
+                                    <h3>10.000+</h3>
+                                    <p>тонн смазочных материалов ежегодно</p>
+                                </div>
+                                <div class="rating-box">
+                                    <h3>200+</h3>
+                                    <p>промышленных предприятий по всей России</p>
+                                </div>
+                                <div class="rating-box">
+                                    <h3>15+</h3>
+                                    <p>лет на рынке индустриальных смазок</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- hero end -->
+        <section class="products">
+            <div class="container">
+                <div class="products_header">
+                    <div class="item">
+                        <h3 class="section-title">Наша продукция</h3>
+                        <p>Мы сосредоточились на нескольких разделах, что позволяет достаточно глубоко разбираться
+                            в проблематике и тематике производственных процессов.</p>
+                    </div>
+                    <div class="icon">
+                        <img src="assets/images/products-header_icon-img.png" alt="">
+                    </div>
+                </div>
+                <!--  -->
+                <div class="products_block">
+                    <div class="products_box">
+                        <div class="img">
+                            <img src="assets/images/products_img1.png" alt="">
+                        </div>
+                        <div class="contend">
+                            <h3>Смазочно — охлаждающие жидкости (СОЖ)</h3>
+                            <ul>
+                                <li>
+                                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4" cy="4" r="4" fill="#1BB1B7" />
+                                    </svg>
+                                    Водорастворимые СОЖ (эмульсии и эмульсолы) Coolway
+                                </li>
+                                <li>
+                                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4" cy="4" r="4" fill="#1BB1B7" />
+                                    </svg>
+                                    Масляные СОЖ Coolcut
+                                </li>
+                                <li>
+                                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4" cy="4" r="4" fill="#1BB1B7" />
+                                    </svg>
+                                    Очистители щелочные и кислотные Coolclean
+                                </li>
+                                <li>
+                                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4" cy="4" r="4" fill="#1BB1B7" />
+                                    </svg>
+                                    Подготовка поверхности Оxidway
+                                </li>
+                            </ul>
+                        </div>
+                        </ul>
+                    </div>
+                    <div class="products_box">
+                        <div class="img">
+                            <img src="assets/images/products_img2.png" alt="">
+                        </div>
+                        <div class="contend">
+                            <h3>Штамповочные разделители Formway</h3>
+                            <ul>
+                                <li>
+                                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4" cy="4" r="4" fill="#1BB1B7" />
+                                    </svg>
+                                    Испаряющиеся
+                                </li>
+                                <li>
+                                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4" cy="4" r="4" fill="#1BB1B7" />
+                                    </svg>
+                                    На масляной основе
+                                </li>
+                                <li>
+                                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="4" cy="4" r="4" fill="#1BB1B7" />
+                                    </svg>
+                                    На водной основе
+                                </li>
+                            </ul>
+                        </div>
+                        </ul>
+                    </div>
+                    <div class="products_box">
+                        <div class="img">
+                            <img src="assets/images/products_img3.png" alt="">
+                        </div>
+                        <div class="contend">
+                            <h3>Антикоррозионные составы Coolprot</h3>
+
+                        </div>
+                        </ul>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="katalog-btn">
+                    <a href="#" class="btn">Перейти в каталог <svg width="19" height="19" viewBox="0 0 19 19"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 18L18 1M18 1V18M18 1H1" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- products end -->
+        <section class="suitable">
+            <div class="container">
+                <div class="products_header">
+                    <h3 class="section-title">Продукция Промминжиниринг </h3>
+                    <h3 class="section-title">идеально подходит для:</h3>
+                </div>
+                <!--  -->
+                <div class="products_block swiper products_slider">
+                    <div class="swiper-wrapper">
+                        <div class="products_box swiper-slide">
+                            <div class="contend">
+                                <div class="img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="132" height="132"
+                                        viewBox="0 0 132 132" fill="none">
+                                        <path
+                                            d="M66.0001 125.125C76.6681 125.125 85.3161 98.6533 85.3161 65.9995C85.3161 33.3457 76.6681 6.87451 66.0001 6.87451C55.3322 6.87451 46.6841 33.3457 46.6841 65.9995C46.6841 98.6533 55.3322 125.125 66.0001 125.125Z"
+                                            stroke="#1BB1B7" stroke-width="4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M75.6577 82.7275C103.937 66.4006 122.537 45.6756 117.203 36.4369C111.869 27.1982 84.6208 32.9443 56.3417 49.2712C28.0627 65.5982 9.462 86.3232 14.796 95.5619C20.1299 104.801 47.3787 99.0544 75.6577 82.7275Z"
+                                            stroke="#1BB1B7" stroke-width="4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M117.203 95.5621C122.537 86.3234 103.937 65.5984 75.6577 49.2715C47.3787 32.9446 20.1299 27.1984 14.796 36.4371C9.462 45.6758 28.0627 66.4009 56.3417 82.7278C84.6208 99.0547 111.869 104.801 117.203 95.5621Z"
+                                            stroke="#1BB1B7" stroke-width="4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M65.9998 73.4133C70.0929 73.4133 73.4111 70.0952 73.4111 66.0021C73.4111 61.9089 70.0929 58.5908 65.9998 58.5908C61.9067 58.5908 58.5886 61.9089 58.5886 66.0021C58.5886 70.0952 61.9067 73.4133 65.9998 73.4133Z"
+                                            stroke="#1BB1B7" stroke-width="4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M92.1991 18.7734L69.5914 59.5284M94.5394 82.9364L72.3496 69.7667"
+                                            stroke="#1BB1B7" stroke-width="4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <h3>Обработки материалов</h3>
+                                <ul>
+                                    <li>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="4" cy="4" r="4" fill="#FFFFFF" />
+                                        </svg>
+                                        Сплавы титана
+                                    </li>
+                                    <li>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="4" cy="4" r="4" fill="#FFFFFF" />
+                                        </svg>
+                                        Сплавы магния
+                                    </li>
+                                    <li>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="4" cy="4" r="4" fill="#FFFFFF" />
+                                        </svg>
+                                        Различные марки стали
+                                    </li>
+                                    <li>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="4" cy="4" r="4" fill="#FFFFFF" />
+                                        </svg>
+                                        Сплавы меди
+                                    </li>
+                                    <li>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="4" cy="4" r="4" fill="#FFFFFF" />
+                                        </svg>
+                                        Сплавы алюминия
+                                    </li>
+                                    <li>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="4" cy="4" r="4" fill="#FFFFFF" />
+                                        </svg>
+                                        Сплавы латуни и бронзы
+                                    </li>
+                                </ul>
+                            </div>
+                            </ul>
+                        </div>
+                        <div class="products_box swiper-slide">
+                            <div class="contend">
+
+                                <div class="img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="132" height="132"
+                                        viewBox="0 0 132 132" fill="none">
+                                        <path
+                                            d="M66 54.1475C90.8382 54.1475 110.973 47.1419 110.973 38.5C110.973 29.8582 90.8382 22.8525 66 22.8525C41.1618 22.8525 21.0265 29.8582 21.0265 38.5C21.0265 47.1419 41.1618 54.1475 66 54.1475Z"
+                                            stroke="#1BB1B7" stroke-width="4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M66 54.1475C90.8382 54.1475 110.973 47.1419 110.973 38.5C110.973 29.8582 90.8382 22.8525 66 22.8525C41.1618 22.8525 21.0265 29.8582 21.0265 38.5C21.0265 47.1419 41.1618 54.1475 66 54.1475Z"
+                                            stroke="#1BB1B7" stroke-width="4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M21.0263 38.4998C21.0263 38.4998 14.0468 77.9815 12.4243 90.5077C11.1043 100.716 36.4098 109.147 65.9998 109.147C95.5898 109.147 120.906 100.716 119.575 90.5077C117.87 77.4672 110.973 38.4998 110.973 38.4998M98.2848 59.54L107.437 92.1M26.7546 59.54L35.9066 92.1"
+                                            stroke="#1BB1B7" stroke-width="4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M66.0003 102.66C70.6113 102.66 74.3493 100.06 74.3493 96.852C74.3493 93.6443 70.6113 91.0439 66.0003 91.0439C61.3893 91.0439 57.6513 93.6443 57.6513 96.852C57.6513 100.06 61.3893 102.66 66.0003 102.66Z"
+                                            stroke="#1BB1B7" stroke-width="4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M66.1045 42.6306C73.4371 42.6306 79.3815 40.7813 79.3815 38.5001C79.3815 36.2189 73.4371 34.3696 66.1045 34.3696C58.7718 34.3696 52.8275 36.2189 52.8275 38.5001C52.8275 40.7813 58.7718 42.6306 66.1045 42.6306Z"
+                                            stroke="#1BB1B7" stroke-width="4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M89.6283 38.4999H92.0538M40.1558 38.4999H42.5813M66.1048 47.4374V48.3587M66.1048 28.6384V29.5624"
+                                            stroke="#1BB1B7" stroke-width="4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <h3>Основные операции</h3>
+                                <ul>
+                                    <li>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="4" cy="4" r="4" fill="#FFFFFF" />
+                                        </svg>
+                                        Токарные работы
+                                    </li>
+                                    <li>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="4" cy="4" r="4" fill="#FFFFFF" />
+                                        </svg>
+                                        Резка
+                                    </li>
+                                    <li>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="4" cy="4" r="4" fill="#FFFFFF" />
+                                        </svg>
+                                        Распиловка
+                                    </li>
+                                    <li>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="4" cy="4" r="4" fill="#FFFFFF" />
+                                        </svg>
+                                        Пазовые работы
+                                    </li>
+                                    <li>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="4" cy="4" r="4" fill="#FFFFFF" />
+                                        </svg>
+                                        Нарезание резьбы
+                                    </li>
+                                    <li>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="4" cy="4" r="4" fill="#FFFFFF" />
+                                        </svg>
+                                        Фрезерование
+                                    </li>
+                                    <li>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="4" cy="4" r="4" fill="#FFFFFF" />
+                                        </svg>
+                                        Сверление
+                                    </li>
+                                </ul>
+                            </div>
+                            </ul>
+                        </div>
+                        <div class="products_box swiper-slide">
+                            <div class="contend">
+
+                                <div class="img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="132" height="132"
+                                        viewBox="0 0 132 132" fill="none">
+                                        <path
+                                            d="M54.4498 8.25024C53.7838 8.2784 53.1476 8.53395 52.6472 8.97431C52.1468 9.41468 51.8124 10.0132 51.6998 10.6702L49.4998 25.9877C46.003 27.4346 42.7188 29.3496 39.7373 31.6802L25.2723 25.8502C24.6342 25.5783 23.9169 25.5575 23.2641 25.7921C22.6113 26.0267 22.0713 26.4993 21.7523 27.1152L10.2023 47.1077C9.86976 47.7198 9.76736 48.4306 9.91365 49.1117C10.0599 49.7927 10.4453 50.3988 10.9998 50.8202L23.0723 60.5002C22.8327 62.3245 22.695 64.1607 22.6598 66.0002C22.6835 67.886 22.8212 69.7686 23.0723 71.6377L10.9998 81.1802C10.4634 81.6169 10.0997 82.23 9.97378 82.9101C9.84784 83.5902 9.96783 84.293 10.3123 84.8927L21.8623 104.885C22.1813 105.501 22.7213 105.974 23.3741 106.208C24.0269 106.443 24.7442 106.422 25.3823 106.15L39.7648 100.32C42.747 102.635 46.0199 104.549 49.4998 106.013L51.6723 121.33C51.7849 121.987 52.1193 122.586 52.6197 123.026C53.1201 123.467 53.7563 123.722 54.4223 123.75H77.5223C78.1898 123.727 78.8287 123.473 79.3302 123.032C79.8316 122.591 80.1646 121.989 80.2723 121.33L82.4998 106.013C85.9937 104.56 89.2771 102.645 92.2623 100.32L106.7 106.15C107.338 106.422 108.055 106.443 108.708 106.208C109.361 105.974 109.901 105.501 110.22 104.885L121.77 84.8927C122.105 84.2838 122.212 83.575 122.071 82.8942C121.93 82.2134 121.55 81.6055 121 81.1802L108.9 71.6377C109.142 69.768 109.27 67.8854 109.285 66.0002C109.259 64.1612 109.13 62.325 108.9 60.5002L121 50.8202C121.536 50.3836 121.9 49.7704 122.026 49.0903C122.152 48.4102 122.032 47.7075 121.687 47.1077L110.137 27.1152C109.796 26.521 109.255 26.0675 108.61 25.8358C107.965 25.604 107.259 25.6091 106.617 25.8502L92.2348 31.6802C89.2526 29.3653 85.9797 27.4515 82.4998 25.9877L80.3273 10.6702C80.21 10.0154 79.8742 9.41962 79.3748 8.98013C78.8754 8.54063 78.2418 8.28334 77.5773 8.25024H54.4498Z"
+                                            stroke="#1BB1B7" stroke-width="4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M66.0005 92.592C80.6415 92.592 92.5105 80.7231 92.5105 66.082C92.5105 51.441 80.6415 39.572 66.0005 39.572C51.3594 39.572 39.4905 51.441 39.4905 66.082C39.4905 80.7231 51.3594 92.592 66.0005 92.592Z"
+                                            stroke="#1BB1B7" stroke-width="4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M53.9823 89.7321L89.6223 54.0371" stroke="#1BB1B7" stroke-width="4"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <h3>Специальные процессы</h3>
+                                <ul>
+                                    <li>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="4" cy="4" r="4" fill="#FFFFFF" />
+                                        </svg>
+                                        Расточка
+                                    </li>
+                                    <li>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="4" cy="4" r="4" fill="#FFFFFF" />
+                                        </svg>
+                                        Глубокое сверление
+                                    </li>
+                                    <li>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="4" cy="4" r="4" fill="#FFFFFF" />
+                                        </svg>
+                                        Волочение
+                                    </li>
+                                    <li>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="4" cy="4" r="4" fill="#FFFFFF" />
+                                        </svg>
+                                        Зубофрезерование
+                                    </li>
+                                    <li>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="4" cy="4" r="4" fill="#FFFFFF" />
+                                        </svg>
+                                        Шлифование
+                                    </li>
+                                    <li>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="4" cy="4" r="4" fill="#FFFFFF" />
+                                        </svg>
+                                        Полировка
+                                    </li>
+                                    <li>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="4" cy="4" r="4" fill="#FFFFFF" />
+                                        </svg>
+                                        Притирка
+                                    </li>
+                                    <li>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="4" cy="4" r="4" fill="#FFFFFF" />
+                                        </svg>
+                                        Заточка
+                                    </li>
+                                </ul>
+                            </div>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="swiper-pagination product_swiper-pagination"></div>
+                </div>
+
+            </div>
+        </section>
+        <!-- suitable end -->
+        <section class="reason">
+            <div class="container">
+                <div class="reason_block">
+                    <div class="reason_block-img">
+                        <img src="assets/images/reason_block-img.png" alt="">
+                    </div>
+                    <div class="reason_box">
+                        <h3 class="section-title">Почему выбирают нас</h3>
+
+                        <div class="box_item">
+                            <div class="icon-item">
+                                <div class="icon">
+                                    <svg width="69" height="69" viewBox="0 0 69 69" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M61.8527 39.5311C60.8825 38.5609 59.5926 38.0267 58.2202 38.0267C58.2106 38.0267 58.201 38.0267 58.1913 38.0274C58.1432 38.0253 53.8404 38.0872 51.7928 33.2769C51.2077 31.9018 51.0207 30.3541 50.9622 29.6335C52.2081 28.2377 52.8881 26.4583 52.8881 24.5736C52.8881 20.6813 49.9515 17.4676 46.1774 17.0179V9.45323C46.1774 8.88324 45.7153 8.42188 45.146 8.42188H6.12145C5.55145 8.42188 5.09009 8.88324 5.09009 9.45323V59.886C5.09009 60.4553 5.55145 60.9174 6.12145 60.9174H45.146C45.7153 60.9174 46.1774 60.4553 46.1774 59.886V52.3392H60.6054C61.1747 52.3392 61.6368 51.8772 61.6368 51.3079V48.1993H62.3243C62.8937 48.1993 63.3557 47.7373 63.3557 47.168V43.1629C63.3571 41.7912 62.8228 40.502 61.8527 39.5311ZM50.8254 24.5736C50.8254 26.0643 50.2409 27.4649 49.18 28.5162C48.9786 28.7163 48.8679 28.9892 48.8747 29.2732C48.8775 29.377 48.9462 31.853 49.8951 34.0842C52.4398 40.0654 57.829 40.088 58.2292 40.0887C59.0467 40.0915 59.8161 40.4112 60.3936 40.9895C60.974 41.5698 61.2937 42.3412 61.293 43.1615V46.1359H60.8303C60.7581 46.1201 60.6831 46.1098 60.6054 46.1098C60.5277 46.1098 60.4535 46.1201 60.3806 46.1359H29.25V43.1615C29.25 41.4769 30.6128 40.1039 32.2939 40.088C32.9004 40.1217 37.8963 40.1932 40.5338 34.2464C41.4379 32.2091 41.6257 29.3977 41.6332 29.2787C41.6518 28.9844 41.5431 28.6956 41.3348 28.4866C40.2931 27.4395 39.7197 26.0492 39.7197 24.573C39.7197 21.5112 42.2101 19.0208 45.2712 19.0208C48.3343 19.0215 50.8254 21.5119 50.8254 24.5736ZM44.1147 58.8547H7.15281V10.4846H44.1147V17.0564C40.4643 17.6168 37.657 20.7693 37.657 24.5736C37.657 26.4335 38.3205 28.1937 39.5354 29.5812C39.4522 30.3816 39.2164 32.1301 38.6478 33.4103C36.5074 38.2371 32.5628 38.0391 32.4025 38.0288C32.3757 38.0267 32.3482 38.0253 32.3214 38.0253C29.49 38.0253 27.1859 40.3294 27.1859 43.1615V47.1673C27.1859 47.7366 27.6473 48.1987 28.2173 48.1987H29.03L29.0554 51.3154C29.0603 51.882 29.5202 52.3385 30.0868 52.3385H44.1133V58.8547H44.1147ZM59.5747 50.2765H45.3991C45.3179 50.2559 45.234 50.2414 45.146 50.2414C45.058 50.2414 44.9748 50.2559 44.893 50.2765H31.1113L31.0941 48.1993H59.5747V50.2765Z"
+                                            fill="#1BB1B7" />
+                                        <path
+                                            d="M24.6529 19.1094H11.5388C10.9688 19.1094 10.5074 19.5707 10.5074 20.1407C10.5074 20.7107 10.9688 21.1721 11.5388 21.1721H24.6529C25.2229 21.1721 25.6842 20.7107 25.6842 20.1407C25.6842 19.5707 25.2229 19.1094 24.6529 19.1094Z"
+                                            fill="#1BB1B7" />
+                                        <path
+                                            d="M24.6529 24.3926H11.5388C10.9688 24.3926 10.5074 24.8539 10.5074 25.4239C10.5074 25.9939 10.9688 26.4553 11.5388 26.4553H24.6529C25.2229 26.4553 25.6842 25.9939 25.6842 25.4239C25.6842 24.8539 25.2229 24.3926 24.6529 24.3926Z"
+                                            fill="#1BB1B7" />
+                                        <path
+                                            d="M24.6529 29.8647H11.5388C10.9688 29.8647 10.5074 30.3261 10.5074 30.8961C10.5074 31.4661 10.9688 31.9275 11.5388 31.9275H24.6529C25.2229 31.9275 25.6842 31.4661 25.6842 30.8961C25.6842 30.3261 25.2229 29.8647 24.6529 29.8647Z"
+                                            fill="#1BB1B7" />
+                                    </svg>
+                                </div>
+                                <p class="description">Сертифицированная продукция</p>
+                            </div>
+                            <div class="icon-item">
+                                <div class="icon">
+                                    <svg width="69" height="70" viewBox="0 0 69 70" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M67.3444 35.4442C67.0948 34.9238 66.4773 34.7083 65.9665 34.9601L58.6706 38.5559L53.6988 40.7406C52.9314 40.5397 50.9712 40.0187 49.2103 39.4892L48.3467 39.1628C48.2202 39.1154 48.0903 39.0958 47.9631 39.0993C47.3525 38.8991 46.8217 38.7094 46.4641 38.5496C44.7493 37.7838 41.6855 35.9834 40.4506 34.8966C39.0555 33.6732 35.421 29.1322 35.3846 29.0862C35.0759 28.6997 34.5416 28.5874 34.1071 28.8169C33.1073 29.3449 29.8648 30.7379 28.1479 30.2315C27.2417 29.9581 25.5647 29.0248 25.0902 28.4437C24.774 28.0573 24.5044 26.6643 24.6468 26.2193C25.0174 26.0288 26.4228 26.2702 27.111 26.3881C28.2888 26.5904 29.4027 26.7815 30.2629 26.499C31.9378 25.95 35.3151 23.0225 36.1292 22.3026C36.9371 22.0034 40.923 20.6404 43.7028 21.762C45.1694 22.3542 46.5955 22.5586 47.8675 22.5586C50.6185 22.5586 52.6475 21.5995 52.7981 21.5262L62.9301 16.0331C63.4321 15.7604 63.6218 15.127 63.3537 14.6171C63.0848 14.1079 62.4605 13.9147 61.9579 14.1874L51.8712 19.6568C51.8361 19.6736 48.2484 21.3435 44.4654 19.8173C41.1705 18.4864 36.8959 19.8096 35.5998 20.2714C34.1621 19.7182 30.1205 18.2513 28.3246 18.5275C26.6483 18.7884 21.7665 19.0221 19.7891 18.6517C18.9543 18.4124 12.6136 14.9317 7.0724 11.7788C6.5746 11.4963 5.94684 11.6756 5.66838 12.1799C5.38991 12.6836 5.56662 13.3218 6.06304 13.6043C9.68724 15.6669 18.2406 20.4862 19.3793 20.7018C21.7981 21.1565 26.9962 20.851 28.6347 20.5964C29.4446 20.4716 31.6449 21.0861 33.5708 21.7543C32.131 22.9492 30.4121 24.2501 29.6282 24.5068C29.2473 24.6317 28.2538 24.4608 27.4548 24.3234C25.8204 24.043 24.1311 23.7528 23.141 24.7719C22.036 25.9207 22.6982 28.7974 23.5013 29.7781C24.3298 30.793 26.4235 31.8944 27.5655 32.2383C29.7877 32.8933 32.8605 31.7019 34.2982 31.0427C35.386 32.3813 37.8942 35.4198 39.0989 36.4766C40.6019 37.7998 43.9717 39.7215 45.6315 40.463C46.2778 40.7518 47.3704 41.1131 48.5379 41.4667L53.3749 43.295C53.628 43.4275 53.8198 43.6745 53.9456 44.0302C54.1643 44.6489 54.1203 45.4748 53.8377 46.0831C53.4925 46.8197 52.7183 47.2033 51.9847 47.0959C51.8396 47.0108 51.6766 46.9633 51.5082 46.9564L44.9501 43.505C44.4447 43.2385 43.8218 43.4394 43.5598 43.9521C43.2979 44.4648 43.4945 45.0967 44.0006 45.3625L50.6054 48.8376C50.6253 48.8474 50.646 48.853 50.6659 48.8627C50.7161 49.1278 50.6693 49.312 50.5951 49.5547C50.5449 49.7179 50.4864 49.909 50.4569 50.1302C50.0237 50.9421 49.0432 51.3013 48.2023 50.9344L42.6667 48.4937C42.6419 48.4826 42.6165 48.4784 42.591 48.4693C42.558 48.4575 42.525 48.4449 42.492 48.4372C42.4583 48.4289 42.424 48.4247 42.3903 48.4205C42.3573 48.4163 42.325 48.4107 42.2926 48.4093C42.2576 48.408 42.2232 48.4107 42.1888 48.4135C42.1572 48.4156 42.1256 48.4163 42.0946 48.4219C42.0602 48.4275 42.0272 48.4366 41.9942 48.4456C41.964 48.454 41.933 48.461 41.9035 48.4721C41.8718 48.484 41.8423 48.4993 41.812 48.514C41.7825 48.5286 41.7529 48.5419 41.7247 48.5593C41.6965 48.5761 41.6711 48.597 41.6449 48.6165C41.6174 48.6367 41.5906 48.657 41.5652 48.68C41.5411 48.7023 41.5198 48.7274 41.4978 48.7518C41.4744 48.7783 41.4504 48.8035 41.4297 48.8321C41.4098 48.8593 41.394 48.8892 41.3761 48.9185C41.3617 48.943 41.3452 48.9639 41.3328 48.9897C41.3287 48.9981 41.3273 49.0071 41.3232 49.0155C41.3197 49.0232 41.3142 49.0295 41.3115 49.0371C41.3012 49.0608 41.297 49.0846 41.2888 49.109C41.2764 49.1446 41.2633 49.1801 41.2551 49.2157C41.2475 49.2478 41.2441 49.2806 41.24 49.3134C41.2351 49.3482 41.2296 49.3831 41.229 49.418C41.2276 49.4515 41.2303 49.4849 41.2324 49.5184C41.2345 49.5519 41.2358 49.5854 41.2406 49.6189C41.2461 49.6524 41.2551 49.6851 41.2633 49.7179C41.2716 49.75 41.2792 49.7814 41.2902 49.8128C41.3018 49.8442 41.3163 49.8749 41.3307 49.9049C41.3445 49.9349 41.3582 49.9649 41.3747 49.9928C41.3919 50.022 41.4125 50.0493 41.4325 50.0765C41.4517 50.1037 41.471 50.1302 41.493 50.1553C41.5157 50.1811 41.5418 50.2034 41.5679 50.2271C41.5927 50.2494 41.6161 50.2725 41.6429 50.2927C41.6711 50.3136 41.702 50.3318 41.7329 50.3499C41.755 50.3638 41.7749 50.3799 41.7983 50.3917L43.2738 51.1332C44.1491 51.5552 44.5245 52.6211 44.1099 53.5104C43.9064 53.9471 43.5481 54.277 43.1012 54.4389C42.6605 54.5986 42.1867 54.5742 41.7646 54.3705L37.6151 52.3818L38.7977 50.3464C39.9363 48.394 39.2955 45.8619 37.3703 44.7026L37.3689 44.7019C36.5095 44.1871 35.5379 44.0302 34.6234 44.1844C34.8112 42.3198 33.973 40.4379 32.3139 39.4369C32.3125 39.4355 32.3104 39.4348 32.3084 39.4334C30.6603 38.4513 28.6622 38.5908 27.1502 39.612C26.8497 38.7052 26.244 37.8975 25.3701 37.3708C23.4304 36.2157 20.9277 36.8665 19.7911 38.8203L17.0257 43.5684L10.2572 38.6564C10.2332 38.6389 10.2064 38.6271 10.1809 38.6124C10.1562 38.5978 10.1342 38.5796 10.108 38.5671L2.79157 34.9622C2.28002 34.7104 1.66189 34.9259 1.41368 35.4463C1.16477 35.966 1.37861 36.5924 1.89085 36.8449L9.12893 40.4121L16.0707 45.4504C15.5392 47.2298 16.2494 49.2192 17.9003 50.2069C18.5487 50.594 19.2603 50.7782 19.963 50.7782C20.1892 50.7782 20.4134 50.7524 20.6355 50.7147C20.4402 52.5953 21.2859 54.494 22.9615 55.4998C23.702 55.9421 24.5278 56.1681 25.3694 56.1681C25.7978 56.1681 26.2302 56.1095 26.6572 55.9909C27.1825 55.8451 27.6714 55.6114 28.1135 55.3094C28.4174 56.2106 29.0252 57.0121 29.8964 57.5359C30.5434 57.9224 31.2543 58.1065 31.9564 58.1065C33.348 58.1065 34.7066 57.3839 35.4664 56.085L36.5645 54.194L40.8817 56.2636C41.3995 56.5133 41.9543 56.6396 42.5113 56.6396C42.9431 56.6396 43.3762 56.5643 43.7957 56.4122C44.7624 56.0627 45.5373 55.3505 45.976 54.4068C46.2799 53.7546 46.3837 53.0598 46.3218 52.3895L47.3848 52.8582C47.8737 53.0724 48.3845 53.1728 48.8871 53.1728C50.3696 53.1728 51.7866 52.2946 52.4158 50.8298C52.4728 50.698 52.5017 50.5606 52.5017 50.4169C52.5045 50.3785 52.5402 50.2641 52.5657 50.1804C52.6413 49.9328 52.7431 49.6014 52.7561 49.1725C53.9937 48.9974 55.1269 48.2133 55.7031 46.9822C56.2215 45.8689 56.2923 44.4683 55.8887 43.3264C55.7512 42.9386 55.558 42.603 55.3297 42.3066L59.5108 40.4693C59.5184 40.4658 59.5246 40.4609 59.5322 40.4567C59.5383 40.4539 59.5452 40.4532 59.5514 40.4497L66.8679 36.8442C67.3794 36.5896 67.5933 35.9639 67.3444 35.4442ZM18.9475 48.4017C17.9917 47.8304 17.67 46.5797 18.2296 45.6157L21.5671 39.884C21.9398 39.2444 22.6102 38.8893 23.2984 38.8893C23.647 38.8893 24.0004 38.9807 24.3215 39.1719C25.2711 39.7445 25.5887 40.9931 25.0291 41.955L21.6929 47.6874C21.1319 48.6514 19.8991 48.9709 18.9475 48.4017ZM26.1127 53.9701C25.3873 54.171 24.6406 54.0727 24.0087 53.6953C22.6865 52.9015 22.2671 51.1214 23.0722 49.7284L27.3929 42.3164C27.9347 41.381 28.8994 40.8564 29.8792 40.8564C30.3522 40.8564 30.828 40.9785 31.2612 41.2359C32.5752 42.0304 32.987 43.8042 32.1791 45.1902L27.8612 52.6015C27.4679 53.2803 26.847 53.7664 26.1127 53.9701ZM33.6904 55.0178C33.128 55.9797 31.8945 56.2992 30.9449 55.7314C29.9878 55.1566 29.666 53.9059 30.2285 52.9426L33.5632 47.211C33.9366 46.572 34.6056 46.2177 35.2931 46.2177C35.6431 46.2177 35.9972 46.3098 36.3204 46.503C37.2679 47.075 37.5841 48.3208 37.0231 49.2827L35.6239 51.692C35.3337 51.7645 35.0759 51.9598 34.9384 52.2556C34.8297 52.4892 34.818 52.7418 34.8799 52.9733L33.6904 55.0178Z"
+                                            fill="#1BB1B7" />
+                                    </svg>
+
+                                </div>
+                                <p class="description">Индивидуальный подбор решений</p>
+                            </div>
+                            <div class="icon-item">
+                                <div class="icon">
+                                    <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M35.2426 36.3794C29.1768 36.3794 23.3594 38.789 19.0702 43.0782C14.781 47.3674 12.3713 53.1848 12.3713 59.2507C12.3713 59.5264 12.4809 59.7908 12.6758 59.9858C12.8708 60.1808 13.1352 60.2903 13.4109 60.2903H57.0743C57.35 60.2903 57.6145 60.1808 57.8094 59.9858C58.0044 59.7908 58.1139 59.5264 58.1139 59.2507C58.1139 53.1848 55.7043 47.3674 51.4151 43.0782C47.1259 38.789 41.3085 36.3794 35.2426 36.3794ZM14.4713 58.218C14.7292 52.8837 17.0299 47.8531 20.8963 44.169C24.7628 40.485 29.8986 38.43 35.2392 38.43C40.5797 38.43 45.7155 40.485 49.582 44.169C53.4485 47.8531 55.7491 52.8837 56.007 58.218H14.4713Z"
+                                            fill="#1BB1B7" />
+                                        <path
+                                            d="M34.8614 7.5752C32.257 7.5752 29.711 8.3475 27.5455 9.79446C25.38 11.2414 23.6922 13.298 22.6955 15.7042C21.6988 18.1104 21.438 20.7581 21.9461 23.3125C22.4542 25.8669 23.7084 28.2133 25.55 30.0549C27.3917 31.8965 29.738 33.1507 32.2924 33.6588C34.8468 34.1669 37.4945 33.9061 39.9007 32.9095C42.3069 31.9128 44.3635 30.225 45.8105 28.0594C47.2574 25.8939 48.0298 23.348 48.0298 20.7435C48.017 17.255 46.6255 13.913 44.1587 11.4462C41.6919 8.97945 38.35 7.58798 34.8614 7.5752ZM34.8614 31.8811C32.6682 31.8811 30.5243 31.2308 28.7007 30.0123C26.8771 28.7938 25.4557 27.0619 24.6164 25.0356C23.7771 23.0094 23.5575 20.7797 23.9854 18.6286C24.4133 16.4776 25.4694 14.5017 27.0203 12.9508C28.5711 11.4 30.547 10.3439 32.6981 9.91599C34.8491 9.48812 37.0788 9.70772 39.1051 10.547C41.1313 11.3863 42.8632 12.8077 44.0817 14.6312C45.3002 16.4548 45.9505 18.5988 45.9505 20.792C45.9378 23.7291 44.7654 26.5423 42.6885 28.6191C40.6117 30.696 37.7985 31.8684 34.8614 31.8811Z"
+                                            fill="#1BB1B7" />
+                                        <path
+                                            d="M17.6872 27.7228H19.0733C19.3466 27.7192 19.6075 27.608 19.7995 27.4135C19.9914 27.2189 20.0991 26.9565 20.099 26.6832V14.208C20.1065 14.1365 20.1065 14.0645 20.099 13.9931C21.4207 11.1194 23.5516 8.69341 26.2307 7.01206C28.9099 5.3307 32.0212 4.46694 35.1837 4.52651C38.3461 4.58608 41.4227 5.5664 44.0366 7.34747C46.6506 9.12853 48.6885 11.6331 49.901 14.5545V26.6832C49.8931 26.7569 49.8931 26.8313 49.901 26.905C49.1053 28.8827 47.9278 30.6844 46.4357 32.207C46.334 32.3026 46.2527 32.4178 46.1965 32.5456C46.1404 32.6734 46.1105 32.8111 46.1087 32.9507C46.1069 33.0903 46.1333 33.2288 46.1862 33.3579C46.2391 33.4871 46.3174 33.6043 46.4166 33.7025C46.5158 33.8008 46.6337 33.878 46.7633 33.9297C46.893 33.9814 47.0318 34.0064 47.1713 34.0033C47.3109 34.0002 47.4483 33.9691 47.5756 33.9117C47.7028 33.8543 47.8172 33.7719 47.9119 33.6693C49.6016 31.9647 50.9392 29.9441 51.8486 27.7228H52.3129C54.243 27.7228 56.0939 26.9561 57.4587 25.5914C58.8234 24.2266 59.5901 22.3756 59.5901 20.4456C59.5901 18.5155 58.8234 16.6646 57.4587 15.2998C56.0939 13.9351 54.243 13.1684 52.3129 13.1684H51.5575C50.0998 9.96414 47.7508 7.24715 44.7908 5.34182C41.8309 3.43649 38.3851 2.42334 34.8649 2.42334C31.3447 2.42334 27.8989 3.43649 24.9389 5.34182C21.979 7.24715 19.6299 9.96414 18.1723 13.1684H17.6941C15.7641 13.1684 13.9131 13.9351 12.5483 15.2998C11.1836 16.6646 10.4169 18.5155 10.4169 20.4456C10.4169 22.3756 11.1836 24.2266 12.5483 25.5914C13.9131 26.9561 15.7641 27.7228 17.6941 27.7228H17.6872ZM57.5248 20.4456C57.523 21.8236 56.9747 23.1447 56.0003 24.1191C55.0259 25.0935 53.7048 25.6418 52.3268 25.6436H51.9802V15.2476H52.3129C52.9964 15.2467 53.6734 15.3804 54.3053 15.6411C54.9371 15.9018 55.5114 16.2845 55.9954 16.7672C56.4794 17.2498 56.8635 17.8231 57.1259 18.4543C57.3884 19.0854 57.5239 19.7621 57.5248 20.4456ZM17.6872 15.2476H18.0198V25.6436H17.6872C16.3086 25.6436 14.9864 25.096 14.0116 24.1211C13.0368 23.1463 12.4891 21.8242 12.4891 20.4456C12.4891 19.067 13.0368 17.7448 14.0116 16.77C14.9864 15.7952 16.3086 15.2476 17.6872 15.2476Z"
+                                            fill="#1BB1B7" />
+                                    </svg>
+
+                                </div>
+                                <p class="description">Техническая поддержка инженеров</p>
+                            </div>
+                            <div class="icon-item">
+                                <div class="icon">
+                                    <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M61.2535 22.379L35.6099 3.66615C35.4312 3.53444 35.2151 3.46338 34.9931 3.46338C34.7711 3.46338 34.5549 3.53444 34.3762 3.66615L9.42575 22.379C9.29664 22.4759 9.19184 22.6014 9.11966 22.7458C9.04749 22.8901 9.00991 23.0493 9.00991 23.2107V59.2503C9.009 59.3874 9.03521 59.5233 9.08705 59.6503C9.13888 59.7772 9.21531 59.8926 9.31194 59.9899C9.40857 60.0872 9.52348 60.1644 9.65007 60.217C9.77665 60.2697 9.91241 60.2968 10.0495 60.2968H60.6436C60.9193 60.2968 61.1837 60.1873 61.3787 59.9923C61.5736 59.7974 61.6832 59.533 61.6832 59.2572V23.2176C61.6827 23.0539 61.6435 22.8926 61.5688 22.7468C61.4941 22.6011 61.3861 22.4751 61.2535 22.379ZM51.9802 45.0493H40.8911V34.6533H51.9802V45.0493ZM38.8119 58.2176H28.4158V47.1285H38.8119V58.2176ZM40.8911 47.1285H51.9802V58.2176H40.8911V47.1285ZM51.9802 32.5741H39.8515C39.5758 32.5741 39.3113 32.6836 39.1164 32.8786C38.9214 33.0735 38.8119 33.3379 38.8119 33.6137V45.0493H27.3762C27.1005 45.0493 26.8361 45.1588 26.6411 45.3538C26.4462 45.5488 26.3366 45.8132 26.3366 46.0889V58.2176H19.4059V27.7226H51.9802V32.5741ZM59.604 58.2176H54.0594V26.683C54.0594 26.4073 53.9499 26.1428 53.7549 25.9479C53.56 25.7529 53.2955 25.6434 53.0198 25.6434H18.3663C18.0906 25.6434 17.8262 25.7529 17.6312 25.9479C17.4363 26.1428 17.3267 26.4073 17.3267 26.683V58.2176H11.0891V23.7374L35.0069 5.8008L59.604 23.7444V58.2176Z"
+                                            fill="#1BB1B7" />
+                                    </svg>
+
+                                </div>
+                                <p class="description">Собственный склад и логистика</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+
+
+
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!--  -->
+    <!-- jquary -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
