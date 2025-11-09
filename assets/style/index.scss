@@ -127,7 +127,7 @@ body {
         height: 2508px;
         flex-shrink: 0;
         left: 0;
-        top: 5810px;
+        top: 5920px;
         background-image: url(../images/ending-bg_fon.png);
         background-repeat: no-repeat;
         background-position: center;
@@ -135,9 +135,9 @@ body {
 
         // 
         @media screen and (max-width: 768px) {
-           height: 459px;
-           top: 5018px;
-           background-size: cover;
+            height: 459px;
+            top: 4888px;
+            background-size: cover;
         }
     }
 }
@@ -1713,7 +1713,7 @@ textarea {
         @media screen and (max-width: 768px) {
             display: flex;
             color: #FFF;
-            font-family: Sora;
+            font-family: 'Sora';
             font-size: 28px;
             font-style: normal;
             font-weight: 400;
@@ -1909,13 +1909,23 @@ textarea {
         }
 
         h3 {
-            color: var(--2, #83CACC);
 
-            font-size: 48px;
+            span {
+
+                color: var(--2, #83CACC);
+                font-family: 'Sora';
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+            }
+
+            color: #FFF;
+            font-family: 'Sora';
+            font-size: 40px;
             font-style: normal;
-            font-weight: 300;
+            font-weight: 400;
             line-height: 120%;
-            /* 57.6px */
 
             // 
             @media screen and (max-width: 768px) {
@@ -1924,7 +1934,7 @@ textarea {
                 font-style: normal;
                 font-weight: 300;
                 line-height: 120%;
-                margin-bottom: 32px;
+                margin-bottom: 0;
 
                 // 
                 &::first-letter {
@@ -1946,12 +1956,7 @@ textarea {
 
             // 
             @media screen and (max-width: 768px) {
-                color: #FFF;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 150%;
-                width: 100%;
+                display: none;
 
             }
         }
@@ -2029,6 +2034,14 @@ textarea {
             align-self: stretch;
             border-radius: 28px;
 
+
+            // 
+            &:nth-child(1n) {
+                order: 2;
+            }
+            &:nth-child(2n){
+                order: 1;
+            }
         }
 
 
@@ -2064,7 +2077,10 @@ textarea {
 
         // 
         @media screen and (max-width: 768px) {
-            padding: 14px 28px 36px 28px;
+            padding-top: 32px;
+            padding-right: 28px;
+            padding-left: 28px;
+            padding-bottom: 48px;
         }
 
         .img {
@@ -2077,6 +2093,13 @@ textarea {
                 width: 191px;
                 height: 120px;
                 aspect-ratio: 191/120;
+
+                // 
+                @media screen and (max-width: 768px) {
+                    width: 167px;
+                    height: 105px;
+                    aspect-ratio: 167/105;
+                }
             }
 
             .stars {
@@ -2103,13 +2126,16 @@ textarea {
             font-size: 24px;
             font-style: normal;
             font-weight: 500;
+            font-family: 'Manrope';
+
             line-height: 150%;
             max-width: 309px;
 
             // 
             @media screen and (max-width: 768px) {
-                font-size: 20px;
-                font-weight: 600;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
                 line-height: 150%;
             }
         }
@@ -2123,6 +2149,8 @@ textarea {
 
         .question-block_title {
             margin-bottom: 24px;
+            // @media screen and (max-width: 768px) {
+            // }
         }
 
         .question {
@@ -2148,7 +2176,6 @@ textarea {
 
         // ============================
         .result-question {
-            margin-bottom: 16px;
             display: flex;
             flex-direction: column;
             gap: 10px;

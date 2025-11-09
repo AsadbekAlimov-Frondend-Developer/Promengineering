@@ -107,7 +107,7 @@ body {
   height: 2508px;
   flex-shrink: 0;
   left: 0;
-  top: 5810px;
+  top: 5920px;
   background-image: url(../images/ending-bg_fon.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -116,7 +116,7 @@ body {
 @media screen and (max-width: 768px) {
   .bg_big_images .image_5 {
     height: 459px;
-    top: 5018px;
+    top: 4888px;
     background-size: cover;
   }
 }
@@ -1413,7 +1413,7 @@ textarea {
   .company .mobile-section-title {
     display: flex;
     color: #FFF;
-    font-family: Sora;
+    font-family: "Sora";
     font-size: 28px;
     font-style: normal;
     font-weight: 400;
@@ -1576,12 +1576,20 @@ textarea {
   }
 }
 .results .products_header h3 {
-  color: var(--2, #83CACC);
-  font-size: 48px;
+  color: #FFF;
+  font-family: "Sora";
+  font-size: 40px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 120%;
-  /* 57.6px */
+}
+.results .products_header h3 span {
+  color: var(--2, #83CACC);
+  font-family: "Sora";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
 }
 @media screen and (max-width: 768px) {
   .results .products_header h3 {
@@ -1590,7 +1598,7 @@ textarea {
     font-style: normal;
     font-weight: 300;
     line-height: 120%;
-    margin-bottom: 32px;
+    margin-bottom: 0;
   }
   .results .products_header h3::first-letter {
     text-transform: uppercase;
@@ -1606,12 +1614,7 @@ textarea {
 }
 @media screen and (max-width: 768px) {
   .results .products_header p {
-    color: #FFF;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    width: 100%;
+    display: none;
   }
 }
 .results .swiper-pagination-progressbar-fill {
@@ -1674,6 +1677,12 @@ textarea {
     align-self: stretch;
     border-radius: 28px;
   }
+  .results .products_box:nth-child(1n) {
+    order: 2;
+  }
+  .results .products_box:nth-child(2n) {
+    order: 1;
+  }
 }
 .results .img {
   width: 132px;
@@ -1700,7 +1709,10 @@ textarea {
 }
 @media screen and (max-width: 768px) {
   .results .contend {
-    padding: 14px 28px 36px 28px;
+    padding-top: 32px;
+    padding-right: 28px;
+    padding-left: 28px;
+    padding-bottom: 48px;
   }
 }
 .results .contend .img {
@@ -1713,6 +1725,13 @@ textarea {
   width: 191px;
   height: 120px;
   aspect-ratio: 191/120;
+}
+@media screen and (max-width: 768px) {
+  .results .contend .img img {
+    width: 167px;
+    height: 105px;
+    aspect-ratio: 167/105;
+  }
 }
 .results .contend .img .stars {
   display: flex;
@@ -1734,13 +1753,15 @@ textarea {
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
+  font-family: "Manrope";
   line-height: 150%;
   max-width: 309px;
 }
 @media screen and (max-width: 768px) {
   .results .contend h3 {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
     line-height: 150%;
   }
 }
@@ -1772,7 +1793,6 @@ textarea {
   /* 24px */
 }
 .results .contend .result-question {
-  margin-bottom: 16px;
   display: flex;
   flex-direction: column;
   gap: 10px;
