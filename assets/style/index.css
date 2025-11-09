@@ -1195,6 +1195,7 @@ textarea {
   background-image: url(../images/certificate.png);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   box-shadow: 0 4px 25.3px 0 rgba(0, 0, 0, 0.14) inset;
   position: relative;
 }
@@ -1207,7 +1208,6 @@ textarea {
     gap: 14px;
     align-self: stretch;
     border-radius: 28px;
-    border: 1px solid #26BAC8;
   }
 }
 .certificate .products_box .sertificate_btn {
