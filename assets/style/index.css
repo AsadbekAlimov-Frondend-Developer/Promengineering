@@ -1118,9 +1118,10 @@ textarea {
 }
 @media screen and (max-width: 480px) {
   .certificate .products_header {
-    margin-bottom: 24px;
+    margin-bottom: 28px;
     align-items: start;
     justify-content: start;
+    flex-direction: column;
   }
 }
 .certificate .products_header h3 {
@@ -1134,32 +1135,16 @@ textarea {
 }
 @media screen and (max-width: 480px) {
   .certificate .products_header h3 {
+    width: 100%;
     line-height: 130%;
     font-size: 28px;
     font-style: normal;
     font-weight: 300;
     line-height: 120%;
+    margin-bottom: 32px;
   }
   .certificate .products_header h3::first-letter {
     text-transform: uppercase;
-  }
-}
-.certificate .products_header h3:last-child {
-  color: #FFF;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 130%;
-}
-@media screen and (max-width: 480px) {
-  .certificate .products_header h3:last-child {
-    display: block;
-    color: var(--Color, #83CACC);
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 130%;
-    margin-bottom: 0;
   }
 }
 .certificate .products_header p {
@@ -1172,7 +1157,12 @@ textarea {
 }
 @media screen and (max-width: 480px) {
   .certificate .products_header p {
-    display: none;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    width: 100%;
   }
 }
 .certificate .swiper-pagination-bullets,
@@ -1203,6 +1193,11 @@ textarea {
   justify-content: space-between;
   margin-bottom: 24px;
 }
+@media screen and (max-width: 480px) {
+  .certificate .swiper-wrapper {
+    margin-bottom: 36px;
+  }
+}
 .certificate .products_box {
   width: 307px;
   height: 363px;
@@ -1216,6 +1211,7 @@ textarea {
 @media screen and (max-width: 480px) {
   .certificate .products_box {
     width: 100%;
+    height: 403.133px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1239,6 +1235,18 @@ textarea {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+}
+@media screen and (max-width: 480px) {
+  .certificate .products_box .sertificate_btn {
+    width: 79.832px;
+    height: 81.132px;
+    flex-shrink: 0;
+  }
+  .certificate .products_box .sertificate_btn svg {
+    width: 51.399px;
+    height: 54.459px;
+    flex-shrink: 0;
+  }
 }
 .certificate .img {
   width: 132px;
