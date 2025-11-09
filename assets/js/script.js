@@ -30,8 +30,43 @@ if (window.innerWidth <= 769) {
     }
   });
 }
+// ============================================
 
-// 
+let swiper;
+
+function initSwiper() {
+  if (window.innerWidth <= 769) {
+    swiper = new Swiper('.results_slider', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      pagination: {
+        el: '.certificate_swiper-pagination',
+        clickable: true
+      }
+    });
+  } else {
+    swiper = new Swiper('.results_slider', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.certificate_swiper-pagination',
+        type: 'progressbar',
+      }
+    });
+  }
+}
+
+initSwiper();
+
+window.addEventListener('resize', () => {
+  if (swiper) swiper.destroy(true, true);
+  initSwiper();
+});
+
+//==================================================== 
+
 var $titles = $('.company .section-title');
 
 if ($titles.length) {
