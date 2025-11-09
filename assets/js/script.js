@@ -10,13 +10,23 @@ $('.menu-btn').on('click', function () {
 // burger menu end
 
 
-if (window.innerWidth <= 768) {
+if (window.innerWidth <= 769) {
   new Swiper('.products_slider', {
     slidesPerView: 1,
     spaceBetween: 20,
     loop: true,
     pagination: {
       el: '.product_swiper-pagination',
+    }
+  });
+}
+if (window.innerWidth <= 769) {
+  new Swiper('.certificate_slider', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    pagination: {
+      el: '.certificate_swiper-pagination',
     }
   });
 }
