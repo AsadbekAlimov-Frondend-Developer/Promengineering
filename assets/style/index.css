@@ -115,7 +115,9 @@ body {
 }
 @media screen and (max-width: 768px) {
   .bg_big_images .image_5 {
-    background: none;
+    height: 459px;
+    top: 5018px;
+    background-size: cover;
   }
 }
 
