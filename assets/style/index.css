@@ -2141,9 +2141,15 @@ textarea {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 1585px;
+  margin-left: -130px;
   height: 1px;
   background: linear-gradient(90deg, #032122 0%, #1BB1B7 57.69%, #032122 100%);
+}
+@media screen and (max-width: 768px) {
+  .footer .footer_block::before {
+    background: none;
+  }
 }
 .footer .footer-logo_item {
   display: flex;
@@ -2223,6 +2229,7 @@ textarea {
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
+  text-decoration: underline;
 }
 .footer .footer_ending .end_description {
   color: #FFF;
