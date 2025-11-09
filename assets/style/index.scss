@@ -268,7 +268,10 @@ textarea {
             display: flex;
             flex-direction: column;
             gap: 23px;
-
+            // 
+            img{
+                width: 100%;
+            }
             // 
             a {
                 padding: 0 13px;

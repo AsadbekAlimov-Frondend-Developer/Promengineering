@@ -236,6 +236,9 @@ textarea {
   flex-direction: column;
   gap: 23px;
 }
+.header .mobile-nav_box .nav_list img {
+  width: 100%;
+}
 .header .mobile-nav_box .nav_list a {
   padding: 0 13px;
 }
