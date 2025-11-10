@@ -183,6 +183,7 @@ button {
 
 .btn {
   font-family: "Sora", sans-serif;
+  transition: all 0.5s ease;
 }
 
 h1,
@@ -509,8 +510,11 @@ textarea {
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
+  transition: all 0.2s ease;
   /* 19.2px */
-  transition: all 0.5s ease;
+}
+.hero .hero_block .hero_block-btns .btn:first-child:hover {
+  background: #05696C;
 }
 @media screen and (max-width: 768px) {
   .hero .hero_block .hero_block-btns .btn:first-child {
@@ -833,6 +837,7 @@ textarea {
   line-height: 120%;
   /* 24px */
   margin: 0 auto;
+  transition: all 0.2s ease;
 }
 @media screen and (max-width: 768px) {
   .products .katalog-btn .btn {
@@ -845,6 +850,9 @@ textarea {
     width: 17px;
     height: 17px;
   }
+}
+.products .katalog-btn .btn:hover {
+  background: #05696C;
 }
 
 .suitable {
@@ -2162,6 +2170,14 @@ textarea {
     border-radius: 42px;
     background: linear-gradient(90deg, #02584E -4.33%, #11B5BB 100%);
   }
+}
+.contact .contact_block .contact_btn:disabled:hover {
+  background: #23A5A9;
+  cursor: default;
+}
+.contact .contact_block .contact_btn:not(:disabled):hover {
+  background: #05696C;
+  cursor: pointer;
 }
 .contact .contact_about {
   display: flex;

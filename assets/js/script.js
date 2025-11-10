@@ -77,3 +77,68 @@ if ($titles.length) {
     $(this).html(newText);
   });
 }
+// =================================contact
+$(document).ready(function() {
+    const $form = $('.contact_item');
+    
+    // Agar forma mavjud bo'lmasa, hech narsa qilmaymiz
+    if (!$form.length) return;
+    
+    const $nameInput = $form.find('input[type="text"]');
+    const $phoneInput = $form.find('input[type="number"]');
+    const $checkbox = $('#contact-checkbox');
+    const $submitBtn = $('.contact_btn');
+    
+    // Agar kerakli elementlar bo'lmasa, to'xtatamiz
+    if (!$nameInput.length || !$phoneInput.length || !$checkbox.length || !$submitBtn.length) return;
+
+    $submitBtn.prop('disabled', true);
+
+    let nameTouched = false;
+    let phoneTouched = false;
+
+    function isValid($input) {
+        const val = $input.val().trim();
+        if (!val) return false;
+        if (!$input[0].checkValidity()) return false;
+        if ($input.attr('type') === 'number' && val.length < 9) return false;
+        return true;
+    }
+
+    function validate($input, touched) {
+        if (!touched) return isValid($input);
+        
+        const valid = isValid($input);
+        $input.css({
+            'border': valid ? '1px solid #83CACC' : '1px solid #FF6363',
+            'background': valid ? ' rgba(131, 202, 204, 0.42)' : 'rgba(255, 163, 163, 0.42)'
+        });
+        return valid;
+    }
+
+    function checkForm() {
+        const allValid = isValid($nameInput) && isValid($phoneInput) && $checkbox.is(':checked');
+        
+        if (allValid) {
+            $submitBtn.prop('disabled', false).removeAttr('disabled');
+        } else {
+            $submitBtn.prop('disabled', true).attr('disabled', 'disabled');
+        }
+    }
+
+    $nameInput.on('input blur', function() {
+        nameTouched = true;
+        validate($(this), nameTouched);
+        checkForm();
+    });
+
+    $phoneInput.on('input blur', function() {
+        phoneTouched = true;
+        validate($(this), phoneTouched);
+        checkForm();
+    });
+
+    $checkbox.on('change', checkForm);
+
+   
+});
