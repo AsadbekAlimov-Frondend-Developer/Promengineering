@@ -99,9 +99,9 @@ body {
         }
 
         // 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 376px) {
             height: 726px;
-            top: 2175px;
+            top: 2199px;
             background-image: url(../images/mobile_product-bg.svg);
         }
 
@@ -177,7 +177,7 @@ body {
         height: 514px;
         flex-shrink: 0;
         left: 0;
-        top: 5985px;
+        top: 5994px;
         background-repeat: no-repeat;
         background-position: center;
         z-index: -1;
@@ -1080,6 +1080,7 @@ textarea {
                     font-weight: 400;
                     line-height: 130%;
                     margin-bottom: 0;
+                    width: 70%;
                 }
             }
         }
@@ -1995,7 +1996,9 @@ textarea {
 
             // 
             @media screen and (max-width: 768px) {
+                width: 225px;
                 line-height: 130%;
+                font-family: 'Sora', sans-serif;
                 font-size: 28px;
                 font-style: normal;
                 font-weight: 300;
@@ -2005,6 +2008,16 @@ textarea {
                 // 
                 &::first-letter {
                     text-transform: uppercase;
+                }
+
+                // 
+                span {
+                    color: var(--2, #83CACC);
+                    font-family: 'Sora',sans-serif;
+                    font-size: 28px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%;
                 }
             }
 
