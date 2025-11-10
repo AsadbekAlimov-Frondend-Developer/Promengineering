@@ -584,6 +584,7 @@ textarea {
 
                 // 
                 &:first-child {
+                    position: relative;
                     display: flex;
                     width: 277px;
                     padding: 12px 54px;
@@ -592,31 +593,43 @@ textarea {
                     gap: 10px;
                     flex-shrink: 0;
                     border-radius: 42px;
-                    background: linear-gradient(90deg, #02584E -4.33%, #11B5BB 100%);
+                    background-color: #05696C; // asosiy fon rangi
                     color: #FFF;
-
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 400;
                     line-height: 120%;
-                    transition: all .2s ease;
+                    overflow: hidden;
+                    transition: all .3s ease;
 
-                    // 
-                    &:hover {
-                        background: #05696C;
-                    }
-
-                    /* 19.2px */
-                    // 
-                    // &:hover {
-                    //     background: #05696C;
-                    // }
-
-                    // 
                     @media screen and (max-width: 768px) {
                         width: 100%;
                     }
+
+                    // gradient background :after orqali
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        border-radius: 42px;
+                        background: linear-gradient(90deg, #02584E -4.33%, #11B5BB 100%);
+                        opacity: 1;
+                        transition: opacity 0.4s ease;
+                        z-index: 0;
+                    }
+
+                    // matn ustida turishi uchun
+                    span {
+                        position: relative;
+                        z-index: 1;
+                    }
+
+                    // hover paytida gradient asta yo‘qoladi
+                    &:hover::after {
+                        opacity: 0;
+                    }
                 }
+
 
                 &:last-child {
                     display: inline-flex;
@@ -661,33 +674,45 @@ textarea {
                 margin-bottom: 23px;
             }
 
-            svg {
-                margin-top: -6px;
-            }
+            // svg {
+            //     margin-top: -6px;
+            // }
         }
 
         // 
         .rating_block {
+            position: relative;
             width: 878px;
             height: 192px;
             flex-shrink: 0;
             border-radius: 28px;
-            border: 1px solid #585858;
             background: rgba(255, 255, 255, 0.21);
             box-shadow: 0 4px 25.3px 0 rgba(0, 0, 0, 0.14) inset;
-            backdrop-filter: blur(3.8499999046325684px);
+            backdrop-filter: blur(3.85px);
             display: inline-flex;
             align-items: center;
             justify-content: space-between;
             padding: 43px 34px;
-            padding-right: 43px;
+            overflow: hidden;
 
-            // 
-            @media screen and (max-width: 768px) {
-                width: 100%;
+            // Gradient border uchun
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                border-radius: 28px;
+                padding: 1px; // border qalinligi
+                background: linear-gradient(90deg, #585858, #869F96);
+                -webkit-mask:
+                    linear-gradient(#fff 0 0) content-box,
+                    linear-gradient(#fff 0 0);
+                -webkit-mask-composite: xor;
+                mask-composite: exclude;
+                pointer-events: none;
             }
 
             @media screen and (max-width: 768px) {
+                width: 100%;
                 display: none;
             }
         }
@@ -700,12 +725,13 @@ textarea {
 
             &:last-child {
                 border: none;
-                padding-left: 53px;
+                margin-left: 53px;
+                padding-right: 0;
             }
 
             //
             &:nth-child(2) {
-                padding-left: 51px;
+                margin-left: 51px;
                 padding-right: 27px;
             }
 
@@ -870,31 +896,7 @@ textarea {
             background: #000;
         }
 
-        // 
-        &:nth-child(2) {
-            .contend {
-                padding: 20px 31px 0 62px;
 
-                // 
-                @media screen and (max-width: 768px) {
-                    padding: 14px 28px 36px 28px;
-                }
-            }
-        }
-
-        // 
-        &:nth-child(3) {
-            .contend {
-                padding: 20px 47px 0 61px;
-
-                // 
-                @media screen and (max-width: 768px) {
-                    padding: 14px 28px 36px 28px;
-                }
-            }
-        }
-
-        // 
     }
 
     .img {
@@ -1421,18 +1423,33 @@ textarea {
         @media screen and (max-width: 768px) {
             border: none;
             padding: 0;
+            margin-bottom: 0 !important;
             gap: 18px;
         }
 
         // 
         &:first-child {
             padding-top: 0;
+            margin-bottom: 30px;
+        }
+
+        // 
+        &:nth-child(2) {
+            padding-top: 0;
+            margin-bottom: 30px;
+        }
+
+        // 
+        &:nth-child(3) {
+            padding-top: 0;
+            margin-bottom: 30px;
         }
 
         // 
         &:last-child {
             border: none;
             padding-bottom: 0;
+            padding-top: 0;
         }
 
         // 
@@ -2962,6 +2979,24 @@ textarea {
                 background-image: url(../images/mobile-reason_block-bg-fon.png);
             }
         }
+
+        .image_4 {
+            position: absolute;
+            width: 100%;
+            height: 1834px;
+            flex-shrink: 0;
+            background-image: url(../images/about-certificate_bg-fon.png);
+            flex-shrink: 0;
+            left: 0;
+            top: 2605px;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: -1;
+
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
     }
 
     // 
@@ -3204,6 +3239,14 @@ textarea {
 
     // reason end
     .team {
+        margin-bottom: 435px;
+
+        // 
+        @media screen and (max-width: 768px) {
+            margin-bottom: 58px;
+        }
+
+        // 
         .titile-block {
             display: flex;
             justify-content: space-between;
@@ -3219,7 +3262,7 @@ textarea {
             .section-title {
                 // 
                 color: #FFF;
-                font-family: Sora;
+                font-family: 'Sora', sans-serif;
                 font-size: 40px;
                 font-style: normal;
                 font-weight: 400;
@@ -3227,7 +3270,7 @@ textarea {
 
                 span {
                     color: var(--2, #83CACC);
-                    font-family: Sora;
+                    font-family: 'Sora', sans-serif;
                     font-size: 40px;
                     font-style: normal;
                     font-weight: 400;
@@ -3252,17 +3295,77 @@ textarea {
             }
         }
 
+        // ===================
         // 
-        .block {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            margin-bottom: 297px;
+        .swiper-pagination-progressbar-fill {
+            height: 5px;
+            top: auto;
+            bottom: 0;
+            border-radius: 50px;
+        }
+
+        .team-pagination,
+        .swiper-pagination-bullets,
+        .swiper-pagination-fraction,
+        .swiper-pagination-custom {
+            position: unset !important;
+        }
+
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background-color: #D9D9D9;
+            opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #1BB1B7;
+        }
+
+        .swiper-pagination-progressbar-fill {
+            background-color: #1BB1B7;
+            left: auto;
+            width: 100%;
+            border-radius: 50px;
+
+        }
+
+        .team-pagination {
+            position: relative !important;
+            width: 111px;
+            margin: 0 auto;
+            background: #545454;
+            height: 5px;
+            border-radius: 50px;
+            display: none;
 
             // 
             @media screen and (max-width: 768px) {
-                margin-bottom: 58px;
+                display: block;
             }
+        }
+
+        // ====================
+        // .block {
+        // margin-bottom: 297px;
+
+        // // 
+        // @media screen and (max-width: 768px) {
+        //     margin-bottom: 58px;
+        // }
+        // }
+
+        .swiper-wrapper {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            @media screen and (max-width: 768px) {
+                margin-bottom: 34px;
+            }
+
+
+
 
             // 
             .box {
@@ -3285,7 +3388,6 @@ textarea {
                     width: 208px;
                     height: 230px;
                     aspect-ratio: 104/115;
-                    margin-bottom: 16px;
                 }
 
                 img {
@@ -3317,6 +3419,7 @@ textarea {
 
                 // 
                 .job_description {
+                    width: 230px;
                     color: #FFF;
                     font-family: 'Manrope', sans-serif;
                     font-size: 16px;
