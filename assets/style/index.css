@@ -175,6 +175,10 @@ body {
   }
 }
 
+input {
+  outline: none;
+}
+
 button {
   outline: none;
   border: none;
@@ -750,6 +754,9 @@ textarea {
     width: 100%;
     height: 218px;
   }
+}
+.products .img source {
+  width: 100%;
 }
 .products .img img {
   width: 100%;

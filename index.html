@@ -269,7 +269,12 @@
                 <div class="products_block">
                     <div class="products_box">
                         <div class="img">
-                            <img src="assets/images/products_img1.png" alt="">
+                            <picture>
+                                <source media="(min-width:768px)" srcset="assets/images/products_img1.png">
+                                <source media="(max-width:768px)" srcset="assets/images/products_img1-mobile.png">
+                                <img src="assets/images/products_img1.png" alt="Flowers">
+                            </picture>
+                            <!-- <img src="assets/images/products_img1.png" alt=""> -->
                         </div>
                         <div class="contend">
                             <h3>Смазочно — охлаждающие жидкости (СОЖ)</h3>
@@ -1142,7 +1147,7 @@
                             <a href="#">Политика конфиденциальности</a>
                             <a href="#">Пользовательское соглашение</a>
                         </div>
-                        <a href="#" class="end_description">© 2025 Coolantway. Все права защищены.</a>
+                        <p class="end_description">© 2025 Coolantway. Все права защищены.</p>
                     </div>
                 </div>
             </div>
