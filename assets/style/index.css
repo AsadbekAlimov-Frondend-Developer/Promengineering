@@ -22,6 +22,18 @@ h3 {
   font-family: "Sora", sans-serif;
 }
 
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  /* Chrome, Safari, Edge, Opera */
+  margin: 0;
+}
+
 body {
   scroll-behavior: smooth;
   background: #000;
@@ -71,7 +83,7 @@ body {
   height: 1834px;
   flex-shrink: 0;
   left: 0;
-  top: 1890px;
+  top: 1898px;
   background-image: url(../images/product-bg.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -85,8 +97,8 @@ body {
 @media screen and (max-width: 375px) {
   .bg_big_images .image_3 {
     height: 726px;
-    top: 2200px;
-    background-image: url(../images/mobile_product-bg.png);
+    top: 2175px;
+    background-image: url(../images/mobile_product-bg.svg);
   }
 }
 .bg_big_images .image_4 {
@@ -95,7 +107,7 @@ body {
   height: 2208px;
   flex-shrink: 0;
   left: 0;
-  top: 4290px;
+  top: 4286px;
   background-image: url(../images/certificate_bg.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -112,7 +124,7 @@ body {
   height: 2508px;
   flex-shrink: 0;
   left: 0;
-  top: 5920px;
+  top: 5819px;
   background-image: url(../images/ending-bg_fon.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -152,7 +164,7 @@ body {
   height: 514px;
   flex-shrink: 0;
   left: 0;
-  top: 5957px;
+  top: 5985px;
   background-repeat: no-repeat;
   background-position: center;
   z-index: -1;
@@ -498,6 +510,7 @@ textarea {
   font-weight: 400;
   line-height: 120%;
   /* 19.2px */
+  transition: all 0.5s ease;
 }
 @media screen and (max-width: 768px) {
   .hero .hero_block .hero_block-btns .btn:first-child {
@@ -933,7 +946,11 @@ textarea {
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  margin-bottom: 24px;
+}
+@media screen and (max-width: 768px) {
+  .suitable .swiper-wrapper {
+    margin-bottom: 24px;
+  }
 }
 .suitable .products_box {
   width: 420px;
@@ -955,7 +972,8 @@ textarea {
     gap: 14px;
     align-self: stretch;
     border-radius: 28px;
-    border: 1px solid #26BAC8;
+    border: 1px solid #0D0D0D;
+    background: rgba(19, 19, 19, 0.5);
   }
 }
 .suitable .img {
@@ -1268,7 +1286,6 @@ textarea {
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  margin-bottom: 24px;
 }
 @media screen and (max-width: 768px) {
   .certificate .swiper-wrapper {
@@ -1709,7 +1726,12 @@ textarea {
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  margin-bottom: 24px;
+  margin-bottom: 87px;
+}
+@media screen and (max-width: 768px) {
+  .results .swiper-wrapper {
+    margin-bottom: 32px;
+  }
 }
 .results .products_box {
   width: 420px;

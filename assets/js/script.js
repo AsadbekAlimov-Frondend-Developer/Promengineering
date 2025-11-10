@@ -50,6 +50,7 @@ function initSwiper() {
       slidesPerView: 3,
       spaceBetween: 30,
       loop: true,
+      grabCursor: true,
       pagination: {
         el: '.certificate_swiper-pagination',
         type: 'progressbar',
