@@ -3055,7 +3055,7 @@ textarea {
             background-image: url(../images/contact_footer-bg-fon.png);
             flex-shrink: 0;
             left: 0;
-            top: 5365px;
+            top: 5325px;
             background-repeat: no-repeat;
             background-position: center;
             z-index: -1;
@@ -3078,7 +3078,7 @@ textarea {
             background-position: center;
             z-index: -1;
             display: none;
-            
+
             @media screen and (max-width: 768px) {
                 display: block;
                 background-image: url(../images/about_mobile-footer_fon.png);
@@ -3274,16 +3274,20 @@ textarea {
                 &:first-child {
                     padding-top: 0;
                 }
+
                 // 
-                &:nth-child(2){
+                &:nth-child(2) {
                     padding-top: 0;
                 }
-                &:nth-child(3){
+
+                &:nth-child(3) {
                     padding-top: 0;
                 }
-                &:nth-child(4){
+
+                &:nth-child(4) {
                     padding-top: 0;
                 }
+
                 &:last-child {
                     padding-bottom: 0;
                 }
@@ -3829,6 +3833,11 @@ textarea {
                 border: none;
                 background: none;
             }
+        }
+
+        // 
+        .checkbox {
+            margin-bottom: 23px;
         }
 
     }

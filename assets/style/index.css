@@ -2552,7 +2552,7 @@ textarea {
   background-image: url(../images/contact_footer-bg-fon.png);
   flex-shrink: 0;
   left: 0;
-  top: 5365px;
+  top: 5325px;
   background-repeat: no-repeat;
   background-position: center;
   z-index: -1;
@@ -3179,6 +3179,9 @@ textarea {
     border: none;
     background: none;
   }
+}
+.about .contact .checkbox {
+  margin-bottom: 23px;
 }
 .about .footer .footer_block::after {
   margin-top: 1px;
