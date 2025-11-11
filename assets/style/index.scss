@@ -476,7 +476,7 @@ textarea {
 // 
 .section-title {
     color: #83CACC;
-
+    font-family: 'Sora', sans-serif;
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
@@ -735,7 +735,7 @@ textarea {
             }
 
             //  
-            h3 {
+            h2 {
                 width: fit-content;
                 color: #83CACC;
 
@@ -801,7 +801,7 @@ textarea {
     }
 
     .item {
-        h3 {
+        .section-title {
             color: #83CACC;
             font-size: 40px;
             font-style: normal;
@@ -933,7 +933,7 @@ textarea {
             padding: 14px 28px 36px 28px;
         }
 
-        h3 {
+        h2 {
             color: #FFF;
             font-size: 24px;
             font-style: normal;
@@ -1083,7 +1083,7 @@ textarea {
             justify-content: start;
         }
 
-        h3 {
+        h2 {
             color: #83CACC;
             text-align: right;
             font-family: 'Sora', sans-serif;
@@ -1240,7 +1240,7 @@ textarea {
             padding: 40px 29px 20px 29px;
         }
 
-        h3 {
+        h2 {
             color: #FFF;
             font-size: 24px;
             font-style: normal;
@@ -1518,7 +1518,7 @@ textarea {
             flex-direction: column;
         }
 
-        h3 {
+        h2 {
             width: 384px;
             color: var(--2, #83CACC);
 
@@ -1694,7 +1694,7 @@ textarea {
             padding: 14px 28px 36px 28px;
         }
 
-        h3 {
+        h2 {
             color: #FFF;
             font-size: 24px;
             font-style: normal;
@@ -2032,7 +2032,7 @@ textarea {
             flex-direction: column;
         }
 
-        h3 {
+        h2 {
 
             span {
 
@@ -2261,7 +2261,7 @@ textarea {
             }
         }
 
-        h3 {
+        h2 {
             color: #FFF;
             font-size: 24px;
             font-style: normal;
@@ -3051,7 +3051,7 @@ textarea {
             background-image: url(../images/about-certificate_bg-fon.png);
             flex-shrink: 0;
             left: 0;
-            top: 2605px;
+            top: 2696px;
             background-repeat: no-repeat;
             background-position: center;
             z-index: -1;
@@ -3499,6 +3499,17 @@ textarea {
                     gap: 12px;
                 }
             }
+        }
+    }
+
+    // 
+    // team end
+    .certificate {
+        margin-bottom: 176px;
+
+        // 
+        @media screen and (max-width: 768px) {
+            margin-bottom: 62px;
         }
     }
 }

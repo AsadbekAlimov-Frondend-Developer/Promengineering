@@ -404,6 +404,7 @@ textarea {
 
 .section-title {
   color: #83CACC;
+  font-family: "Sora", sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
@@ -618,7 +619,7 @@ textarea {
   margin-left: 51px;
   padding-right: 27px;
 }
-.hero .hero_block .rating-box h3 {
+.hero .hero_block .rating-box h2 {
   width: -moz-fit-content;
   width: fit-content;
   color: #83CACC;
@@ -667,7 +668,7 @@ textarea {
     margin-bottom: 36px;
   }
 }
-.products .item h3 {
+.products .item .section-title {
   color: #83CACC;
   font-size: 40px;
   font-style: normal;
@@ -676,7 +677,7 @@ textarea {
   margin-bottom: 24px;
 }
 @media screen and (max-width: 768px) {
-  .products .item h3 {
+  .products .item .section-title {
     color: var(--Color, #83CACC);
     font-size: 28px;
     font-style: normal;
@@ -777,7 +778,7 @@ textarea {
     padding: 14px 28px 36px 28px;
   }
 }
-.products .contend h3 {
+.products .contend h2 {
   color: #FFF;
   font-size: 24px;
   font-style: normal;
@@ -786,7 +787,7 @@ textarea {
   max-width: 309px;
 }
 @media screen and (max-width: 768px) {
-  .products .contend h3 {
+  .products .contend h2 {
     font-size: 20px;
     font-weight: 600;
     line-height: 150%;
@@ -900,7 +901,7 @@ textarea {
     justify-content: start;
   }
 }
-.suitable .products_header h3 {
+.suitable .products_header h2 {
   color: #83CACC;
   text-align: right;
   font-family: "Sora", sans-serif;
@@ -910,17 +911,17 @@ textarea {
   line-height: 130%;
 }
 @media screen and (max-width: 768px) {
-  .suitable .products_header h3 {
+  .suitable .products_header h2 {
     display: none;
     text-align: start;
     font-size: 28px;
     line-height: 130%;
   }
-  .suitable .products_header h3::first-letter {
+  .suitable .products_header h2::first-letter {
     text-transform: uppercase;
   }
 }
-.suitable .products_header h3:last-child {
+.suitable .products_header h2:last-child {
   color: #FFF;
   font-size: 40px;
   font-style: normal;
@@ -928,7 +929,7 @@ textarea {
   line-height: 130%;
 }
 @media screen and (max-width: 768px) {
-  .suitable .products_header h3:last-child {
+  .suitable .products_header h2:last-child {
     display: block;
     color: var(--Color, #83CACC);
     font-size: 28px;
@@ -1033,7 +1034,7 @@ textarea {
     padding: 40px 29px 20px 29px;
   }
 }
-.suitable .contend h3 {
+.suitable .contend h2 {
   color: #FFF;
   font-size: 24px;
   font-style: normal;
@@ -1042,7 +1043,7 @@ textarea {
   max-width: 309px;
 }
 @media screen and (max-width: 768px) {
-  .suitable .contend h3 {
+  .suitable .contend h2 {
     font-size: 20px;
     font-weight: 600;
     line-height: 150%;
@@ -1262,7 +1263,7 @@ textarea {
     flex-direction: column;
   }
 }
-.certificate .products_header h3 {
+.certificate .products_header h2 {
   width: 384px;
   color: var(--2, #83CACC);
   font-size: 48px;
@@ -1272,7 +1273,7 @@ textarea {
   /* 57.6px */
 }
 @media screen and (max-width: 768px) {
-  .certificate .products_header h3 {
+  .certificate .products_header h2 {
     width: 100%;
     line-height: 130%;
     font-size: 28px;
@@ -1281,7 +1282,7 @@ textarea {
     line-height: 120%;
     margin-bottom: 32px;
   }
-  .certificate .products_header h3::first-letter {
+  .certificate .products_header h2::first-letter {
     text-transform: uppercase;
   }
 }
@@ -1409,7 +1410,7 @@ textarea {
     padding: 14px 28px 36px 28px;
   }
 }
-.certificate .contend h3 {
+.certificate .contend h2 {
   color: #FFF;
   font-size: 24px;
   font-style: normal;
@@ -1418,7 +1419,7 @@ textarea {
   max-width: 309px;
 }
 @media screen and (max-width: 768px) {
-  .certificate .contend h3 {
+  .certificate .contend h2 {
     font-size: 20px;
     font-weight: 600;
     line-height: 150%;
@@ -1687,7 +1688,7 @@ textarea {
     flex-direction: column;
   }
 }
-.results .products_header h3 {
+.results .products_header h2 {
   color: #FFF;
   font-family: "Sora", sans-serif;
   font-size: 40px;
@@ -1695,7 +1696,7 @@ textarea {
   font-weight: 400;
   line-height: 120%;
 }
-.results .products_header h3 span {
+.results .products_header h2 span {
   color: var(--2, #83CACC);
   font-family: "Sora", sans-serif;
   font-size: 40px;
@@ -1704,7 +1705,7 @@ textarea {
   line-height: 120%;
 }
 @media screen and (max-width: 768px) {
-  .results .products_header h3 {
+  .results .products_header h2 {
     width: 225px;
     line-height: 130%;
     font-family: "Sora", sans-serif;
@@ -1714,10 +1715,10 @@ textarea {
     line-height: 120%;
     margin-bottom: 0;
   }
-  .results .products_header h3::first-letter {
+  .results .products_header h2::first-letter {
     text-transform: uppercase;
   }
-  .results .products_header h3 span {
+  .results .products_header h2 span {
     color: var(--2, #83CACC);
     font-family: "Sora", sans-serif;
     font-size: 28px;
@@ -1875,7 +1876,7 @@ textarea {
   max-width: 23px;
   max-height: 23px;
 }
-.results .contend h3 {
+.results .contend h2 {
   color: #FFF;
   font-size: 24px;
   font-style: normal;
@@ -1885,7 +1886,7 @@ textarea {
   max-width: 309px;
 }
 @media screen and (max-width: 768px) {
-  .results .contend h3 {
+  .results .contend h2 {
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
@@ -2545,7 +2546,7 @@ textarea {
   background-image: url(../images/about-certificate_bg-fon.png);
   flex-shrink: 0;
   left: 0;
-  top: 2605px;
+  top: 2696px;
   background-repeat: no-repeat;
   background-position: center;
   z-index: -1;
@@ -2905,4 +2906,12 @@ textarea {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+.about .certificate {
+  margin-bottom: 176px;
+}
+@media screen and (max-width: 768px) {
+  .about .certificate {
+    margin-bottom: 62px;
+  }
 }/*# sourceMappingURL=index.css.map */
