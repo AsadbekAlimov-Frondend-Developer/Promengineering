@@ -1,16 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "Manrope";
-  src: url("../fonts/Jura,Manrope,Poppins,Sora/Manrope/Manrope-VariableFont_wght.ttf") format("truetype");
-  font-weight: 100 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Sora", sans-serif;
-  src: url("../fonts/Jura,Manrope,Poppins,Sora/Sora/Sora-VariableFont_wght.ttf") format("truetype");
-  font-weight: 100 900;
-  font-style: normal;
-}
 /* Endi fontlarni qo‘llaymiz */
 body {
   font-family: "Manrope", sans-serif;
@@ -1226,7 +1214,7 @@ textarea {
 }
 .reason .icon-item .description {
   color: #FFF;
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -1865,7 +1853,7 @@ textarea {
   display: flex;
   gap: 8px;
   color: #FFF;
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -1881,7 +1869,7 @@ textarea {
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   line-height: 150%;
   max-width: 309px;
 }
@@ -1904,7 +1892,7 @@ textarea {
 }
 .results .contend .question {
   color: #FFF;
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
@@ -1913,7 +1901,7 @@ textarea {
 }
 .results .contend .answer {
   color: #FFF;
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1927,7 +1915,7 @@ textarea {
 }
 .results .contend .result-text {
   color: #FFF;
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
@@ -1936,7 +1924,7 @@ textarea {
 }
 .results .contend .result-description {
   color: #FFF;
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -2040,7 +2028,7 @@ textarea {
 .contact .contact_block .contact_description {
   color: #FFF;
   width: 454px;
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -2080,7 +2068,7 @@ textarea {
 .contact .contact_block .contact_input::-moz-placeholder {
   color: #FFF;
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -2089,7 +2077,7 @@ textarea {
 .contact .contact_block .contact_input::placeholder {
   color: #FFF;
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -2164,7 +2152,7 @@ textarea {
 }
 .contact .contact_block .checkbox label {
   color: #FFF;
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -2269,7 +2257,7 @@ textarea {
 .contact .contact_about .about_item .description {
   width: 271px;
   color: #FFF;
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -2297,7 +2285,7 @@ textarea {
     padding-top: 0;
   }
 }
-.footer .footer_block::before {
+.footer .footer_block::after {
   content: "";
   position: absolute;
   top: 0;
@@ -2308,7 +2296,7 @@ textarea {
   background: linear-gradient(90deg, #032122 0%, #1BB1B7 57.69%, #032122 100%);
 }
 @media screen and (max-width: 768px) {
-  .footer .footer_block::before {
+  .footer .footer_block::after {
     background: none;
   }
 }
@@ -2329,7 +2317,7 @@ textarea {
 .footer .footer-logo_item .location {
   width: 360px;
   color: #FFF;
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -2359,7 +2347,7 @@ textarea {
 .footer .footer_item li a {
   color: #FFF;
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -2400,7 +2388,7 @@ textarea {
 }
 .footer .footer_contact a {
   color: #FFF;
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -2426,7 +2414,7 @@ textarea {
     display: block;
     width: 210px;
     color: #FFF;
-    font-family: "Manrope";
+    font-family: "Manrope", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -2464,7 +2452,7 @@ textarea {
   width: fit-content;
   color: #FFF;
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -2474,7 +2462,7 @@ textarea {
 }
 .footer .footer_ending .end_description {
   color: #FFF;
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -2554,6 +2542,44 @@ textarea {
 @media screen and (max-width: 768px) {
   .about .bg_big_images .image_4 {
     display: none;
+  }
+}
+.about .bg_big_images .image_5 {
+  position: absolute;
+  width: 100%;
+  height: 1834px;
+  flex-shrink: 0;
+  background-image: url(../images/contact_footer-bg-fon.png);
+  flex-shrink: 0;
+  left: 0;
+  top: 5443px;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .about .bg_big_images .image_5 {
+    display: none;
+  }
+}
+.about .bg_big_images .image_6 {
+  position: absolute;
+  width: 100%;
+  height: 514px;
+  flex-shrink: 0;
+  flex-shrink: 0;
+  left: 0;
+  top: 4993px;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .about .bg_big_images .image_6 {
+    display: block;
+    background-image: url(../images/about_mobile-footer_fon.png);
+    filter: none;
   }
 }
 .about .main-header {
@@ -2718,6 +2744,15 @@ textarea {
   gap: 30px;
 }
 .about .reason .box_item .icon-item:first-child {
+  padding-top: 0;
+}
+.about .reason .box_item .icon-item:nth-child(2) {
+  padding-top: 0;
+}
+.about .reason .box_item .icon-item:nth-child(3) {
+  padding-top: 0;
+}
+.about .reason .box_item .icon-item:nth-child(4) {
   padding-top: 0;
 }
 .about .reason .box_item .icon-item:last-child {
@@ -2917,6 +2952,53 @@ textarea {
 }
 .about .stages {
   margin-bottom: 337px;
+  position: relative;
+}
+.about .stages::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/about_stages-bg-fon.png);
+  background-position: calc(50% + 206px) center;
+  background-repeat: no-repeat;
+  background-size: 1200px 920px;
+  filter: brightness(1) blur(80px);
+  z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .about .stages::after {
+    background-position: -160px;
+    background-size: 428px 608px;
+    filter: none;
+    opacity: 0.8;
+  }
+}
+.about .stages::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: calc(50% + 206px) center;
+  background-size: 1200px 920px;
+  filter: brightness(1) blur(80px);
+  z-index: -1;
+  background: none;
+}
+@media screen and (max-width: 768px) {
+  .about .stages::before {
+    background-image: url(../images/about_stages-bg-fon.png);
+    background-position: 0px 269px;
+    background-repeat: no-repeat;
+    background-size: 728px 1008px;
+    margin-top: 622px;
+    filter: none;
+    opacity: 0.8;
+  }
 }
 @media screen and (max-width: 768px) {
   .about .stages {
@@ -2925,6 +3007,7 @@ textarea {
 }
 .about .stages .block {
   display: flex;
+  flex-wrap: wrap;
   align-items: start;
   justify-content: space-between;
 }
@@ -2932,6 +3015,12 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 329px;
+}
+@media screen and (max-width: 768px) {
+  .about .stages .contend {
+    gap: 0;
+    margin-bottom: 36px;
+  }
 }
 .about .stages .contend .title h2 {
   width: 336px;
@@ -2941,6 +3030,26 @@ textarea {
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
+}
+.about .stages .contend .title h2 br {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .about .stages .contend .title h2 {
+    width: 212px;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+  }
+  .about .stages .contend .title h2 br {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about .stages .contend .description-block {
+    display: none;
+  }
 }
 .about .stages .contend .description-block p {
   width: 358px;
@@ -3000,6 +3109,15 @@ textarea {
        column-gap: 172px;
   row-gap: 86px;
 }
+@media screen and (max-width: 768px) {
+  .about .stages .item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 56px;
+    align-self: stretch;
+  }
+}
 .about .stages .item .box:nth-child(2) p {
   width: 301px;
 }
@@ -3010,17 +3128,6 @@ textarea {
   width: 235px;
 }
 .about .stages .item .number {
-  color: rgba(255, 255, 255, 0.21);
-  leading-trim: both;
-  text-edge: cap;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #000;
-  font-family: "Sora", sans-serif;
-  font-size: 171px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%;
-  /* 205.2px */
   margin-bottom: 22px;
 }
 .about .stages .item h2 {
@@ -3032,6 +3139,13 @@ textarea {
   line-height: 120%;
   margin-bottom: 5px;
 }
+@media screen and (max-width: 768px) {
+  .about .stages .item h2 {
+    font-size: 28px;
+    line-height: 120%;
+    margin-bottom: 6px;
+  }
+}
 .about .stages .item p {
   width: 242px;
   color: #FFF;
@@ -3040,4 +3154,32 @@ textarea {
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
+}
+@media screen and (max-width: 768px) {
+  .about .stages .item p {
+    width: 315px !important;
+  }
+}
+.about .contact {
+  margin-bottom: 298px;
+}
+@media screen and (max-width: 768px) {
+  .about .contact {
+    margin-bottom: 127px;
+  }
+}
+.about .contact .contact_block {
+  margin-bottom: 0;
+  border-radius: 40px;
+  border: 1px solid #26BAC8;
+  background: rgba(0, 0, 0, 0.64);
+}
+@media screen and (max-width: 768px) {
+  .about .contact .contact_block {
+    border: none;
+    background: none;
+  }
+}
+.about .footer .footer_block::after {
+  margin-top: 1px;
 }/*# sourceMappingURL=index.css.map */
