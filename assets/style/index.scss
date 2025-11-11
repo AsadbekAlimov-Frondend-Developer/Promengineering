@@ -999,6 +999,7 @@ textarea {
     // katalog-btn
     .katalog-btn {
         .btn {
+            position: relative;
             display: flex;
             width: 344px;
             padding: 12px 54px;
@@ -1007,7 +1008,7 @@ textarea {
             gap: 22px;
             flex-shrink: 0;
             border-radius: 49px;
-            background: linear-gradient(90deg, #02584E -4.33%, #11B5BB 100%);
+            background: #05696C;
             color: #FFF;
 
             font-size: 20px;
@@ -1031,10 +1032,28 @@ textarea {
                 }
             }
 
+            // gradient background :after orqali
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                border-radius: 42px;
+                background: linear-gradient(90deg, #02584E -4.33%, #11B5BB 100%);
+                opacity: 1;
+                transition: opacity 0.4s ease;
+                z-index: 0;
+            }
 
-            // 
-            &:hover {
-                background: #05696C;
+            // matn ustida turishi uchun
+            span,
+            svg {
+                position: relative;
+                z-index: 1;
+            }
+
+            // hover paytida gradient asta yo‘qoladi
+            &:hover::after {
+                opacity: 0;
             }
 
         }
@@ -2585,6 +2604,7 @@ textarea {
 
         // 
         .contact_btn {
+            position: relative;
             width: 100%;
             display: flex;
             height: 54px;
@@ -2592,43 +2612,87 @@ textarea {
             justify-content: center;
             align-items: center;
             gap: 10px;
-            align-self: stretch;
             border-radius: 36px;
-            background: linear-gradient(90deg, #02584E -4.33%, #11B5BB 100%);
+            overflow: hidden;
             color: #FFF;
             font-family: 'Sora', sans-serif;
             font-size: 16px;
-            font-style: normal;
             font-weight: 400;
             line-height: 120%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1;
 
-            // 
-            @media screen and (max-width: 768px) {
-                display: flex;
-                width: 100%;
-                height: 52px;
-                padding: 12px 54px;
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
-                border-radius: 42px;
+            // 🔹 Gradient — doimiy fon (pastda turadi)
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                border-radius: inherit;
                 background: linear-gradient(90deg, #02584E -4.33%, #11B5BB 100%);
+                z-index: 0;
+                opacity: 1;
+                transition: opacity 0.4s ease;
             }
 
+            // 🔹 Oddiy fon (#05696C yoki disabled uchun #23A5A9)
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                border-radius: inherit;
+                background: linear-gradient(90deg, #02584E -4.33%, #11B5BB 100%);
+                z-index: 0;
+                opacity: 0;
+                transition: opacity 0.4s ease, background 0.4s ease;
+            }
 
+            // 🔹 Matn va ikonalar ustida turadi
+            span,
+            svg {
+                position: relative;
+                z-index: 2;
+            }
 
-            // 
-            &:disabled:hover {
-                background: #23A5A9;
+            // 🔹 Hover bo‘lganda — gradient asta yo‘qoladi
+            &:not(:disabled):hover::before {
+                opacity: 0; // gradient sekin yo‘qoladi
+            }
+
+            &:not(:disabled):hover::after {
+                opacity: 1; // hover foni silliq paydo bo‘ladi
+                background: #05696C;
+            }
+
+            // 🔹 Disabled holatda hoverda #23A5A9 chiqadi
+            &:disabled {
                 cursor: default;
             }
 
-            &:not(:disabled):hover {
-                background: #05696C;
-                cursor: pointer;
+            &:disabled:hover::before {
+                opacity: 0; // gradient sekin yo‘qoladi
             }
 
+            &:disabled:hover::after {
+                opacity: 1; // sekin chiqadi
+                background: #23A5A9;
+            }
+
+            // 🔹 Mobil uchun
+            @media screen and (max-width: 768px) {
+                height: 52px;
+                padding: 12px 54px;
+                border-radius: 42px;
+
+                &::before,
+                &::after {
+                    border-radius: 42px;
+                }
+            }
         }
+
+
+
 
         // 
     }
