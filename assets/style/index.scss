@@ -267,8 +267,12 @@ textarea {
 
 .header {
     padding-top: 31px;
+    margin-bottom: 162px;
+
+    // 
 
     @media screen and (max-width: 768px) {
+        margin-bottom: 33px;
         padding-top: 45px;
     }
 
@@ -343,12 +347,7 @@ textarea {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        margin-bottom: 162px;
 
-        // 
-        @media screen and (max-width: 768px) {
-            margin-bottom: 33px;
-        }
     }
 
     // 
