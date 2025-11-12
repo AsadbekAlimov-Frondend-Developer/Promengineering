@@ -85,10 +85,11 @@ body {
         }
 
         // 
-        @media screen and (max-width: 376px) {
+        @media screen and (max-width: 480px) {
             height: 726px;
-            top: 2199px;
+            top: 2214px;
             background-image: url(../images/mobile_product-bg.svg);
+            background-size: cover;
         }
 
     }
@@ -1021,7 +1022,6 @@ textarea {
             @media screen and (max-width: 768px) {
                 width: 100%;
                 border-radius: 49px;
-                background: linear-gradient(90deg, #02584E -4.33%, #11B5BB 100%);
                 gap: 10px;
 
                 // 
@@ -1178,6 +1178,7 @@ textarea {
         // 
         @media screen and (max-width: 768px) {
             margin-bottom: 24px;
+            gap: 0;
         }
 
         // 
@@ -1280,7 +1281,7 @@ textarea {
             max-width: 313px;
             display: flex;
             gap: 8px;
-            align-items: start;
+            align-items: center;
 
             // 
             @media screen and (max-width: 768px) {
@@ -1300,7 +1301,6 @@ textarea {
             svg {
                 min-width: 8px;
                 min-height: 8px;
-                margin-top: 9px;
 
                 // @media screen and (max-width: 768px) {
 

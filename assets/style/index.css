@@ -82,11 +82,12 @@ body {
     background-image: none;
   }
 }
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 480px) {
   .bg_big_images .image_3 {
     height: 726px;
-    top: 2199px;
+    top: 2214px;
     background-image: url(../images/mobile_product-bg.svg);
+    background-size: cover;
   }
 }
 .bg_big_images .image_4 {
@@ -856,7 +857,6 @@ textarea {
   .products .katalog-btn .btn {
     width: 100%;
     border-radius: 49px;
-    background: linear-gradient(90deg, #02584E -4.33%, #11B5BB 100%);
     gap: 10px;
   }
   .products .katalog-btn .btn svg {
@@ -987,6 +987,7 @@ textarea {
 @media screen and (max-width: 768px) {
   .suitable .swiper-wrapper {
     margin-bottom: 24px;
+    gap: 0;
   }
 }
 .suitable .products_box {
@@ -1075,7 +1076,7 @@ textarea {
   max-width: 313px;
   display: flex;
   gap: 8px;
-  align-items: start;
+  align-items: center;
 }
 @media screen and (max-width: 768px) {
   .suitable .contend li {
@@ -1091,7 +1092,6 @@ textarea {
 .suitable .contend li svg {
   min-width: 8px;
   min-height: 8px;
-  margin-top: 9px;
 }
 .suitable .katalog-btn .btn {
   display: flex;
