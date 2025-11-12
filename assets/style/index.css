@@ -3290,6 +3290,14 @@ textarea {
   margin-top: 1px;
 }
 
+.catalog .header {
+  margin-bottom: 120px;
+}
+@media screen and (max-width: 768px) {
+  .catalog .header {
+    margin-bottom: 36px;
+  }
+}
 .catalog .catalog_about {
   margin-bottom: 219px;
 }
@@ -3610,6 +3618,12 @@ textarea {
   border: 1px solid #0D0D0D;
   background: rgba(0, 0, 0, 0.44);
   position: relative;
+  transition: all 0.2s ease;
+}
+.catalog .catalog_about .products_block .box:hover {
+  border-radius: 32px;
+  border: 1px solid #0D0D0D;
+  background: rgba(101, 101, 101, 0.44);
 }
 .catalog .catalog_about .products_block .box .content {
   padding: 0 38.5px;

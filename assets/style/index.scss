@@ -3969,6 +3969,15 @@ textarea {
 
 // about end
 .catalog {
+    .header {
+        margin-bottom: 120px;
+
+        // 
+        @media screen and (max-width: 768px) {
+            margin-bottom: 36px;
+        }
+    }
+
     .catalog_about {
         margin-bottom: 219px;
 
@@ -4342,6 +4351,13 @@ textarea {
                 border: 1px solid #0D0D0D;
                 background: rgba(0, 0, 0, 0.44);
                 position: relative;
+                transition: all .2s ease;
+                // 
+                &:hover {
+                    border-radius: 32px;
+                    border: 1px solid #0D0D0D;
+                    background: rgba(101, 101, 101, 0.44);
+                }
 
                 // 
                 .content {
