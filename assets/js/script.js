@@ -164,3 +164,4 @@ if (window.innerWidth <= 769) {
 $(document).ready(function () {
   $('#phone_number').inputmask("+7 (999) 999-99-99");
 });
+ 
