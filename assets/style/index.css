@@ -1137,6 +1137,7 @@ textarea {
   display: flex;
   align-items: center;
   gap: 140px;
+  justify-content: space-between;
 }
 .reason .section-title {
   text-align: center;
@@ -1575,8 +1576,6 @@ textarea {
 @media screen and (max-width: 768px) {
   .company .block .box {
     padding-bottom: 14px;
-    padding-right: 17px;
-    padding-left: 26px;
     padding-top: 8px;
   }
 }
@@ -2146,8 +2145,8 @@ textarea {
   cursor: pointer;
   background-color: #E1E1E1;
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 65%;
+  background-position: 54.5% 54%;
+  background-size: 50%;
 }
 @media screen and (max-width: 768px) {
   .contact .contact_block #contact-checkbox {
@@ -2980,7 +2979,7 @@ textarea {
   width: 100%;
   height: 100%;
 }
-.about .team .swiper-wrapper .box h4 {
+.about .team .swiper-wrapper .box h2 {
   color: #FFF;
   font-family: "Manrope", sans-serif;
   font-size: 24px;
@@ -3012,6 +3011,10 @@ textarea {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+.about .team .swiper-wrapper .box .icons img {
+  width: 24px;
+  height: 24px;
 }
 .about .certificate {
   margin-bottom: 176px;
@@ -3285,4 +3288,397 @@ textarea {
 }
 .about .footer .footer_block::after {
   margin-top: 1px;
+}
+
+.catalog .catalog_about {
+  margin-bottom: 219px;
+}
+@media screen and (max-width: 768px) {
+  .catalog .catalog_about {
+    margin-bottom: 118px;
+  }
+}
+.catalog .catalog_about .catalog_title {
+  color: var(--2, #83CACC);
+  font-family: "Sora", sans-serif;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 768px) {
+  .catalog .catalog_about .catalog_title {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 120%;
+    margin-bottom: 36px;
+  }
+}
+.catalog .catalog_about .catalog_block {
+  display: flex;
+  align-items: start;
+  gap: 25px;
+}
+@media screen and (max-width: 768px) {
+  .catalog .catalog_about .catalog_block {
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+}
+.catalog .catalog_about .catalog_category {
+  width: 312px;
+}
+@media screen and (max-width: 768px) {
+  .catalog .catalog_about .catalog_category {
+    display: none;
+  }
+}
+.catalog .catalog_about .catalog_category .category_title {
+  color: #FFF;
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 20px;
+}
+.catalog .catalog_about .catalog_category .checkbox_blocks {
+  display: flex;
+  margin-left: 25px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  align-self: stretch;
+}
+.catalog .catalog_about .catalog_category .checkboxes {
+  margin-bottom: 50px;
+}
+.catalog .catalog_about .catalog_category .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.catalog .catalog_about .catalog_category .checkbox input[type=radio] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 12px;
+  height: 12px;
+  min-width: 12px;
+  border: 1px solid white;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  margin: 0;
+  box-sizing: border-box;
+}
+.catalog .catalog_about .catalog_category .checkbox input[type=radio]:checked::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2.5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #1BB1B7;
+}
+.catalog .catalog_about .catalog_category .checkbox input[type=radio]:hover {
+  border-color: rgba(255, 255, 255, 0.8);
+}
+.catalog .catalog_about .catalog_category .checkbox input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  border: 1px solid white;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  margin: 0;
+  background-color: white;
+}
+.catalog .catalog_about .catalog_category .checkbox input[type=checkbox]:checked {
+  background-color: #1BB1B7;
+  border-color: #1BB1B7;
+}
+.catalog .catalog_about .catalog_category .checkbox input[type=checkbox]:checked::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.catalog .catalog_about .catalog_category .checkbox label {
+  color: #FFF;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.catalog .catalog_about .catalog_category .checkbox_item {
+  width: 100%;
+  border-bottom: 2px solid transparent;
+  -o-border-image: linear-gradient(90deg, #1BB1B7, #001314);
+     border-image: linear-gradient(90deg, #1BB1B7, #001314);
+  border-image-slice: 1;
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+}
+.catalog .catalog_about .catalog_category .checkbox_item:nth-child(5) {
+  border-bottom: none !important;
+  -o-border-image: none !important;
+     border-image: none !important;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.catalog .catalog_about .catalog_category .category_result .result_product {
+  color: #FFF;
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 27px;
+  /* 30px */
+}
+.catalog .catalog_about .catalog_category .category_result .result_product span {
+  color: var(--2, #83CACC);
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.catalog .catalog_about .catalog_category .category_result .btns {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+.catalog .catalog_about .catalog_category .category_result .btns .btn:first-child {
+  position: relative;
+  display: flex;
+  width: 266px;
+  height: 50px;
+  font-family: "Sora", sans-serif;
+  padding: 12px 54px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 42px;
+  background-color: #05696C;
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  .catalog .catalog_about .catalog_category .category_result .btns .btn:first-child {
+    width: 100%;
+  }
+}
+.catalog .catalog_about .catalog_category .category_result .btns .btn:first-child::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 42px;
+  background: linear-gradient(90deg, #02584E -4.33%, #11B5BB 100%);
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+.catalog .catalog_about .catalog_category .category_result .btns .btn:first-child span {
+  position: relative;
+  z-index: 1;
+}
+.catalog .catalog_about .catalog_category .category_result .btns .btn:first-child:hover::after {
+  opacity: 0;
+}
+.catalog .catalog_about .catalog_category .category_result .btns .btn:last-child {
+  width: 266px;
+  color: #FFF;
+  text-align: center;
+  font-family: "Sora", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 150%;
+  /* 24px */
+}
+.catalog .catalog_about .catalog_products {
+  width: 984px;
+}
+.catalog .catalog_about .catalog_products .search_item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 54px;
+}
+.catalog .catalog_about .catalog_products .search {
+  width: 760px;
+  position: relative;
+}
+.catalog .catalog_about .catalog_products .search input {
+  width: 100%;
+  height: 40px;
+  padding: 8px 20px 8px 28px;
+  flex-shrink: 0;
+  border-radius: 47px;
+  border: 1px solid #FFF;
+  color: white;
+  background: transparent;
+}
+.catalog .catalog_about .catalog_products .search input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.53);
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.catalog .catalog_about .catalog_products .search input::placeholder {
+  color: rgba(255, 255, 255, 0.53);
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.catalog .catalog_about .catalog_products .search button {
+  position: absolute;
+  right: 20px;
+  border: none;
+  background: none;
+  top: 0;
+  bottom: 0;
+}
+.catalog .catalog_about .catalog_products .sort button {
+  display: flex;
+  width: 200px;
+  height: 40px;
+  padding: 8px 35px;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 45px;
+  border: 1px solid #FFF;
+  background: transparent;
+  color: #FFF;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.catalog .catalog_about .products_block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 24px;
+  flex-grow: 1;
+}
+@media screen and (max-width: 768px) {
+  .catalog .catalog_about .products_block {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+.catalog .catalog_about .products_block .box {
+  border-radius: 32px;
+  border: 1px solid #0D0D0D;
+  background: rgba(0, 0, 0, 0.44);
+  position: relative;
+}
+.catalog .catalog_about .products_block .box .content {
+  padding: 0 38.5px;
+}
+.catalog .catalog_about .products_block .box .products_title {
+  color: #FFF;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  margin-bottom: 12px;
+}
+.catalog .catalog_about .products_block .box .products_description {
+  color: #FFF;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 8px;
+}
+.catalog .catalog_about .products_block .box ul {
+  margin-bottom: 12px;
+}
+.catalog .catalog_about .products_block .box li {
+  color: #FFF;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  list-style: inside;
+}
+.catalog .catalog_about .products_block .box .product_certificate p {
+  color: #FFF;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  margin-bottom: 93px;
+}
+.catalog .catalog_about .products_block .box .product_certificate p span {
+  color: #FFF;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.catalog .catalog_about .products_block .box .product_btn {
+  display: flex;
+  width: 287px;
+  height: 44px;
+  padding: 12px 54px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 53px;
+  border: 1px solid #073739;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #FFF;
+  font-family: "Sora", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
 }/*# sourceMappingURL=index.css.map */

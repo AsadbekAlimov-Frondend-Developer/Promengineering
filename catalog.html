@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promengineering</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css" rel="stylesheet">
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <!--  -->
+    <link rel="stylesheet" href="assets/style/index.css">
+</head>
+
+<body>
+    <div class="wrapper catalog">
+        <header class="header">
+            <div class="container">
+                <div class="navbar_blocks active">
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/navbar_logo.svg" alt="logo">
+                    </a>
+                    <div class="nav_box">
+                        <ul class="nav_item">
+                            <li class="nav_list">
+                                <a href="about.html">О компании</a>
+                            </li>
+
+                            <li class="nav_list">
+                                <a href="#">Продукция</a>
+                            </li>
+                            <li class="nav_list">
+                                <a href="#">Услуги</a>
+                            </li>
+                            <li class="nav_list">
+                                <a href="#">Контакты</a>
+                            </li>
+                        </ul>
+                        <div class="nav_contacts">
+                            <a href="tel:+74689127007" class="phone">
+                                <span>+7 958 642-73-92</span>
+                            </a>
+                            <div class="icons">
+                                <a href="#" class="icon">
+                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <mask id="mask0_0_192" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5"
+                                            y="5" width="24" height="24">
+                                            <rect x="5" y="5" width="24" height="23.7241" fill="url(#pattern0_0_192)" />
+                                        </mask>
+                                        <g mask="url(#mask0_0_192)">
+                                            <rect x="5" y="5" width="24" height="24" fill="white" />
+                                        </g>
+                                        <defs>
+                                            <pattern id="pattern0_0_192" patternContentUnits="objectBoundingBox"
+                                                width="1" height="1">
+                                                <use xlink:href="#image0_0_192"
+                                                    transform="matrix(0.0114943 0 0 0.0116279 -0.091954 -0.0813953)" />
+                                            </pattern>
+                                            <image id="image0_0_192" width="100" height="100" preserveAspectRatio="none"
+                                                xlink:href="data:image/png;base64,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" />
+                                        </defs>
+                                    </svg>
+                                </a>
+                                <a href="#" class="icon">
+                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <mask id="mask0_0_196" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5"
+                                            y="4" width="24" height="24">
+                                            <rect x="5" y="4" width="24" height="24" fill="url(#pattern0_0_196)" />
+                                        </mask>
+                                        <g mask="url(#mask0_0_196)">
+                                            <rect x="5" y="4" width="24" height="24" fill="white" />
+                                        </g>
+                                        <defs>
+                                            <pattern id="pattern0_0_196" patternContentUnits="objectBoundingBox"
+                                                width="1" height="1">
+                                                <use xlink:href="#image0_0_196"
+                                                    transform="translate(-0.0319149 -0.0319149) scale(0.0106383)" />
+                                            </pattern>
+                                            <image id="image0_0_196" width="100" height="100" preserveAspectRatio="none"
+                                                xlink:href="data:image/png;base64,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" />
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <div class="menu-btn active">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46"
+                                fill="none">
+                                <line x1="13" y1="15" x2="33.5" y2="15" stroke="white" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <line x1="13" y1="22.5" x2="33.5" y2="22.5" stroke="white" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <line x1="13" y1="30" x2="33.5" y2="30" stroke="white" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- mobile menu  -->
+                <div class="hamburger nav-mobile_menu">
+                    <div class="mobile-navbar_blocks">
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/navbar_logo.svg" alt="logo">
+                        </a>
+
+                        <div class="menu">
+
+                            <div class="menu-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46"
+                                    fill="none">
+                                    <path d="M16.0977 16.0919L29.0056 28.9999" stroke="#1BB1B7" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <path d="M16.0938 28.9999L29.0017 16.0919" stroke="#1BB1B7" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-nav_box">
+                        <ul class="nav_item">
+                            <li class="nav_list">
+                                <a href="about.html">О компании</a>
+                                <img src="assets/images/nav_menu-border.png" alt="nav_menu-border">
+                            </li>
+
+                            <li class="nav_list">
+                                <a href="#">Продукция</a>
+                                <img src="assets/images/nav_menu-border.png" alt="nav_menu-border">
+                            </li>
+                            <li class="nav_list">
+                                <a href="#">Услуги</a>
+                                <img src="assets/images/nav_menu-border.png" alt="nav_menu-border">
+                            </li>
+                            <li class="nav_list">
+                                <a href="#">Контакты</a>
+                                <img src="assets/images/nav_menu-border.png" alt="nav_menu-border">
+                            </li>
+                        </ul>
+                        <!-- <div class="nav_contacts">
+                            <div class="phone">
+                                <span>+7 958 642-73-92</span>
+                            </div>
+                            <div class="icons">
+                                 <div class="icon">
+                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <mask id="mask0_0_192" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5"
+                                            y="5" width="24" height="24">
+                                            <rect x="5" y="5" width="24" height="23.7241" fill="url(#pattern0_0_192)" />
+                                        </mask>
+                                        <g mask="url(#mask0_0_192)">
+                                            <rect x="5" y="5" width="24" height="24" fill="white" />
+                                        </g>
+                                        <defs>
+                                            <pattern id="pattern0_0_192" patternContentUnits="objectBoundingBox"
+                                                width="1" height="1">
+                                                <use xlink:href="#image0_0_192"
+                                                    transform="matrix(0.0114943 0 0 0.0116279 -0.091954 -0.0813953)" />
+                                            </pattern>
+                                            <image id="image0_0_192" width="100" height="100" preserveAspectRatio="none"
+                                                xlink:href="data:image/png;base64,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" />
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <div class="icon">
+                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <mask id="mask0_0_196" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5"
+                                            y="4" width="24" height="24">
+                                            <rect x="5" y="4" width="24" height="24" fill="url(#pattern0_0_196)" />
+                                        </mask>
+                                        <g mask="url(#mask0_0_196)">
+                                            <rect x="5" y="4" width="24" height="24" fill="white" />
+                                        </g>
+                                        <defs>
+                                            <pattern id="pattern0_0_196" patternContentUnits="objectBoundingBox"
+                                                width="1" height="1">
+                                                <use xlink:href="#image0_0_196"
+                                                    transform="translate(-0.0319149 -0.0319149) scale(0.0106383)" />
+                                            </pattern>
+                                            <image id="image0_0_196" width="100" height="100" preserveAspectRatio="none"
+                                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAGjElEQVR4nO2dXahVRRTHf6lXk4pKoqxI81pWLybYU1FBaZRWEqQSGRWWQRRilEZlSS8qFWZREUmJH2k+FfVSQhR9YUqpgaZlH2omll9p2dXrmZhYNy6ne8+Zs/fMnDX77D/8Xy537z1rrbP3zPqYNVCiRIkSJUoUFycCo4DJwGxgOfAFsBHYBuwDOoT75G8b5X+WyzWT5B72XiUaRD9gNDALWA0cAYwnHgPWAfOAMcCAZgurFX2BscBS4LBHA9TjIWCJGKdPs5WgAUOB+cDOiEYwvXCHvDl2TC2HdmAh8LcCQ5gqHpW35mJaABcAK4HjChRv6rATWCE/nsKhv0zSPidoE4l/AXOKtEK7HvhegWJNTm4FriNhtMkkWVGgTOORr8obnxSGimNmCsp1wHASwY3AAQVKM4G5HxiHctwhy0bTIuwE7kEpphdwvjAOrMgqTBXmKVCMaTLnogSPKlCGUcKZzTbGlBb9TJleaHUxtZmrqWMKlGCU0epkfGxjtLfI0tbkWBIPi+mBF9npM574ZSyP/gUFwppEuCBGoLCcxHFmJWRA0uaftygQ0iTG70KF7ucoEM4kSlv54hXDE00uGUVJLq+Zx7cUCGUS55s+8+CdCgQyidPqcIQPg7yhQBhTEC7ykflrpfzGAeCHgF8Eq8sheQwyX4GSTGB+DcwALuwm96CA8+bcPOWdGioKTQDaAr1lwOU15D8l0MpyR9ay1bEKFGc882fgMeBMRx1sCjSOa7MYZKkCBRpP4Yv3gQny1jeCHwONaXGjxugfuQo9VAh8QY6lZlvAfM8fcn9nXKVAoSYjN0nBxUnkj06EHOcVRY5bdQCrZJ+HL4zVFN/6WIGSjQN/kYqXc/GPaYHH/qHrQAYq3bdhPEzSjWBuYDmOuIblRylQuumBB2WTT9ZJutH9hCsjyDTSZSCTFSjfVE3S94ujlgV2J9QaYHOD162NINtEl4E8qcAIncDbMkmfkM0O/3rDMyQXYe/5YoPXH4wg5xMuA1ne5ODeQg8lNENl0uy672sNhivOjiSv3ctYF581wRBfScXfQPJjqjheXfd+KcNbdnUkuT9xGcw3ET9L73r0Hc6Sz1z3Z7yc8ZN3byQdbHAZzE+BB7FbfIfz8Idbgd+qnvNsjvs9E8kgNvdSF3sDbgOb5rkk5jTZ81f9LJvHyYN3IhnE/ojqosPzZ8kuEi7DP24CdvXwTB+bZzZHMoh1wKMZZIOr49MgBtVIDdhch4/mNx2aDPK7hwftAU7HP27u5a2wfMRjlY3R9MnykZRZT7y3oiLhdl8YF9EgTpP6Rk8Pexo42YOCJgC/1jCGDav4xEMRDbIhtmN4QCZ1Gx87NcNbsazGvY+Lv+AbiyIaxMkxrKWEPLQT5QfAA3V6UvWRlny9vRVdq7e7CIPPIxrEKXQyO2I9lHUQ75TJeorkwLfWuc4a43bCYX9EgzzuMqBJEQfUKCvAbQGNcU5keWyEIdkElZGobUiMiSzPyNRTuJMDG+TBiLI4p3AtPlKgfNOE9hWvRJTFucjB4ikFyjc98E/g0nD2iFpt45Qt7MKVCpRveuFBWZGFwJ6IctQq9O6xlPSQAuWbGrTJqMEejTE48o+qoVJSxGkxyrlfciy+erfEGrfdlVbo7QjviQ+RBzGrba7JMkAbwtiuQNnGkfukxWBWVOfjQ3FnnorLFDvFrQTOyCDr9hSW7qlu+twN3NJgxUqMcXXk3fRp8boCBZuMXOX4ttyXUuhnROKNA3ZJQUQtrIkwjk5JD3vBCgWKNTm5TD5N1bgh4vO9ob1b0XLKPCx1XPaNuUT6f/ko6nAJ+ZyPZ2ioijeJ0ikRlWXDy7cKhDOJcWvIs0dsu7qyxR/OrHjeiNojnlcgqEmEzxEBbZErM0yijNYmFvE2Q1XJmwIwaiPl7iWXZatx/sej4ts0BbY+qpzk+Y9WF3fTZMxUoAijhA+jBKG7HpgEqOZAly5MT+QET9MKRx51oTwUTCHGRy5YNk1MGTdtNZXFTymy87g2xUOL+xXw6NWKtP5I7ujV6oBkvT0fKXBLjEBhLLTJKuxwwsd3D6CAaJdTAlLI0XdK2tV7pk8jhsm3WOOZJEeljPYiWhBDxMPdocAQ22UsueumioA+0n57cVWvqxhV6Iul1jZTP/ZWQF9gNDALWO35s3ZMuhLNkxVTISfq0Bggu6YmSvWGbbHxqbTv2CaJsg7hXvnbevmfJXLNRNlgWRqgRIkSJUpQVPwD7n8xO9l+g4AAAAAASUVORK5CYII=" />
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="catalog_about">
+            <div class="container">
+                <h2 class="catalog_title">Продукция</h2>
+                <!--  -->
+                <div class="catalog_block">
+                    <div class="catalog_category">
+
+                        <div class="checkboxes">
+                            <div class="checkbox_item">
+                                <div class="category_title">
+                                    <h3>Категории</h3>
+                                </div>
+                                <div class="checkbox_blocks">
+                                    <div class="checkbox">
+                                        <input type="radio" name="category" id="category1">
+                                        <label for="category1">СОЖ</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <input type="radio" name="category" id="category2">
+                                        <label for="category2">Штамповочные разделители</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <input type="radio" name="category" id="category3">
+                                        <label for="category3">Антикоррозионные составы</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <input type="radio" name="category" id="category4">
+                                        <label for="category4">Индустриальные масла</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+
+                            <div class="checkbox_item">
+                                <div class="category_title">
+                                    <h3>Назначение</h3>
+                                </div>
+                                <div class="checkbox_blocks">
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="category" id="category2_1">
+                                        <label for="category2_1">Резка / сверление</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="category" id="category2_2">
+                                        <label for="category2_2">Фрезеровка / токарные работы</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="category" id="category2_3">
+                                        <label for="category2_3">Шлифование / полировка</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="category" id="category2_4">
+                                        <label for="category2_4">Защита от коррозии</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="category" id="category2_5">
+                                        <label for="category2_5">Подготовка поверхности</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="checkbox_item">
+                                <div class="category_title">
+                                    <h3>Типы основы</h3>
+                                </div>
+                                <div class="checkbox_blocks">
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="category" id="category3_1">
+                                        <label for="category3_1">Водорастворимые</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="category" id="category3_2">
+                                        <label for="category3_2">Масляные</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="category" id="category3_3">
+                                        <label for="category3_3">Испаряющиеся</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="checkbox_item">
+                                <div class="category_title">
+                                    <h3>Форма выпуска</h3>
+                                </div>
+                                <div class="checkbox_blocks">
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="category" id="category4_1">
+                                        <label for="category4_1">Канистра 20 л</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="category" id="category4_2">
+                                        <label for="category4_2">Бочка 200 л</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="category" id="category4_3">
+                                        <label for="category4_3">Еврокуб 1000 л</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="checkbox_item">
+                                <div class="checkbox_blocks">
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="category" id="category5_1">
+                                        <label for="category5_1">Наличие сертификатов</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="category_result">
+                            <p class="result_product">Найдено: <span>56 товаров</span></p>
+                            <div class="btns">
+                                <button class="btn"><span>Применить</span></button>
+                                <button class="btn">Сбросить параметры</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog_products">
+                        <div class="search_item">
+                            <div class="search">
+                                <input type="text" placeholder="Поиск...">
+                                <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none">
+                                        <path
+                                            d="M17.9419 17.0575L14.0302 13.1466C15.1639 11.7854 15.7293 10.0395 15.6086 8.27214C15.488 6.50475 14.6906 4.85192 13.3823 3.65748C12.074 2.46304 10.3557 1.81895 8.58462 1.8592C6.81357 1.89945 5.12622 2.62094 3.87358 3.87358C2.62094 5.12622 1.89945 6.81357 1.8592 8.58462C1.81895 10.3557 2.46304 12.074 3.65748 13.3823C4.85192 14.6906 6.50475 15.488 8.27214 15.6086C10.0395 15.7293 11.7854 15.1639 13.1466 14.0302L17.0575 17.9419C17.1156 17.9999 17.1845 18.046 17.2604 18.0774C17.3363 18.1089 17.4176 18.125 17.4997 18.125C17.5818 18.125 17.6631 18.1089 17.739 18.0774C17.8149 18.046 17.8838 17.9999 17.9419 17.9419C17.9999 17.8838 18.046 17.8149 18.0774 17.739C18.1089 17.6631 18.125 17.5818 18.125 17.4997C18.125 17.4176 18.1089 17.3363 18.0774 17.2604C18.046 17.1845 17.9999 17.1156 17.9419 17.0575ZM3.12469 8.74969C3.12469 7.63717 3.45459 6.54963 4.07267 5.62461C4.69076 4.69958 5.56926 3.97861 6.5971 3.55287C7.62493 3.12712 8.75593 3.01573 9.84707 3.23277C10.9382 3.44981 11.9405 3.98554 12.7272 4.77221C13.5138 5.55888 14.0496 6.56116 14.2666 7.65231C14.4837 8.74345 14.3723 9.87445 13.9465 10.9023C13.5208 11.9301 12.7998 12.8086 11.8748 13.4267C10.9497 14.0448 9.86221 14.3747 8.74969 14.3747C7.25836 14.373 5.82858 13.7799 4.77404 12.7253C3.71951 11.6708 3.12634 10.241 3.12469 8.74969Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <!--  -->
+                            <div class="sort">
+                                <button><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        viewBox="0 0 20 20" fill="none">
+                                        <path
+                                            d="M11.225 6.27502C11.3422 6.39206 11.501 6.4578 11.6666 6.4578C11.8323 6.4578 11.9911 6.39206 12.1083 6.27502L12.7083 5.67502V14.1667C12.7083 14.3324 12.7741 14.4914 12.8914 14.6086C13.0086 14.7258 13.1675 14.7917 13.3333 14.7917C13.4991 14.7917 13.658 14.7258 13.7752 14.6086C13.8925 14.4914 13.9583 14.3324 13.9583 14.1667V5.67502L14.5583 6.27502C14.6155 6.33643 14.6845 6.38568 14.7612 6.41984C14.8378 6.454 14.9206 6.47237 15.0045 6.47385C15.0884 6.47533 15.1718 6.45989 15.2496 6.42846C15.3275 6.39702 15.3981 6.35023 15.4575 6.29088C15.5168 6.23154 15.5636 6.16084 15.5951 6.08302C15.6265 6.00519 15.6419 5.92184 15.6405 5.83792C15.639 5.754 15.6206 5.67124 15.5864 5.59457C15.5523 5.51791 15.503 5.4489 15.4416 5.39169L13.775 3.72502C13.6578 3.60798 13.4989 3.54224 13.3333 3.54224C13.1677 3.54224 13.0088 3.60798 12.8916 3.72502L11.225 5.39169C11.1079 5.50887 11.0422 5.66773 11.0422 5.83335C11.0422 5.99898 11.1079 6.15783 11.225 6.27502ZM7.29163 14.325L7.89163 13.725C7.94885 13.6636 8.01785 13.6144 8.09452 13.5802C8.17118 13.546 8.25394 13.5277 8.33786 13.5262C8.42178 13.5247 8.50514 13.5401 8.58296 13.5716C8.66079 13.603 8.73148 13.6498 8.79083 13.7092C8.85018 13.7685 8.89697 13.8392 8.9284 13.917C8.95984 13.9948 8.97527 14.0782 8.97379 14.1621C8.97231 14.246 8.95394 14.3288 8.91978 14.4055C8.88562 14.4821 8.83637 14.5511 8.77496 14.6084L7.1083 16.275C6.99111 16.3921 6.83226 16.4578 6.66663 16.4578C6.50101 16.4578 6.34215 16.3921 6.22496 16.275L4.5583 14.6084C4.49689 14.5511 4.44764 14.4821 4.41348 14.4055C4.37932 14.3288 4.36095 14.246 4.35947 14.1621C4.35799 14.0782 4.37343 13.9948 4.40486 13.917C4.4363 13.8392 4.48308 13.7685 4.54243 13.7092C4.60178 13.6498 4.67248 13.603 4.7503 13.5716C4.82812 13.5401 4.91148 13.5247 4.9954 13.5262C5.07932 13.5277 5.16208 13.546 5.23875 13.5802C5.31541 13.6144 5.38441 13.6636 5.44163 13.725L6.04163 14.325V5.83335C6.04163 5.66759 6.10748 5.50862 6.22469 5.39141C6.3419 5.2742 6.50087 5.20835 6.66663 5.20835C6.83239 5.20835 6.99136 5.2742 7.10857 5.39141C7.22578 5.50862 7.29163 5.66759 7.29163 5.83335V14.325Z"
+                                            fill="#1BB1B7" />
+                                    </svg>Сортировать
+                                </button>
+                            </div>
+                        </div>
+                        <div class="products_block">
+                            <div class="box">
+                                <div class="img">
+                                    <img src="assets/images/catalog_products.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <h3 class="products_title">Coolway 2010</h3>
+                                    <p class="products_description">Водорастворимая СОЖ для токарных и фрезерных
+                                        операций.</p>
+                                    <ul>
+                                        <li>высокая стойкость к окислению</li>
+                                        <li>высокая стойкость к окислению</li>
+                                    </ul>
+                                    <div class="product_certificate">
+                                        <p>Сертификаты: <span>ISO 9001</span></p>
+                                    </div>
+                                </div>
+                                <a href="#" class="product_btn">Подробнее</a>
+                            </div>
+                            <div class="box">
+                                <div class="img">
+                                    <img src="assets/images/catalog_products.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <h3 class="products_title">Coolway 2010</h3>
+                                    <p class="products_description">Водорастворимая СОЖ для токарных и фрезерных
+                                        операций.</p>
+                                    <ul>
+                                        <li>высокая стойкость к окислению</li>
+                                        <li>высокая стойкость к окислению</li>
+                                    </ul>
+                                    <div class="product_certificate">
+                                        <p>Сертификаты: <span>ISO 9001</span></p>
+                                    </div>
+                                </div>
+                                <a href="#" class="product_btn">Подробнее</a>
+                            </div>
+                            <div class="box">
+                                <div class="img">
+                                    <img src="assets/images/catalog_products.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <h3 class="products_title">Coolway 2010</h3>
+                                    <p class="products_description">Водорастворимая СОЖ для токарных и фрезерных
+                                        операций.</p>
+                                    <ul>
+                                        <li>высокая стойкость к окислению</li>
+                                        <li>высокая стойкость к окислению</li>
+                                    </ul>
+                                    <div class="product_certificate">
+                                        <p>Сертификаты: <span>ISO 9001</span></p>
+                                    </div>
+                                </div>
+                                <a href="#" class="product_btn">Подробнее</a>
+                            </div>
+                            <div class="box">
+                                <div class="img">
+                                    <img src="assets/images/catalog_products.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <h3 class="products_title">Coolway 2010</h3>
+                                    <p class="products_description">Водорастворимая СОЖ для токарных и фрезерных
+                                        операций.</p>
+                                    <ul>
+                                        <li>высокая стойкость к окислению</li>
+                                        <li>высокая стойкость к окислению</li>
+                                    </ul>
+                                    <div class="product_certificate">
+                                        <p>Сертификаты: <span>ISO 9001</span></p>
+                                    </div>
+                                </div>
+                                <a href="#" class="product_btn">Подробнее</a>
+                            </div>
+                            <div class="box">
+                                <div class="img">
+                                    <img src="assets/images/catalog_products.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <h3 class="products_title">Coolway 2010</h3>
+                                    <p class="products_description">Водорастворимая СОЖ для токарных и фрезерных
+                                        операций.</p>
+                                    <ul>
+                                        <li>высокая стойкость к окислению</li>
+                                        <li>высокая стойкость к окислению</li>
+                                    </ul>
+                                    <div class="product_certificate">
+                                        <p>Сертификаты: <span>ISO 9001</span></p>
+                                    </div>
+                                </div>
+                                <a href="#" class="product_btn">Подробнее</a>
+                            </div>
+                            <div class="box">
+                                <div class="img">
+                                    <img src="assets/images/catalog_products.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <h3 class="products_title">Coolway 2010</h3>
+                                    <p class="products_description">Водорастворимая СОЖ для токарных и фрезерных
+                                        операций.</p>
+                                    <ul>
+                                        <li>высокая стойкость к окислению</li>
+                                        <li>высокая стойкость к окислению</li>
+                                    </ul>
+                                    <div class="product_certificate">
+                                        <p>Сертификаты: <span>ISO 9001</span></p>
+                                    </div>
+                                </div>
+                                <a href="#" class="product_btn">Подробнее</a>
+                            </div>
+                            <div class="box">
+                                <div class="img">
+                                    <img src="assets/images/catalog_products.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <h3 class="products_title">Coolway 2010</h3>
+                                    <p class="products_description">Водорастворимая СОЖ для токарных и фрезерных
+                                        операций.</p>
+                                    <ul>
+                                        <li>высокая стойкость к окислению</li>
+                                        <li>высокая стойкость к окислению</li>
+                                    </ul>
+                                    <div class="product_certificate">
+                                        <p>Сертификаты: <span>ISO 9001</span></p>
+                                    </div>
+                                </div>
+                                <a href="#" class="product_btn">Подробнее</a>
+                            </div>
+                            <div class="box">
+                                <div class="img">
+                                    <img src="assets/images/catalog_products.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <h3 class="products_title">Coolway 2010</h3>
+                                    <p class="products_description">Водорастворимая СОЖ для токарных и фрезерных
+                                        операций.</p>
+                                    <ul>
+                                        <li>высокая стойкость к окислению</li>
+                                        <li>высокая стойкость к окислению</li>
+                                    </ul>
+                                    <div class="product_certificate">
+                                        <p>Сертификаты: <span>ISO 9001</span></p>
+                                    </div>
+                                </div>
+                                <a href="#" class="product_btn">Подробнее</a>
+                            </div>
+                            <div class="box">
+                                <div class="img">
+                                    <img src="assets/images/catalog_products.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <h3 class="products_title">Coolway 2010</h3>
+                                    <p class="products_description">Водорастворимая СОЖ для токарных и фрезерных
+                                        операций.</p>
+                                    <ul>
+                                        <li>высокая стойкость к окислению</li>
+                                        <li>высокая стойкость к окислению</li>
+                                    </ul>
+                                    <div class="product_certificate">
+                                        <p>Сертификаты: <span>ISO 9001</span></p>
+                                    </div>
+                                </div>
+                                <a href="#" class="product_btn">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="slider">
+                            <div class="numbers">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!--  -->
+    <!-- jquary -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

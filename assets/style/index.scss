@@ -1363,6 +1363,8 @@ textarea {
         display: flex;
         align-items: center;
         gap: 140px;
+        justify-content: space-between;
+
     }
 
     .section-title {
@@ -1878,8 +1880,6 @@ textarea {
 
             @media screen and (max-width: 768px) {
                 padding-bottom: 14px;
-                padding-right: 17px;
-                padding-left: 26px;
                 padding-top: 8px;
                 // 
 
@@ -2548,8 +2548,8 @@ textarea {
             background-color: #E1E1E1;
 
             background-repeat: no-repeat;
-            background-position: center;
-            background-size: 65%;
+            background-position: 54.5% 54%;
+            background-size: 50%;
 
             // 
             @media screen and (max-width: 768px) {
@@ -3572,7 +3572,7 @@ textarea {
                 }
 
                 // 
-                h4 {
+                h2 {
                     color: #FFF;
                     font-family: 'Manrope', sans-serif;
                     font-size: 24px;
@@ -3610,6 +3610,12 @@ textarea {
                     display: flex;
                     align-items: center;
                     gap: 12px;
+
+                    // icon
+                    img {
+                        width: 24px;
+                        height: 24px;
+                    }
                 }
             }
         }
@@ -3909,11 +3915,13 @@ textarea {
                 background: none;
             }
         }
-        .contact_description{
+
+        .contact_description {
             @media screen and (max-width: 768px) {
                 width: 100%;
             }
         }
+
         // 
         .checkbox {
             margin-bottom: 23px;
@@ -3957,4 +3965,471 @@ textarea {
         }
     }
 
+}
+
+// about end
+.catalog {
+    .catalog_about {
+        margin-bottom: 219px;
+
+        // 
+        @media screen and (max-width: 768px) {
+            margin-bottom: 118px;
+        }
+
+        // 
+        .catalog_title {
+            color: var(--2, #83CACC);
+            font-family: 'Sora', sans-serif;
+            font-size: 52px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            margin-bottom: 60px;
+
+            // 
+            @media screen and (max-width: 768px) {
+                font-size: 28px;
+                font-weight: 400;
+                line-height: 120%;
+                margin-bottom: 36px;
+            }
+        }
+
+        // 
+        .catalog_block {
+            display: flex;
+            align-items: start;
+            gap: 25px;
+
+            // 
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                align-items: flex-start;
+                align-self: stretch;
+            }
+        }
+
+        // 
+        .catalog_category {
+            width: 312px;
+
+            // 
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+
+            // 
+            .category_title {
+                color: #FFF;
+                font-family: 'Manrope', sans-serif;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 150%;
+                margin-bottom: 20px;
+            }
+
+            // 
+            .checkbox_blocks {
+                display: flex;
+                margin-left: 25px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 14px;
+                align-self: stretch;
+            }
+
+            // 
+            .checkboxes {
+                margin-bottom: 50px;
+            }
+
+            // 
+            .checkbox {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                input[type='radio'] {
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    width: 12px;
+                    height: 12px;
+                    min-width: 12px;
+                    border: 1px solid white;
+                    border-radius: 50%;
+                    outline: none;
+                    cursor: pointer;
+                    position: relative;
+                    background-color: transparent;
+                    margin: 0;
+                    box-sizing: border-box; // Border ichida hisoblanadi
+
+                    &:checked::before {
+                        content: '';
+                        position: absolute;
+                        top: 2px; // Aniq pozitsiya
+                        left: 2.5px; // Aniq pozitsiya
+                        width: 6px; // Kattaroq qildim
+                        height: 6px; // Kattaroq qildim
+                        border-radius: 50%;
+                        background-color: #1BB1B7;
+                    }
+
+                    &:hover {
+                        border-color: rgba(255, 255, 255, 0.8);
+                    }
+                }
+
+                input[type='checkbox'] {
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    width: 16px;
+                    height: 16px;
+                    min-width: 16px;
+                    border: 1px solid white;
+                    border-radius: 2px; // Checkbox uchun
+                    outline: none;
+                    cursor: pointer;
+                    position: relative;
+                    background-color: transparent;
+                    margin: 0;
+                    background-color: white;
+
+                    &:checked {
+                        background-color: #1BB1B7; // Fon rangi
+                        border-color: #1BB1B7;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left: 5px;
+                            top: 2px;
+                            width: 4px;
+                            height: 8px;
+                            border: solid white; // Oq galochka
+                            border-width: 0 2px 2px 0;
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+
+                label {
+                    color: #FFF;
+                    font-family: 'Manrope', sans-serif;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                    cursor: pointer;
+                    user-select: none;
+                }
+            }
+
+            // 
+            .checkbox_item {
+                width: 100%;
+                border-bottom: 2px solid transparent;
+                border-image: linear-gradient(90deg, #1BB1B7, #001314);
+                border-image-slice: 1;
+                padding-bottom: 28px;
+                margin-bottom: 28px;
+
+                // 
+                &:nth-child(5) {
+                    border-bottom: none !important;
+                    border-image: none !important;
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                }
+            }
+
+            // 
+            .category_result {
+                .result_product {
+                    color: #FFF;
+                    font-family: 'Manrope', sans-serif;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                    margin-bottom: 27px;
+
+                    /* 30px */
+                    span {
+                        color: var(--2, #83CACC);
+                        font-family: 'Manrope', sans-serif;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 150%;
+                    }
+                }
+
+                // 
+                .btns {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 16px;
+                    align-self: stretch;
+
+                    // 
+                    .btn {
+                        &:first-child {
+                            position: relative;
+                            display: flex;
+                            width: 266px;
+                            height: 50px;
+                            font-family: 'Sora', sans-serif;
+                            padding: 12px 54px;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 10px;
+                            flex-shrink: 0;
+                            border-radius: 42px;
+                            background-color: #05696C; // asosiy fon rangi
+                            color: #FFF;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 120%;
+                            overflow: hidden;
+                            transition: all .3s ease;
+
+                            @media screen and (max-width: 768px) {
+                                width: 100%;
+                            }
+
+                            // gradient background :after orqali
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                inset: 0;
+                                border-radius: 42px;
+                                background: linear-gradient(90deg, #02584E -4.33%, #11B5BB 100%);
+                                opacity: 1;
+                                transition: opacity 0.4s ease;
+                                z-index: 0;
+                            }
+
+                            // matn ustida turishi uchun
+                            span {
+                                position: relative;
+                                z-index: 1;
+                            }
+
+                            // hover paytida gradient asta yo‘qoladi
+                            &:hover::after {
+                                opacity: 0;
+                            }
+                        }
+
+                        // 
+                        &:last-child {
+                            width: 266px;
+                            color: #FFF;
+                            text-align: center;
+                            font-family: 'Sora', sans-serif;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 200;
+                            line-height: 150%;
+                            /* 24px */
+                        }
+                    }
+                }
+            }
+        }
+
+        // 
+        .catalog_products {
+            width: 984px;
+
+            // 
+            .search_item {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                gap: 24px;
+                margin-bottom: 54px;
+            }
+
+            // 
+            .search {
+                width: 760px;
+                position: relative;
+
+                // 
+                input {
+                    width: 100%;
+                    height: 40px;
+                    padding: 8px 20px 8px 28px;
+                    flex-shrink: 0;
+                    border-radius: 47px;
+                    border: 1px solid #FFF;
+                    color: white;
+                    background: transparent;
+
+                    // 
+                    &::placeholder {
+                        color: rgba(255, 255, 255, 0.53);
+                        font-family: 'Manrope', sans-serif;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 20px;
+                    }
+                }
+
+                // 
+                button {
+                    position: absolute;
+                    right: 20px;
+                    border: none;
+                    background: none;
+                    top: 0;
+                    bottom: 0;
+                }
+
+            }
+
+            // 
+            .sort {
+                button {
+                    display: flex;
+                    width: 200px;
+                    height: 40px;
+                    padding: 8px 35px;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-shrink: 0;
+                    border-radius: 45px;
+                    border: 1px solid #FFF;
+                    background: transparent;
+                    color: #FFF;
+                    font-family: 'Manrope', sans-serif;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px;
+                }
+
+            }
+
+            // 
+        }
+
+        // 
+        .products_block {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px 24px;
+            flex-grow: 1;
+
+            // 
+            @media screen and (max-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            // 
+            .box {
+                border-radius: 32px;
+                border: 1px solid #0D0D0D;
+                background: rgba(0, 0, 0, 0.44);
+                position: relative;
+
+                // 
+                .content {
+                    padding: 0 38.5px;
+                }
+
+                // 
+                .products_title {
+                    color: #FFF;
+                    font-family: 'Manrope', sans-serif;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 150%;
+                    margin-bottom: 12px;
+                }
+
+                // 
+                .products_description {
+                    color: #FFF;
+                    font-family: 'Manrope', sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                    margin-bottom: 8px;
+                }
+
+                ul {
+                    margin-bottom: 12px;
+                }
+
+                li {
+                    color: #FFF;
+                    font-family: 'Manrope', sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                    list-style: inside;
+                }
+
+                // 
+                .product_certificate {
+                    p {
+                        color: #FFF;
+                        font-family: 'Manrope', sans-serif;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 150%;
+                        margin-bottom: 93px;
+
+                        // 
+                        span {
+                            color: #FFF;
+                            font-family: 'Manrope', sans-serif;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 150%;
+                        }
+                    }
+                }
+
+                // 
+                .product_btn {
+                    display: flex;
+                    width: 287px;
+                    height: 44px;
+                    padding: 12px 54px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    border-radius: 53px;
+                    border: 1px solid #073739;
+                    position: absolute;
+                    bottom: 15px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    color: #FFF;
+                    font-family: 'Sora', sans-serif;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%;
+                }
+            }
+        }
+    }
 }
