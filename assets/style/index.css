@@ -156,6 +156,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   z-index: -1;
+  background-size: cover;
 }
 @media screen and (max-width: 768px) {
   .bg_big_images .image_7 {
@@ -238,7 +239,7 @@ textarea {
   padding-top: 31px;
   margin-bottom: 162px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 834px) {
   .header {
     margin-bottom: 33px;
     padding-top: 45px;
@@ -249,7 +250,7 @@ textarea {
   height: 52px;
   aspect-ratio: 149/26;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1006px) {
   .header .logo {
     width: 188px;
     height: 33px;
@@ -267,7 +268,7 @@ textarea {
   justify-content: space-between;
   margin-bottom: 162px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 834px) {
   .header .mobile-navbar_blocks {
     margin-bottom: 48px;
   }
@@ -290,7 +291,7 @@ textarea {
   left: 0;
   background: #000;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 834px) {
   .header .hamburger {
     display: block;
     transform: translateX(-100%);
@@ -311,7 +312,17 @@ textarea {
   align-items: center;
   gap: 175px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1125px) {
+  .header .nav_box {
+    gap: 50px;
+  }
+}
+@media screen and (max-width: 1006px) {
+  .header .nav_box {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 834px) {
   .header .nav_box {
     display: none;
   }
@@ -337,7 +348,7 @@ textarea {
 .header .menu {
   display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 834px) {
   .header .menu {
     display: block;
   }
@@ -353,6 +364,11 @@ textarea {
   display: flex;
   align-items: center;
   gap: 35px;
+}
+@media screen and (max-width: 1006px) {
+  .header .nav_item {
+    gap: 20px;
+  }
 }
 .header .nav_list a {
   color: #FFF;
@@ -706,7 +722,7 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
-  justify-content: space-between;
+  gap: 30px;
   margin-bottom: 90px;
 }
 @media screen and (max-width: 768px) {
@@ -716,7 +732,7 @@ textarea {
   }
 }
 .products .products_box {
-  width: 420px;
+  width: calc(33.3333333333% - 20px);
   flex-shrink: 0;
   border-radius: 40px;
   border: 1px solid #26BAC8;
@@ -966,7 +982,7 @@ textarea {
 .suitable .swiper-wrapper {
   display: flex;
   align-items: stretch;
-  justify-content: space-between;
+  gap: 30px;
 }
 @media screen and (max-width: 768px) {
   .suitable .swiper-wrapper {
@@ -974,7 +990,7 @@ textarea {
   }
 }
 .suitable .products_box {
-  width: 420px;
+  width: calc(33.3333333333% - 20px);
   height: auto;
   flex-shrink: 0;
   border-radius: 38px;
@@ -1119,11 +1135,13 @@ textarea {
 .reason .reason_block {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 140px;
 }
 .reason .section-title {
   text-align: center;
   margin-bottom: 40px;
+  color: #FFF;
+  line-height: 120%;
 }
 @media screen and (max-width: 768px) {
   .reason .section-title {
@@ -1137,26 +1155,33 @@ textarea {
     margin-bottom: 36px;
   }
 }
+.reason .reason_block-img {
+  width: calc(50% - 70px);
+}
 @media screen and (max-width: 768px) {
   .reason .reason_block-img {
     display: none;
   }
 }
 .reason .reason_block-img img {
-  width: 579px;
-  height: 460px;
+  width: 100%;
+  height: 100%;
   flex-shrink: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
   aspect-ratio: 579/460;
 }
+.reason .reason_box {
+  width: calc(50% - 70px);
+}
 .reason .box_item {
-  width: 599px;
   height: -moz-fit-content;
   height: fit-content;
   flex-shrink: 0;
   border-radius: 38px;
   border: 1px solid #585858;
   background: rgba(255, 255, 255, 0.21);
-  box-shadow: 0 4px 25.3px 0 rgba(0, 0, 0, 0.14) inset;
+  box-shadow: 0 20px 25.3px 0 rgba(0, 0, 0, 0.14) inset;
   -webkit-backdrop-filter: blur(3.8499999046px);
           backdrop-filter: blur(3.8499999046px);
   padding-top: 56px;
@@ -1317,7 +1342,7 @@ textarea {
 .certificate .swiper-wrapper {
   display: flex;
   align-items: stretch;
-  justify-content: space-between;
+  gap: 30px;
 }
 @media screen and (max-width: 768px) {
   .certificate .swiper-wrapper {
@@ -1325,7 +1350,7 @@ textarea {
   }
 }
 .certificate .products_box {
-  width: 307px;
+  width: calc(25% - 22.5px);
   height: 363px;
   flex-shrink: 0;
   background-repeat: no-repeat;
@@ -1347,12 +1372,12 @@ textarea {
 }
 .certificate .products_box .sertificate_btn {
   width: 71.83px;
-  height: 73px;
+  height: 71.83px;
   flex-shrink: 0;
-  flex-shrink: 0;
-  background-color: #000;
-  border: 1px solid #585858;
-  flex-shrink: 0;
+  background: url(../images/certificate_block-btn.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -1537,8 +1562,6 @@ textarea {
   justify-content: center;
   align-items: center;
   padding-bottom: 36px;
-  padding-right: 40px;
-  padding-left: 50px;
   padding-top: 32px;
   border-right: 1px solid transparent;
   border-bottom: 1px solid transparent;
@@ -1972,7 +1995,6 @@ textarea {
 }
 .contact .contact_block {
   width: 100%;
-  height: 383px;
   flex-shrink: 0;
   display: flex;
   flex-wrap: wrap;
@@ -2285,6 +2307,31 @@ textarea {
     padding-top: 0;
   }
 }
+.footer .footer_item-block {
+  display: flex;
+  align-items: start;
+}
+@media screen and (max-width: 921px) {
+  .footer .footer_item-block {
+    flex-direction: column;
+  }
+}
+.footer .footer_item-block .footer_item {
+  margin-left: 94px;
+}
+@media screen and (max-width: 921px) {
+  .footer .footer_item-block .footer_item {
+    margin-left: 0;
+  }
+}
+.footer .footer_item-block .footer_contact {
+  margin-left: 161px;
+}
+@media screen and (max-width: 921px) {
+  .footer .footer_item-block .footer_contact {
+    margin-left: 0;
+  }
+}
 .footer .footer_block::after {
   content: "";
   position: absolute;
@@ -2329,9 +2376,11 @@ textarea {
   }
 }
 .footer .footer_item {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
 }
 @media screen and (max-width: 768px) {
   .footer .footer_item {
