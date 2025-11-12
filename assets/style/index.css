@@ -85,7 +85,7 @@ body {
 @media screen and (max-width: 480px) {
   .bg_big_images .image_3 {
     height: 726px;
-    top: 2214px;
+    top: 2173px;
     background-image: url(../images/mobile_product-bg.svg);
     background-size: cover;
   }
@@ -122,7 +122,7 @@ body {
 @media screen and (max-width: 768px) {
   .bg_big_images .image_5 {
     height: 459px;
-    top: 4888px;
+    top: 4848px;
     background-size: cover;
   }
 }
@@ -153,7 +153,7 @@ body {
   height: 514px;
   flex-shrink: 0;
   left: 0;
-  top: 6005px;
+  top: 5940px;
   background-repeat: no-repeat;
   background-position: center;
   z-index: -1;
@@ -2623,7 +2623,7 @@ textarea {
   flex-shrink: 0;
   flex-shrink: 0;
   left: 0;
-  top: 4842px;
+  top: 4820px;
   background-repeat: no-repeat;
   background-position: center;
   z-index: -1;
@@ -2724,6 +2724,14 @@ textarea {
 .about .reason .reason_block {
   align-items: flex-start;
   flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+  .about .reason .reason_block {
+    gap: 0;
+  }
+}
+.about .reason .reason_box {
+  width: 599px;
 }
 .about .reason .reason_block-description {
   display: flex;
@@ -2944,16 +2952,17 @@ textarea {
 .about .team .swiper-wrapper {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  gap: 116px;
 }
 @media screen and (max-width: 768px) {
   .about .team .swiper-wrapper {
     margin-bottom: 34px;
+    gap: 0;
   }
 }
 .about .team .swiper-wrapper .box {
   display: flex;
-  width: 265px;
+  width: calc(25% - 87px);
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
@@ -3240,6 +3249,11 @@ textarea {
   .about .contact .contact_block {
     border: none;
     background: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about .contact .contact_description {
+    width: 100%;
   }
 }
 .about .contact .checkbox {

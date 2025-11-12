@@ -87,7 +87,7 @@ body {
         // 
         @media screen and (max-width: 480px) {
             height: 726px;
-            top: 2214px;
+            top: 2173px;
             background-image: url(../images/mobile_product-bg.svg);
             background-size: cover;
         }
@@ -129,7 +129,7 @@ body {
         // 
         @media screen and (max-width: 768px) {
             height: 459px;
-            top: 4888px;
+            top: 4848px;
             background-size: cover;
         }
     }
@@ -164,7 +164,7 @@ body {
         height: 514px;
         flex-shrink: 0;
         left: 0;
-        top: 6005px;
+        top: 5940px;
         background-repeat: no-repeat;
         background-position: center;
         z-index: -1;
@@ -1404,6 +1404,7 @@ textarea {
     //
     .reason_box {
         width: calc(50% - 70px);
+
         // 
         @media screen and (max-width: 768px) {
             width: 100%;
@@ -3124,7 +3125,7 @@ textarea {
             flex-shrink: 0;
             flex-shrink: 0;
             left: 0;
-            top: 4842px;
+            top: 4820px;
             background-repeat: no-repeat;
             background-position: center;
             z-index: -1;
@@ -3241,6 +3242,17 @@ textarea {
         .reason_block {
             align-items: flex-start;
             flex-wrap: wrap;
+
+            // 
+            @media screen and (max-width: 768px) {
+                gap: 0;
+            }
+
+        }
+
+        // 
+        .reason_box {
+            width: 599px;
         }
 
         // 
@@ -3268,6 +3280,8 @@ textarea {
                     display: none;
                 }
             }
+
+
 
             .mobile-reason_title {
                 display: none;
@@ -3519,10 +3533,11 @@ textarea {
         .swiper-wrapper {
             display: flex;
             align-items: flex-start;
-            justify-content: space-between;
+            gap: 116px;
 
             @media screen and (max-width: 768px) {
                 margin-bottom: 34px;
+                gap: 0;
             }
 
 
@@ -3531,7 +3546,7 @@ textarea {
             // 
             .box {
                 display: flex;
-                width: 265px;
+                width: calc(100% / 4 - 87px);
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 16px;
@@ -3894,7 +3909,11 @@ textarea {
                 background: none;
             }
         }
-
+        .contact_description{
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
+        }
         // 
         .checkbox {
             margin-bottom: 23px;
