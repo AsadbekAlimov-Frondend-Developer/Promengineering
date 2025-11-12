@@ -169,6 +169,7 @@ body {
         background-position: center;
         z-index: -1;
         background-size: cover;
+
         // 
         @media screen and (max-width: 768px) {
             background-image: url(../images/footer-mobile_bg-fon.png);
@@ -894,6 +895,7 @@ textarea {
             border-radius: 28px;
             border: 1px solid #26BAC8;
             background: #000;
+            overflow: hidden;
         }
 
 
@@ -921,17 +923,17 @@ textarea {
             border-radius: 40px;
 
             @media screen and (max-width: 768px) {
-                border-radius: 28px;
+                border-radius: 0;
             }
         }
     }
 
     .contend {
-        padding: 20px 38px 35px 54px;
+        padding: 20px 38px 35px 38px;
 
         // 
         @media screen and (max-width: 768px) {
-            padding: 14px 28px 36px 28px;
+            padding: 0 28px 36px 28px;
         }
 
         h2 {
@@ -1234,7 +1236,7 @@ textarea {
 
     .contend {
         width: 100%;
-        padding: 62px 85px 78px 53px;
+        padding: 62px 53px 78px 53px;
 
         // 
         @media screen and (max-width: 768px) {
@@ -1402,6 +1404,10 @@ textarea {
     //
     .reason_box {
         width: calc(50% - 70px);
+        // 
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
     }
 
     //
@@ -1413,10 +1419,7 @@ textarea {
         background: rgba(255, 255, 255, 0.21);
         box-shadow: 0 20px 25.3px 0 rgba(0, 0, 0, 0.14) inset;
         backdrop-filter: blur(3.8499999046325684px);
-        padding-top: 56px;
-        padding-left: 67px;
-        padding-right: 70px;
-        padding-bottom: 67px;
+        padding: 56px 67px 67px;
 
         // 
         @media screen and (max-width: 768px) {
@@ -2196,10 +2199,11 @@ textarea {
         width: 132px;
         height: 132px;
         margin-bottom: 32px;
+        height: fit-content;
 
         //  
         @media screen and (max-width: 768px) {
-            margin-bottom: 29px;
+            margin-bottom: 32px;
         }
 
         // 

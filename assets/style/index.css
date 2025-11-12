@@ -750,6 +750,7 @@ textarea {
     border-radius: 28px;
     border: 1px solid #26BAC8;
     background: #000;
+    overflow: hidden;
   }
 }
 .products .img {
@@ -772,15 +773,15 @@ textarea {
 }
 @media screen and (max-width: 768px) {
   .products .img img {
-    border-radius: 28px;
+    border-radius: 0;
   }
 }
 .products .contend {
-  padding: 20px 38px 35px 54px;
+  padding: 20px 38px 35px 38px;
 }
 @media screen and (max-width: 768px) {
   .products .contend {
-    padding: 14px 28px 36px 28px;
+    padding: 0 28px 36px 28px;
   }
 }
 .products .contend h2 {
@@ -1032,7 +1033,7 @@ textarea {
 }
 .suitable .contend {
   width: 100%;
-  padding: 62px 85px 78px 53px;
+  padding: 62px 53px 78px 53px;
 }
 @media screen and (max-width: 768px) {
   .suitable .contend {
@@ -1174,6 +1175,11 @@ textarea {
 .reason .reason_box {
   width: calc(50% - 70px);
 }
+@media screen and (max-width: 768px) {
+  .reason .reason_box {
+    width: 100%;
+  }
+}
 .reason .box_item {
   height: -moz-fit-content;
   height: fit-content;
@@ -1184,10 +1190,7 @@ textarea {
   box-shadow: 0 20px 25.3px 0 rgba(0, 0, 0, 0.14) inset;
   -webkit-backdrop-filter: blur(3.8499999046px);
           backdrop-filter: blur(3.8499999046px);
-  padding-top: 56px;
-  padding-left: 67px;
-  padding-right: 70px;
-  padding-bottom: 67px;
+  padding: 56px 67px 67px;
 }
 @media screen and (max-width: 768px) {
   .reason .box_item {
@@ -1827,10 +1830,12 @@ textarea {
   width: 132px;
   height: 132px;
   margin-bottom: 32px;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 @media screen and (max-width: 768px) {
   .results .img {
-    margin-bottom: 29px;
+    margin-bottom: 32px;
   }
 }
 .results .img svg {
