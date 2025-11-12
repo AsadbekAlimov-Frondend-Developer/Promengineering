@@ -84,8 +84,8 @@ $(document).ready(function () {
   // Agar forma mavjud bo'lmasa, hech narsa qilmaymiz
   if (!$form.length) return;
 
-  const $nameInput = $form.find('input[type="text"]');
-  const $phoneInput = $form.find('input[type="number"]');
+  const $nameInput = $form.find('#name');
+  const $phoneInput = $form.find('#phone_number');
   const $checkbox = $('#contact-checkbox');
   const $submitBtn = $('.contact_btn');
 
@@ -157,3 +157,10 @@ if (window.innerWidth <= 769) {
   });
 
 }
+
+// ==========================================
+
+
+$(document).ready(function () {
+  $('#phone_number').inputmask("+7 (999) 999-99-99");
+});
