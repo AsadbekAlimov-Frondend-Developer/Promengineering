@@ -177,3 +177,52 @@ function catalog_toggleActive(element) {
   // active klassini toggle qiladi
   $section.toggleClass('active');
 }
+// =catalog_filter select
+$(document).ready(function() {
+    // Tekshirish - agar element mavjud bo'lsa ishlat
+    if ($('.catalog_sort .custom-select').length > 0) {
+        
+        var $selectSelected = $('.catalog_sort .select-selected');
+        var $selectItems = $('.catalog_sort .select-items');
+        var $options = $('.catalog_sort .select-items div');
+
+        // Toggle dropdown
+        $selectSelected.on('click', function(e) {
+            e.stopPropagation();
+            $selectItems.toggleClass('select-hide show');
+            $(this).toggleClass('select-arrow-active');
+        });
+
+        // Select option
+        $options.on('click', function() {
+            // Remove previous selection
+            $options.removeClass('same-as-selected');
+            
+            // Add selection to clicked option
+            $(this).addClass('same-as-selected');
+            
+            // Update selected display (FAQAT TEXT, SVG siz)
+            var text = $(this).text().trim();
+            $selectSelected.text(text);
+            
+            // Close dropdown
+            $selectItems.removeClass('show').addClass('select-hide');
+            $selectSelected.removeClass('select-arrow-active');
+            
+            // Get selected value
+            var value = $(this).data('value');
+            console.log('Selected:', value);
+            
+            // Bu yerga o'z kodingizni qo'shing
+            // Masalan: sorting qilish yoki AJAX so'rov yuborish
+        });
+
+        // Close dropdown when clicking outside
+        $(document).on('click', function() {
+            if ($selectItems.hasClass('show')) {
+                $selectItems.removeClass('show').addClass('select-hide');
+                $selectSelected.removeClass('select-arrow-active');
+            }
+        });
+    }
+});
