@@ -164,4 +164,16 @@ if (window.innerWidth <= 769) {
 $(document).ready(function () {
   $('#phone_number').inputmask("+7 (999) 999-99-99");
 });
- 
+// 
+// ========================================== catalog_filter
+function catalog_toggleActive(element) {
+  const $section = $('.catalog_category');
+  
+  if ($section.length === 0) {
+    console.warn(".catalog_category topilmadi");
+    return;
+  }
+
+  // active klassini toggle qiladi
+  $section.toggleClass('active');
+}

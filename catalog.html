@@ -10,8 +10,10 @@
     <!-- Swiper CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css" rel="stylesheet">
     <!-- font -->
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Sora:wght@100..800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Sora:wght@100..800&family=Open+Sans:wght@300..800&display=swap"
         rel="stylesheet">
+
     <!--  -->
     <link rel="stylesheet" href="assets/style/index.css">
 </head>
@@ -205,7 +207,18 @@
                 <!--  -->
                 <div class="catalog_block">
                     <div class="catalog_category">
-
+                        <div class="filter-mobile_title">
+                            <h2>Фильтры</h2>
+                            <div class="filter_close-btn"  onclick="catalog_toggleActive(this)" >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46"
+                                    fill="none">
+                                    <path d="M17.0039 16.998L28.0987 28.0928" stroke="#1BB1B7" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <path d="M17 28.0938L28.0947 16.999" stroke="#1BB1B7" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+                        </div>
                         <div class="checkboxes">
                             <div class="checkbox_item">
                                 <div class="category_title">
@@ -340,6 +353,41 @@
                                             fill="#1BB1B7" />
                                     </svg>Сортировать
                                 </button>
+                            </div>
+                            <!-- -->
+                            <div class="mobile_search-items">
+                                <div class="popularity_block">
+                                    <div class="popularity_btn">
+                                        <button>По популярности
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <g clip-path="url(#clip0_0_1370)">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M12.7073 16.7064C12.5198 16.8938 12.2655 16.9992 12.0003 16.9992C11.7352 16.9992 11.4809 16.8938 11.2933 16.7064L5.63634 11.0494C5.54083 10.9571 5.46465 10.8468 5.41224 10.7248C5.35983 10.6028 5.33225 10.4715 5.33109 10.3388C5.32994 10.206 5.35524 10.0743 5.40552 9.95141C5.4558 9.82852 5.53006 9.71686 5.62395 9.62297C5.71784 9.52908 5.82949 9.45483 5.95239 9.40454C6.07529 9.35426 6.20696 9.32896 6.33974 9.33012C6.47252 9.33127 6.60374 9.35886 6.72575 9.41126C6.84775 9.46367 6.9581 9.53986 7.05034 9.63537L12.0003 14.5854L16.9503 9.63537C17.1389 9.45321 17.3915 9.35241 17.6537 9.35469C17.9159 9.35697 18.1668 9.46214 18.3522 9.64755C18.5376 9.83296 18.6427 10.0838 18.645 10.346C18.6473 10.6082 18.5465 10.8608 18.3643 11.0494L12.7073 16.7064Z"
+                                                        fill="#1BB1B7" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_0_1370">
+                                                        <rect width="24" height="24" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="filter">
+                                    <div class="filter_btn">
+                                        <button onclick="catalog_toggleActive(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path d="M6 8H18M8 12H16M10.4 16H13.6" stroke="#1BB1B7"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            Фильтры
+
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="products_block">
@@ -507,9 +555,28 @@
                             </div>
                         </div>
                         <div class="slider">
-                            <div class="numbers">
-
+                            <div class="pagination">
+                                <a href="#" class="arrow_left"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M17 12L7 12M7 12L11 16M7 12L11 8" stroke="white" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg></a>
+                                <div class="numbers">
+                                    <a href="#" class="count active">1</a>
+                                    <a href="#" class="count">2</a>
+                                    <a href="#" class="count">3</a>
+                                </div>
+                                <a href="#" class="arrow_right"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 12L17 12M17 12L13 16M17 12L13 8" stroke="white"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></a>
                             </div>
+                            <a class="view-all" href="#">Смотреть все <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                    height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M8.3335 6.66675L11.6668 10.0001L8.3335 13.3334" stroke="white"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></a>
                         </div>
                     </div>
                 </div>
