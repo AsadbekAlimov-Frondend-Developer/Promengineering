@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* Endi fontlarni qo‘llaymiz */
 body {
   font-family: "Manrope", sans-serif;
 }
@@ -122,7 +121,7 @@ body {
 @media screen and (max-width: 768px) {
   .bg_big_images .image_5 {
     height: 459px;
-    top: 4848px;
+    top: 4797px;
     background-size: cover;
   }
 }
@@ -506,6 +505,7 @@ textarea {
   position: relative;
   display: flex;
   width: 277px;
+  height: 52px;
   padding: 12px 54px;
   justify-content: center;
   align-items: center;
@@ -558,6 +558,7 @@ textarea {
 @media screen and (max-width: 768px) {
   .hero .hero_block .hero_block-btns .btn:last-child {
     width: 100%;
+    padding: 0;
   }
 }
 .hero .hero_block .rating-title {
@@ -592,18 +593,20 @@ textarea {
   justify-content: space-between;
   padding: 43px 34px;
   overflow: hidden;
+  z-index: 1;
 }
 .hero .hero_block .rating_block::before {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 28px;
+  border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(90deg, #585858, #869F96);
+  background: linear-gradient(90deg, #585858 0%, #869F9B 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
+  z-index: -1;
 }
 @media screen and (max-width: 768px) {
   .hero .hero_block .rating_block {
@@ -840,6 +843,7 @@ textarea {
   position: relative;
   display: flex;
   width: 344px;
+  height: 55px;
   padding: 12px 54px;
   justify-content: center;
   align-items: center;
@@ -847,13 +851,23 @@ textarea {
   flex-shrink: 0;
   border-radius: 49px;
   background: #05696C;
+  margin: 0 auto;
+}
+.products .katalog-btn .btn span {
   color: #FFF;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
   /* 24px */
-  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .products .katalog-btn .btn span {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+  }
 }
 @media screen and (max-width: 768px) {
   .products .katalog-btn .btn {
@@ -969,6 +983,7 @@ textarea {
   height: 10px;
   background-color: #D9D9D9;
   opacity: 1;
+  margin: 0 !important;
 }
 .suitable .swiper-pagination-bullet-active {
   background-color: #1BB1B7;
@@ -978,7 +993,9 @@ textarea {
 }
 @media screen and (max-width: 768px) {
   .suitable .swiper-pagination {
-    display: block;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
   }
 }
 .suitable .swiper-wrapper {
@@ -997,11 +1014,15 @@ textarea {
   height: auto;
   flex-shrink: 0;
   border-radius: 38px;
-  border: 1px solid #0D0D0D;
   background: rgba(19, 19, 19, 0.5);
-  box-shadow: 0 4px 25.3px 0 rgba(0, 0, 0, 0.14) inset;
-  -webkit-backdrop-filter: blur(3.8499999046px);
-          backdrop-filter: blur(3.8499999046px);
+  box-shadow: inset 0 4px 25.3px rgba(0, 0, 0, 0.14);
+  -webkit-backdrop-filter: blur(3.85px);
+          backdrop-filter: blur(3.85px);
+  border: 1px solid transparent;
+  background-image: linear-gradient(rgba(19, 19, 19, 0.5), rgba(19, 19, 19, 0.5)), linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+  /* tashqi border */
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 @media screen and (max-width: 768px) {
   .suitable .products_box {
@@ -1012,8 +1033,6 @@ textarea {
     gap: 14px;
     align-self: stretch;
     border-radius: 28px;
-    border: 1px solid #0D0D0D;
-    background: rgba(19, 19, 19, 0.5);
   }
 }
 .suitable .img {
@@ -1043,30 +1062,31 @@ textarea {
 }
 .suitable .contend h2 {
   color: #FFF;
+  font-family: "Sora", sans-serif;
   font-size: 24px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 150%;
-  max-width: 309px;
+  font-weight: 400;
+  line-height: 130%;
+  /* 31.2px */
 }
 @media screen and (max-width: 768px) {
   .suitable .contend h2 {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 150%;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 130%;
   }
 }
 .suitable .contend ul {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
   margin-top: 28px;
 }
 @media screen and (max-width: 768px) {
   .suitable .contend ul {
     margin-top: 26px;
-    gap: 16px;
-    margin-left: 16px;
+    gap: 13px;
+    margin-left: 26px;
   }
 }
 .suitable .contend li {
@@ -1077,7 +1097,7 @@ textarea {
   line-height: 150%;
   max-width: 313px;
   display: flex;
-  gap: 8px;
+  gap: 13px;
   align-items: center;
 }
 @media screen and (max-width: 768px) {
@@ -1092,8 +1112,8 @@ textarea {
   }
 }
 .suitable .contend li svg {
-  min-width: 8px;
-  min-height: 8px;
+  width: 4px;
+  height: 4px;
 }
 .suitable .katalog-btn .btn {
   display: flex;
@@ -1260,7 +1280,7 @@ textarea {
 }
 
 .certificate {
-  margin-bottom: 239px;
+  margin-bottom: 385px;
 }
 @media screen and (max-width: 768px) {
   .certificate {
@@ -1332,6 +1352,7 @@ textarea {
   height: 10px;
   background-color: #D9D9D9;
   opacity: 1;
+  margin: 0 !important;
 }
 .certificate .swiper-pagination-bullet-active {
   background-color: #1BB1B7;
@@ -1341,7 +1362,9 @@ textarea {
 }
 @media screen and (max-width: 768px) {
   .certificate .swiper-pagination {
-    display: block;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
   }
 }
 .certificate .swiper-wrapper {
@@ -1527,7 +1550,8 @@ textarea {
   text-align: center;
   margin-bottom: 74px;
   color: var(--2, #83CACC);
-  font-family: "Manrope";
+  text-align: center;
+  font-family: "Sora", sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
@@ -1682,7 +1706,7 @@ textarea {
 }
 
 .results {
-  margin-bottom: 239px;
+  margin-bottom: 335px;
 }
 @media screen and (max-width: 768px) {
   .results {
@@ -1760,6 +1784,7 @@ textarea {
   top: auto;
   bottom: 0;
   border-radius: 50px;
+  background: #1BB1B7;
 }
 .results .certificate_swiper-pagination,
 .results .swiper-pagination-bullets,
@@ -1803,12 +1828,25 @@ textarea {
   }
 }
 .results .products_box {
+  position: relative;
   width: 420px;
   height: auto;
   flex-shrink: 0;
   border-radius: 38px;
-  border: 1px solid #585858;
   background: rgba(255, 255, 255, 0.21);
+  z-index: 1;
+}
+.results .products_box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(180deg, #869F9B);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 @media screen and (max-width: 768px) {
   .results .products_box {
@@ -2133,7 +2171,7 @@ textarea {
 }
 @media screen and (max-width: 768px) {
   .contact .contact_block .contact_input:nth-child(2n) {
-    margin-bottom: 32px;
+    margin-bottom: 30px;
   }
 }
 .contact .contact_block #contact-checkbox {
@@ -2158,6 +2196,8 @@ textarea {
     align-items: flex-start;
     gap: 10px;
     flex-shrink: 0;
+    background-position: 4px 5px;
+    background-size: 11px;
   }
 }
 .contact .contact_block #contact-checkbox:checked {
@@ -2175,6 +2215,7 @@ textarea {
     align-items: center;
     gap: 21px;
     margin-bottom: 58px;
+    padding-left: 12px;
   }
 }
 .contact .contact_block .checkbox label {

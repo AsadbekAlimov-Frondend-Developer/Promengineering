@@ -1,4 +1,3 @@
-/* Endi fontlarni qo‘llaymiz */
 body {
     font-family: 'Manrope', sans-serif;
 }
@@ -129,7 +128,7 @@ body {
         // 
         @media screen and (max-width: 768px) {
             height: 459px;
-            top: 4848px;
+            top: 4797px;
             background-size: cover;
         }
     }
@@ -589,6 +588,7 @@ textarea {
                     position: relative;
                     display: flex;
                     width: 277px;
+                    height: 52px;
                     padding: 12px 54px;
                     justify-content: center;
                     align-items: center;
@@ -649,6 +649,7 @@ textarea {
                     // 
                     @media screen and (max-width: 768px) {
                         width: 100%;
+                        padding: 0;
                     }
                 }
 
@@ -696,21 +697,23 @@ textarea {
             justify-content: space-between;
             padding: 43px 34px;
             overflow: hidden;
+            z-index: 1;
 
-            // Gradient border uchun
+            // 🔥 Gradient border (faqat tashqi qismi)
             &::before {
                 content: "";
                 position: absolute;
                 inset: 0;
-                border-radius: 28px;
+                border-radius: inherit;
                 padding: 1px; // border qalinligi
-                background: linear-gradient(90deg, #585858, #869F96);
+                background: linear-gradient(90deg, #585858 0%, #869F9B 100%);
                 -webkit-mask:
                     linear-gradient(#fff 0 0) content-box,
                     linear-gradient(#fff 0 0);
                 -webkit-mask-composite: xor;
                 mask-composite: exclude;
                 pointer-events: none;
+                z-index: -1;
             }
 
             @media screen and (max-width: 768px) {
@@ -718,6 +721,7 @@ textarea {
                 display: none;
             }
         }
+
 
         // 
         .rating-box {
@@ -1005,6 +1009,7 @@ textarea {
             position: relative;
             display: flex;
             width: 344px;
+            height: 55px;
             padding: 12px 54px;
             justify-content: center;
             align-items: center;
@@ -1012,14 +1017,24 @@ textarea {
             flex-shrink: 0;
             border-radius: 49px;
             background: #05696C;
-            color: #FFF;
-
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 120%;
-            /* 24px */
             margin: 0 auto;
+
+            span {
+                color: #FFF;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+
+                /* 24px */
+                // 
+                @media screen and (max-width: 768px) {
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%;
+                }
+            }
 
             // 
             @media screen and (max-width: 768px) {
@@ -1157,6 +1172,7 @@ textarea {
         height: 10px;
         background-color: #D9D9D9;
         opacity: 1;
+        margin: 0 !important;
     }
 
     .swiper-pagination-bullet-active {
@@ -1168,7 +1184,9 @@ textarea {
 
         // 
         @media screen and (max-width: 768px) {
-            display: block;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
         }
     }
 
@@ -1193,12 +1211,20 @@ textarea {
         height: auto;
         flex-shrink: 0;
         border-radius: 38px;
-        border: 1px solid #0D0D0D;
         background: rgba(19, 19, 19, 0.50);
-        box-shadow: 0 4px 25.3px 0 rgba(0, 0, 0, 0.14) inset;
-        backdrop-filter: blur(3.8499999046325684px);
+        box-shadow: inset 0 4px 25.3px rgba(0, 0, 0, 0.14);
+        backdrop-filter: blur(3.85px);
 
-        // 
+        // gradient border
+        border: 1px solid transparent;
+        background-image:
+            linear-gradient(rgba(19, 19, 19, 0.5), rgba(19, 19, 19, 0.5)),
+            /* ichki fon */
+            linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+        /* tashqi border */
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+
         @media screen and (max-width: 768px) {
             width: 100%;
             display: flex;
@@ -1207,14 +1233,9 @@ textarea {
             gap: 14px;
             align-self: stretch;
             border-radius: 28px;
-            border: 1px solid #0D0D0D;
-            background: rgba(19, 19, 19, 0.50);
         }
-
-
-
-        // 
     }
+
 
     .img {
         width: 132px;
@@ -1246,31 +1267,32 @@ textarea {
 
         h2 {
             color: #FFF;
+            font-family: 'Sora', sans-serif;
             font-size: 24px;
             font-style: normal;
-            font-weight: 500;
-            line-height: 150%;
-            max-width: 309px;
+            font-weight: 400;
+            line-height: 130%;
+            /* 31.2px */
 
-            // 
+            // // 
             @media screen and (max-width: 768px) {
-                font-size: 20px;
-                font-weight: 600;
-                line-height: 150%;
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 130%;
             }
         }
 
         ul {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 12px;
             margin-top: 28px;
 
             // 
             @media screen and (max-width: 768px) {
                 margin-top: 26px;
-                gap: 16px;
-                margin-left: 16px;
+                gap: 13px;
+                margin-left: 26px;
             }
         }
 
@@ -1283,7 +1305,7 @@ textarea {
             line-height: 150%;
             max-width: 313px;
             display: flex;
-            gap: 8px;
+            gap: 13px;
             align-items: center;
 
             // 
@@ -1302,8 +1324,8 @@ textarea {
 
             // 
             svg {
-                min-width: 8px;
-                min-height: 8px;
+                width: 4px;
+                height: 4px;
 
                 // @media screen and (max-width: 768px) {
 
@@ -1508,7 +1530,7 @@ textarea {
 
 
 .certificate {
-    margin-bottom: 239px;
+    margin-bottom: 385px;
 
     // 
     @media screen and (max-width: 768px) {
@@ -1592,6 +1614,7 @@ textarea {
         height: 10px;
         background-color: #D9D9D9;
         opacity: 1;
+        margin: 0 !important;
     }
 
     .swiper-pagination-bullet-active {
@@ -1603,7 +1626,9 @@ textarea {
 
         // 
         @media screen and (max-width: 768px) {
-            display: block;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
         }
     }
 
@@ -1830,7 +1855,8 @@ textarea {
         text-align: center;
         margin-bottom: 74px;
         color: var(--2, #83CACC);
-        font-family: 'Manrope';
+        text-align: center;
+        font-family: 'Sora', sans-serif;
         font-size: 40px;
         font-style: normal;
         font-weight: 400;
@@ -2020,7 +2046,7 @@ textarea {
 
 // company end
 .results {
-    margin-bottom: 239px;
+    margin-bottom: 335px;
 
     // 
     @media screen and (max-width: 768px) {
@@ -2113,6 +2139,7 @@ textarea {
         top: auto;
         bottom: 0;
         border-radius: 50px;
+        background: #1BB1B7;
     }
 
     .certificate_swiper-pagination,
@@ -2165,14 +2192,29 @@ textarea {
     }
 
     .products_box {
+        position: relative;
         width: 420px;
         height: auto;
         flex-shrink: 0;
         border-radius: 38px;
-        border: 1px solid #585858;
         background: rgba(255, 255, 255, 0.21);
+        z-index: 1; // ustida turadi
 
-        // 
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0; // barcha tomonlardan to‘liq
+            border-radius: inherit;
+            padding: 1px; // border qalinligi
+            background: linear-gradient(180deg, #869F9B);
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none; // hover bloklamaydi
+        }
+
         @media screen and (max-width: 768px) {
             width: 100%;
             display: flex;
@@ -2182,8 +2224,6 @@ textarea {
             align-self: stretch;
             border-radius: 28px;
 
-
-            // 
             &:nth-child(1n) {
                 order: 2;
             }
@@ -2192,11 +2232,8 @@ textarea {
                 order: 1;
             }
         }
-
-
-
-        // 
     }
+
 
     .img {
         width: 132px;
@@ -2533,7 +2570,7 @@ textarea {
                 margin-bottom: 52px;
 
                 @media screen and (max-width: 768px) {
-                    margin-bottom: 32px;
+                    margin-bottom: 30px;
                 }
             }
 
@@ -2561,6 +2598,8 @@ textarea {
                 align-items: flex-start;
                 gap: 10px;
                 flex-shrink: 0;
+                background-position: 4px 5px;
+                background-size: 11px;
             }
         }
 
@@ -2584,6 +2623,7 @@ textarea {
                 align-items: center;
                 gap: 21px;
                 margin-bottom: 58px;
+                padding-left: 12px;
             }
 
             // 
@@ -3119,7 +3159,7 @@ textarea {
         }
 
         // 
-        
+
 
     }
 
@@ -3952,9 +3992,10 @@ textarea {
 
 // about end
 .catalog {
+
     // 
     .bg_big_images {
-        .image_1{
+        .image_1 {
             position: absolute;
             width: 859px;
             height: 813px;
@@ -3972,7 +4013,8 @@ textarea {
                 display: none;
             }
         }
-        .catalog_footer_bg-fon{
+
+        .catalog_footer_bg-fon {
             position: absolute;
             width: 100%;
             height: 873px;
@@ -3990,9 +4032,11 @@ textarea {
             }
         }
     }
+
     // 
     .header {
         margin-bottom: 120px;
+
         // 
         @media screen and (max-width: 768px) {
             margin-bottom: 36px;

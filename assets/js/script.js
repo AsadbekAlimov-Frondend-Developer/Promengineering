@@ -68,15 +68,7 @@ window.addEventListener('resize', () => {
 
 //==================================================== 
 
-var $titles = $('.company .section-title');
 
-if ($titles.length) {
-  $titles.each(function () {
-    var text = $(this).text();
-    var newText = text.replace(/,(\s*)/, ',$1<br>');
-    $(this).html(newText);
-  });
-}
 // =================================contact
 $(document).ready(function () {
   const $form = $('.contact_item');
