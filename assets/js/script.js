@@ -28,15 +28,15 @@
       '.products_slider': function () {
         return {
           slidesPerView: window.innerWidth <= 769 ? 1 : 3,
-          spaceBetween: 20,
+          spaceBetween: 30,
           loop: true,
           pagination: { el: '.product_swiper-pagination', clickable: true }
         };
       },
       '.certificate_slider': function () {
         return {
-          slidesPerView: window.innerWidth <= 769 ? 1 : 2,
-          spaceBetween: 20,
+          slidesPerView: window.innerWidth <= 769 ? 1 : 4,
+          spaceBetween: 30,
           loop: true,
           pagination: { el: '.certificate_swiper-pagination', clickable: true }
         };

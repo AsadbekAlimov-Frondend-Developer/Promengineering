@@ -1191,7 +1191,6 @@ textarea {
     .swiper-wrapper {
         display: flex;
         align-items: stretch;
-        gap: 30px;
 
         // 
         @media screen and (max-width: 768px) {
@@ -1635,7 +1634,6 @@ textarea {
     .swiper-wrapper {
         display: flex;
         align-items: stretch;
-        gap: 30px;
 
         // 
         @media screen and (max-width: 768px) {
@@ -1647,9 +1645,7 @@ textarea {
     }
 
     .products_box {
-        width: calc(100% / 4 - 22.5px);
         height: 363px;
-        flex-shrink: 0;
 
         background-repeat: no-repeat;
         background-position: center;
@@ -2143,7 +2139,7 @@ textarea {
         background: #1BB1B7;
     }
 
-    .certificate_swiper-pagination,
+    .results_swiper-pagination,
     .swiper-pagination-bullets,
     .swiper-pagination-fraction,
     .swiper-pagination-custom {
@@ -2161,7 +2157,7 @@ textarea {
         background-color: #1BB1B7;
     }
 
-    .certificate_swiper-pagination {
+    .results_swiper-pagination {
         width: fit-content;
         margin: 0 auto;
 
@@ -4890,7 +4886,7 @@ textarea {
 
 //
 // 
-.products_block {
+.main_products_block {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
