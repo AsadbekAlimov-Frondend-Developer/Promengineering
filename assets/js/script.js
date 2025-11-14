@@ -218,3 +218,18 @@ $(document).ready(function() {
         });
     }
 });
+
+// ==========================================
+var thumbs = new Swiper(".thumbsSlider", {
+  spaceBetween: 20,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+
+var main = new Swiper(".mainSlider", {
+  spaceBetween: 10,
+  thumbs: {
+    swiper: thumbs,
+  },
+});
