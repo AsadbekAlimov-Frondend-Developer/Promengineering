@@ -6268,6 +6268,24 @@ textarea {
     background: none;
   }
 }
+.page-404 .image_404 {
+  position: absolute;
+  width: 100%;
+  height: 873px;
+  flex-shrink: 0;
+  background-image: url(../images/catalog_footer-bg.png);
+  flex-shrink: 0;
+  left: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .page-404 .image_404 {
+    display: none;
+  }
+}
 .page-404 .header {
   margin-bottom: 152px;
 }

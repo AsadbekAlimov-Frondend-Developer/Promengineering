@@ -27,6 +27,7 @@
         return {
           slidesPerView: perView,
           spaceBetween: 30,
+          loop:true,
           loop: slideCount >= perView * 2,
           pagination: { el: '.product_swiper-pagination', clickable: true }
         };
