@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <div class="wrapper card_page">
+    <div class="wrapper card-service_page">
         <div class="bg_big_images">
             <div class="image_1"></div>
             <div class="footer_mobile-fon"></div>
@@ -214,16 +214,12 @@
             <div class="container">
                 <div class="page_title">
                     <div class="items">
-                        <a class="old-page" href="#">Продукция</a>
+                        <a class="old-page" href="#">Услуги</a>
                         <span class="middle" href="#">/</span>
-                        <a class="current" href="#">Coolway 2010</a>
+                        <a class="current" href="#">Лаб. испытания</a>
                     </div>
                     <div class="item_2">
-                        <div class="info_main-btns">
-                            <a href="#" class="btn">Водорастворимая</a>
-                            <a href="#" class="btn">Резка / сверление</a>
-                            <a href="#" class="btn">ISO 9001</a>
-                        </div>
+
                         <div class="back_page">
                             <a href="#" class="btn">Назад в каталог <svg xmlns="http://www.w3.org/2000/svg" width="21"
                                     height="21" viewBox="0 0 21 21" fill="none">
@@ -240,25 +236,80 @@
                     <div class="card_slider-block">
                         <div class="card_slider-main">
                             <!-- Main Slider -->
-                            <div class="swiper mainSlider">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img src="assets/images/card_page-slider.png"></div>
-                                    <div class="swiper-slide"><img src="assets/images/card_page-slider.png"></div>
-                                    <div class="swiper-slide"><img src="assets/images/card_page-slider.png"></div>
+                            <div class="main-img">
+                                <div class="swiper-slide"><img src="assets/images/card-service-page_main-img.png"></div>
+                            </div>
+                            <div class="faq-accordion accordion" id="faqAccordion">
+                                <h2 class="faq_title">
+                                    Частые вопросы:
+                                </h2>
+
+                                <!-- Accordion 1 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#item1">
+                                            <span>Нужен ли минимальный объём пробы?</span>
+                                        </button>
+                                    </h2>
+                                    <div id="item1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            <p>Да, минимальный объём пробы составляет 1 литр. Этого достаточно для
+                                                проведения всех необходимых испытаний.</p>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div class="swiper-pagination main-pagination"></div>
+                                <!-- Accordion 2 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#item2">
+                                            <span>Нужен ли минимальный объём пробы?</span>
+                                        </button>
+                                    </h2>
+                                    <div id="item2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            <p>Да, минимальный объём пробы составляет 1 литр. Этого достаточно для
+                                                проведения всех необходимых испытаний.</p>
+                                        </div>
+                                    </div>
+                                </div>
 
-                            </div>
+                                <!-- Accordion 3 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#item3">
+                                            <span>Нужен ли минимальный объём пробы?</span>
+                                        </button>
+                                    </h2>
+                                    <div id="item3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            <p>Да, минимальный объём пробы составляет 1 литр. Этого достаточно для
+                                                проведения всех необходимых испытаний.</p>
+                                        </div>
+                                    </div>
+                                </div>
 
-                            <!-- Thumbs Slider -->
-                            <div class="swiper thumbsSlider">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img src="assets/images/card_page-slider.png"></div>
-                                    <div class="swiper-slide"><img src="assets/images/card_page-slider.png"></div>
-                                    <div class="swiper-slide"><img src="assets/images/card_page-slider.png"></div>
+                                <!-- Accordion 4 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#item4">
+                                            <span>Нужен ли минимальный объём пробы?</span>
+                                        </button>
+                                    </h2>
+                                    <div id="item4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            <p>Да, минимальный объём пробы составляет 1 литр. Этого достаточно для
+                                                проведения всех необходимых испытаний.</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
+
 
                         </div>
                     </div>
@@ -267,83 +318,116 @@
                         <div class="card_page-info">
 
                             <div class="info_year">
-                                <span>Артикул: АР-456</span>
-                                <h2>Coolway 2010</h2>
+                                <h2>Лабораторные испытания</h2>
                             </div>
-                            <p class="info_description">Водорастворимая смазочно-охлаждающая жидкость,
-                                предназначенная
-                                для широкого спектра металлообрабатывающих операций: токарных, фрезерных,
-                                сверлильных
-                                и резьбонарезных. Продукт обеспечивает эффективное охлаждение инструмента
-                                и заготовки,
-                                снижает трение, увеличивает срок службы режущего инструмента и улучшает качество
-                                обработки поверхности.</p>
+                            <p class="info_description">Лабораторные испытания позволяют проверить свойства
+                                смазочно-охлаждающих жидкостей и смазок в контролируемых условиях. Мы анализируем
+                                соответствие стандартам, подбираем оптимальные режимы эксплуатации и подтверждаем
+                                качество документально.</p>
                             <div class="info_items">
                                 <div class="info_item">
-                                    <h2>Основные характеристики:</h2>
+                                    <h2>Этапы:</h2>
                                     <ul>
-                                        <li><span>•</span> Вязкость: ХХ cSt</li>
-                                        <li><span>•</span> Концентрация: ХХ %</li>
-                                        <li><span>•</span> Основа: водорастворимая</li>
-                                        <li><span>•</span> Форма выпуска: канистра 20 л, бочка 200 л</li>
-                                        <li><span>•</span> Срок хранения: ХХ мес</li>
+                                        <li><span>1.</span> Приём и регистрация образцов продукции или проб.</li>
+                                        <li><span>2. </span> Проведение анализа (вязкость, устойчивость к окислению,
+                                            коррозионная активность и др.).</li>
+                                        <li><span>3. </span> Подготовка протоколов испытаний.</li>
+                                        <li><span>4. </span> Формирование рекомендаций по применению.</li>
                                     </ul>
                                 </div>
                                 <!--  -->
                                 <div class="info_item">
-                                    <h2>Преимущества и применение:</h2>
-                                    <ul>
-                                        <li><span>•</span> Увеличивает срок службы инструмента на 30%</li>
-                                        <li><span>•</span> Снижает пенообразование при высоких оборотах</li>
-                                        <li><span>•</span> Обеспечивает чистоту поверхности</li>
-                                        <li><span>•</span> Подходит для: стали, алюминия, меди</li>
-                                    </ul>
+                                    <h2>Сроки:</h2>
+                                    <p>От 5 до 10 рабочих дней в зависимости от типа <br> продукта и объёма испытаний.
+                                    </p>
                                 </div>
                                 <!--  -->
                                 <div class="info_item">
-                                    <h2>PDF-файлы для скачивания:</h2>
-                                    <div class="download_block">
-                                        <ul>
-                                            <li><span>•</span> «Каталог продукции <span class="value">(2,5 МБ)</span>»
-                                            </li>
-                                            <li><span>•</span>«Сертификат соответствия <span
-                                                    class="value">(1,2 МБ)</span> »</li>
-                                        </ul>
-                                        <div class="download_btns">
-                                            <a href="#" download class="btn"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                    <path
-                                                        d="M12 15.577L8.461 12.039L9.169 11.319L11.5 13.65V5H12.5V13.65L14.83 11.32L15.539 12.039L12 15.577ZM5 19V14.962H6V18H18V14.962H19V19H5Z"
-                                                        fill="white" />
-                                                </svg> Скачать</a>
-                                            <a href="#" download class="btn"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                    <path
-                                                        d="M12 15.577L8.461 12.039L9.169 11.319L11.5 13.65V5H12.5V13.65L14.83 11.32L15.539 12.039L12 15.577ZM5 19V14.962H6V18H18V14.962H19V19H5Z"
-                                                        fill="white" />
-                                                </svg> Скачать</a>
-                                        </div>
-                                        <div class="mobile-download_btns">
-                                            <a href="#" download class="btn"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                    <path
-                                                        d="M12 15.577L8.461 12.039L9.169 11.319L11.5 13.65V5H12.5V13.65L14.83 11.32L15.539 12.039L12 15.577ZM5 19V14.962H6V18H18V14.962H19V19H5Z"
-                                                        fill="white" />
-                                                </svg> «Сертификат соответствия (1,2 МБ)»</a>
-                                            <a href="#" download class="btn"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                    <path
-                                                        d="M12 15.577L8.461 12.039L9.169 11.319L11.5 13.65V5H12.5V13.65L14.83 11.32L15.539 12.039L12 15.577ZM5 19V14.962H6V18H18V14.962H19V19H5Z"
-                                                        fill="white" />
-                                                </svg> «Каталог продукции (2,5 МБ)»</a>
-                                        </div>
+                                    <h2>Результаты:</h2>
+                                    <ul>
+                                        <li><span>• </span> Получение официального протокола испытаний.</li>
+                                        <li><span>• </span> Снижение рисков выхода оборудования из строя.</li>
+                                        <li><span>• </span> Оптимизация расхода и увеличение межсервисных интервалов
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-accordion accordion" id="faqAccordion">
+                            <h2 class="faq_title">
+                                Частые вопросы:
+                            </h2>
+
+                            <!-- Accordion 1 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#item1">
+                                        <span>Нужен ли минимальный объём пробы?</span>
+                                    </button>
+                                </h2>
+                                <div id="item1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p>Да, минимальный объём пробы составляет 1 литр. Этого достаточно для
+                                            проведения всех необходимых испытаний.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Accordion 2 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#item2">
+                                        <span>Нужен ли минимальный объём пробы?</span>
+                                    </button>
+                                </h2>
+                                <div id="item2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p>Да, минимальный объём пробы составляет 1 литр. Этого достаточно для
+                                            проведения всех необходимых испытаний.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Accordion 3 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#item3">
+                                        <span>Нужен ли минимальный объём пробы?</span>
+                                    </button>
+                                </h2>
+                                <div id="item3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p>Да, минимальный объём пробы составляет 1 литр. Этого достаточно для
+                                            проведения всех необходимых испытаний.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Accordion 4 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#item4">
+                                        <span>Нужен ли минимальный объём пробы?</span>
+                                    </button>
+                                </h2>
+                                <div id="item4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p>Да, минимальный объём пробы составляет 1 литр. Этого достаточно для
+                                            проведения всех необходимых испытаний.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card_contact-block">
 
-                            <form action="" class="card_contact">
+                        <div class="card_contact-block">
+                            <div class="contact_title">
+                                <h2>Оставить заявку на лабораторное испытание</h2>
+                            </div>
+                            <form action="" class="contact_item">
                                 <div class="name">
                                     <input type="text" class="contact_input" placeholder="Имя" id="name">
                                 </div>
@@ -362,90 +446,7 @@
                 </div>
             </div>
         </section>
-        <!--  -->
-        <section class="card_products-block">
-            <div class="container">
-                <div class="block_title">
-                    <h2>Похожие товары:</h2>
-                </div>
-                <div class="main_products_block">
-                    <div class="box">
-                        <div class="img">
-                            <img src="assets/images/catalog_products.png" alt="">
-                        </div>
-                        <div class="content">
-                            <h2 class="products_title">Coolway 2010</h2>
-                            <p class="products_description">Водорастворимая СОЖ для токарных и фрезерных
-                                операций.</p>
-                            <ul>
-                                <li>высокая стойкость к окислению</li>
-                                <li>низкое пенообразование.</li>
-                            </ul>
-                            <div class="product_certificate">
-                                <p>Сертификаты: <span>ISO 9001</span></p>
-                            </div>
-                        </div>
-                        <a href="#" class="product_btn">Подробнее</a>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="assets/images/catalog_products.png" alt="">
-                        </div>
-                        <div class="content">
-                            <h2 class="products_title">Coolway 2010</h2>
-                            <p class="products_description">Водорастворимая СОЖ для токарных и фрезерных
-                                операций.</p>
-                            <ul>
-                                <li>высокая стойкость к окислению</li>
-                                <li>низкое пенообразование.</li>
-                            </ul>
-                            <div class="product_certificate">
-                                <p>Сертификаты: <span>ISO 9001</span></p>
-                            </div>
-                        </div>
-                        <a href="#" class="product_btn">Подробнее</a>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="assets/images/catalog_products.png" alt="">
-                        </div>
-                        <div class="content">
-                            <h2 class="products_title">Coolway 2010</h2>
-                            <p class="products_description">Водорастворимая СОЖ для токарных и фрезерных
-                                операций.</p>
-                            <ul>
-                                <li>высокая стойкость к окислению</li>
-                                <li>низкое пенообразование.</li>
-                            </ul>
-                            <div class="product_certificate">
-                                <p>Сертификаты: <span>ISO 9001</span></p>
-                            </div>
-                        </div>
-                        <a href="#" class="product_btn">Подробнее</a>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="assets/images/catalog_products.png" alt="">
-                        </div>
-                        <div class="content">
-                            <h2 class="products_title">Coolway 2010</h2>
-                            <p class="products_description">Водорастворимая СОЖ для токарных и фрезерных
-                                операций.</p>
-                            <ul>
-                                <li>высокая стойкость к окислению</li>
-                                <li>низкое пенообразование.</li>
-                            </ul>
-                            <div class="product_certificate">
-                                <p>Сертификаты: <span>ISO 9001</span></p>
-                            </div>
-                        </div>
-                        <a href="#" class="product_btn">Подробнее</a>
-                    </div>
 
-                </div>
-            </div>
-        </section>
-        <!--  -->
         <!-- card_products end -->
         <footer class="footer">
             <div class="container">

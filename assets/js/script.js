@@ -1,15 +1,12 @@
 (function ($) {
   'use strict';
 
-  // Optimized script for Swipers, menu toggle, contact validation, custom select, and thumbnails
   $(function () {
 
-    // ---------- MENU BUTTON ----------
+    // ========== MENU BUTTON ==========
     $('.menu-btn').on('click', function () {
       const $this = $(this);
-      // Toggle active on hamburger and swap active class between the two menu-btns
       $('.menu-btn').removeClass('active');
-      // If there are exactly two buttons, activate the other one. Otherwise toggle current.
       const index = $('.menu-btn').index(this);
       if ($('.menu-btn').length === 2) {
         $('.menu-btn').eq(index === 0 ? 1 : 0).addClass('active');
@@ -19,49 +16,61 @@
       $('.hamburger').toggleClass('active');
     });
 
-    // ---------- SWIPER MANAGEMENT ----------
-    // Keep instances in a map keyed by selector
+    // ========== SWIPER MANAGEMENT ==========
     const swiperInstances = {};
-
-    // Config map for sliders - you can extend options per slider
     const SWIPER_CONFIG = {
       '.products_slider': function () {
+        const $slider = document.querySelector('.products_slider');
+        if (!$slider) return null;
+        const slideCount = $slider.querySelectorAll('.swiper-slide').length;
+        const perView = window.innerWidth <= 769 ? 1 : 3;
         return {
-          slidesPerView: window.innerWidth <= 769 ? 1 : 3,
+          slidesPerView: perView,
           spaceBetween: 30,
-          loop: true,
+          loop: slideCount >= perView * 2,
           pagination: { el: '.product_swiper-pagination', clickable: true }
         };
       },
       '.certificate_slider': function () {
+        const $slider = document.querySelector('.certificate_slider');
+        if (!$slider) return null;
+        const slideCount = $slider.querySelectorAll('.swiper-slide').length;
+        const perView = window.innerWidth <= 769 ? 1 : 4;
         return {
-          slidesPerView: window.innerWidth <= 769 ? 1 : 4,
+          slidesPerView: perView,
           spaceBetween: 30,
-          loop: true,
+          loop: slideCount >= perView * 2,
           pagination: { el: '.certificate_swiper-pagination', clickable: true }
         };
       },
       '.results_slider': function () {
-        return window.innerWidth <= 769 ?
-          {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            pagination: { el: '.results_swiper-pagination', clickable: true }
-          } :
-          {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            loop: true,
-            grabCursor: true,
-            pagination: { el: '.results_swiper-pagination', type: 'progressbar' }
-          };
+        const $slider = document.querySelector('.results_slider');
+        if (!$slider) return null;
+        const slideCount = $slider.querySelectorAll('.swiper-slide').length;
+        return window.innerWidth <= 769 ? {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          loop: slideCount >= 2,
+          pagination: { el: '.results_swiper-pagination', clickable: true }
+        } : {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          loop: slideCount >= 6,
+          grabCursor: true,
+          pagination: { el: '.results_swiper-pagination', type: 'progressbar' }
+        };
       },
       '.team_slider': function () {
+        if (window.innerWidth > 769) return null;
+
+        const $slider = document.querySelector('.team_slider');
+        if (!$slider) return null;
+        const slideCount = $slider.querySelectorAll('.swiper-slide').length;
+
         return {
-          slidesPerView: window.innerWidth <= 769 ? 1.3 : 3,
+          slidesPerView: 1.3,
           spaceBetween: 38,
-          loop: true,
+          loop: slideCount >= 3,
           grabCursor: true,
           pagination: { el: '.team-pagination', type: 'progressbar' }
         };
@@ -71,129 +80,158 @@
     function initOrUpdateSwipers() {
       Object.keys(SWIPER_CONFIG).forEach(selector => {
         const el = document.querySelector(selector);
-        if (!el) return; // skip if not on page
-
+        if (!el) return;
         const config = SWIPER_CONFIG[selector]();
-
-        // If instance exists destroy it first to re-init with new options
+        if (!config) return;
         if (swiperInstances[selector] && swiperInstances[selector].destroy) {
-          try {
-            swiperInstances[selector].destroy(true, true);
-          } catch (e) {
-            // ignore
-          }
+          try { swiperInstances[selector].destroy(true, true); } catch (e) { }
           delete swiperInstances[selector];
         }
-
-        // Create new instance
-        swiperInstances[selector] = new Swiper(selector, config);
+        try { swiperInstances[selector] = new Swiper(selector, config); } catch (e) { }
       });
     }
 
-    // Initial init
     initOrUpdateSwipers();
-
-    // Debounced resize handler
     let resizeTimer = null;
     window.addEventListener('resize', function () {
       clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(function () {
-        initOrUpdateSwipers();
-      }, 150);
+      resizeTimer = setTimeout(initOrUpdateSwipers, 150);
     });
 
-    // ---------- THUMBS + MAIN SLIDERS (pair) ----------
-    // Only init if DOM elements exist
-    // if (document.querySelector('.thumbsSlider') && document.querySelector('.mainSlider')) {
-    //   // Destroy previous if any
-    //   if (swiperInstances['.thumbsSlider'] && swiperInstances['.thumbsSlider'].destroy) {
-    //     try { swiperInstances['.thumbsSlider'].destroy(true, true); } catch (e) { }
-    //   }
-    //   if (swiperInstances['.mainSlider'] && swiperInstances['.mainSlider'].destroy) {
-    //     try { swiperInstances['.mainSlider'].destroy(true, true); } catch (e) { }
-    //   }
-
-    //   swiperInstances['.thumbsSlider'] = new Swiper('.thumbsSlider', {
-    //     spaceBetween: 20,
-    //     slidesPerView: 4,
-    //     freeMode: true,
-    //     watchSlidesProgress: true
-    //   });
-
-    //   swiperInstances['.mainSlider'] = new Swiper('.mainSlider', {
-    //     spaceBetween: 10,
-    //     thumbs: { swiper: swiperInstances['.thumbsSlider'] }
-    //   });
-    // }
-    if (!document.querySelector(".mainSlider")) return;
-
-    let m, t;
-
-    function init() {
-      if (m) m.destroy(true, true);
-      if (t) t.destroy(true, true);
-
-      if (window.innerWidth <= 769) {
-        m = new Swiper(".mainSlider", {
-          pagination: { el: ".main-pagination", clickable: true }
-        });
-      } else {
-        t = new Swiper(".thumbsSlider", { slidesPerView: 4, spaceBetween: 20 });
-        m = new Swiper(".mainSlider", { thumbs: { swiper: t } });
+    // ========== THUMBS + MAIN SLIDERS ==========
+    if (document.querySelector(".mainSlider")) {
+      let m, t;
+      function initThumbSlider() {
+        if (m) m.destroy(true, true);
+        if (t) t.destroy(true, true);
+        if (window.innerWidth <= 769) {
+          m = new Swiper(".mainSlider", {
+            pagination: { el: ".main-pagination", clickable: true }
+          });
+        } else {
+          t = new Swiper(".thumbsSlider", { slidesPerView: 4, spaceBetween: 20, watchSlidesProgress: true });
+          m = new Swiper(".mainSlider", { thumbs: { swiper: t } });
+        }
       }
+      initThumbSlider();
+      window.addEventListener("resize", initThumbSlider);
     }
 
-    init();
-    window.addEventListener("resize", init);
-
-    // ---------- CONTACT FORM VALIDATION ----------
+    // ========== CONTACT FORM VALIDATION ==========
     const $form = $('.contact_item');
     if ($form.length) {
-      const $nameInput = $form.find('#name');
-      const $phoneInput = $form.find('#phone_number');
-      const $checkbox = $form.find('#contact-checkbox');
-      const $submitBtn = $form.find('.contact_btn');
+      const $nameInput = $('#name');
+      const $phoneInput = $('#phone_number');
+      const $checkbox = $('#contact-checkbox');
+      const $submitBtn = $('.contact_btn');
 
-      // If any required element is missing - skip
-      if ($nameInput.length && $phoneInput.length && $checkbox.length && $submitBtn.length) {
-        $submitBtn.prop('disabled', true);
+      $submitBtn.prop('disabled', true);
 
-        function isValidInput($input) {
-          const val = $input.val() ? $input.val().trim() : '';
-          if (!val) return false;
-          // rely on native validation where possible
-          if ($input.attr('type') === 'tel') {
-            // phone mask "+7 (999) 999-99-99" -> check digits count
-            const digits = (val.match(/\d/g) || []).length;
-            return digits >= 10; // allow 10+ digits
-          }
-          return $input[0].checkValidity ? $input[0].checkValidity() : true;
-        }
-
-        function updateFieldStyle($input) {
-          const ok = isValidInput($input);
-          $input.css({
-            border: ok ? '1px solid #83CACC' : '1px solid #FF6363',
-            background: ok ? 'rgba(131, 202, 204, 0.42)' : 'rgba(255, 163, 163, 0.42)'
-          });
-          return ok;
-        }
-
-        function checkForm() {
-          const allValid = isValidInput($nameInput) && isValidInput($phoneInput) && $checkbox.is(':checked');
-          $submitBtn.prop('disabled', !allValid);
-        }
-
-        $nameInput.on('input blur', function () { updateFieldStyle($(this)); checkForm(); });
-        $phoneInput.on('input blur', function () { updateFieldStyle($(this)); checkForm(); });
-        $checkbox.on('change', checkForm);
-
-        // run once on load
-        checkForm();
+      // InputMask
+      if ($phoneInput.length && typeof $.fn.inputmask === 'function') {
+        $phoneInput.inputmask({
+          mask: '+7 (999) 999-99-99',
+          placeholder: '_',
+          showMaskOnHover: false,
+          clearIncomplete: false
+        });
+      } else if ($phoneInput.length) {
+        $phoneInput.on('input', function () {
+          let value = $(this).val().replace(/\D/g, '');
+          if (value.length > 0 && value[0] === '7') value = value.substring(1);
+          let formatted = '+7';
+          if (value.length > 0) formatted += ' (' + value.substring(0, 3);
+          if (value.length >= 4) formatted += ') ' + value.substring(3, 6);
+          if (value.length >= 7) formatted += '-' + value.substring(6, 8);
+          if (value.length >= 9) formatted += '-' + value.substring(8, 10);
+          $(this).val(formatted);
+        });
       }
+
+      function isValidInput($input) {
+        const val = ($input.val() || '').trim();
+        if (!val) return false;
+        if ($input.attr('id') === 'phone_number') {
+          return val.replace(/\D/g, '').length === 11;
+        }
+        if ($input.attr('id') === 'name') {
+          return val.length >= 2;
+        }
+        return true;
+      }
+
+      function updateFieldStyle($input, touched) {
+        if (!touched) return false;
+        const ok = isValidInput($input);
+        $input.css({
+          border: ok ? '1px solid #83CACC' : '1px solid #FF6363',
+          background: ok ? 'rgba(131, 202, 204, 0.42)' : 'rgba(255, 163, 163, 0.42)',
+          transition: 'all 0.3s ease'
+        });
+        return ok;
+      }
+
+      let nameTouched = false;
+      let phoneTouched = false;
+
+      function checkForm() {
+        const nameValue = ($nameInput.val() || '').trim();
+        const phoneValue = ($phoneInput.val() || '').trim();
+        const nameValid = isValidInput($nameInput);
+        const phoneValid = isValidInput($phoneInput);
+        const checkboxValid = $checkbox.is(':checked');
+
+        // Rang berish faqat touched bo'lganda
+        if (nameTouched) {
+          $nameInput.css({
+            border: nameValid ? '1px solid #83CACC' : '1px solid #FF6363',
+            background: nameValid ? 'rgba(131, 202, 204, 0.42)' : 'rgba(255, 163, 163, 0.42)',
+            transition: 'all 0.3s ease'
+          });
+        }
+
+        if (phoneTouched) {
+          $phoneInput.css({
+            border: phoneValid ? '1px solid #83CACC' : '1px solid #FF6363',
+            background: phoneValid ? 'rgba(131, 202, 204, 0.42)' : 'rgba(255, 163, 163, 0.42)',
+            transition: 'all 0.3s ease'
+          });
+        }
+
+        // Button disabled bo'lishi: hamma input to'g'ri yozilmasa
+        const allValid = nameValid && phoneValid && checkboxValid;
+
+        $submitBtn.prop('disabled', !allValid).css({
+          opacity: allValid ? '1' : '1',
+          cursor: allValid ? 'pointer' : 'defoult'
+        });
+      }
+
+      $nameInput.on('focus', function () {
+        nameTouched = true;
+      }).on('input blur', checkForm);
+
+      $phoneInput.on('focus', function () {
+        phoneTouched = true;
+      }).on('input blur', checkForm);
+
+      $checkbox.on('change', checkForm);
+
+      $form.on('submit', function (e) {
+        e.preventDefault();
+        if (!$submitBtn.prop('disabled')) {
+          $form[0].reset();
+          nameTouched = false;
+          phoneTouched = false;
+          $nameInput.css({ border: '', background: '' });
+          $phoneInput.css({ border: '', background: '' });
+          checkForm();
+        }
+      });
     }
 
-    // ---------- CUSTOM SELECT (catalog_sort) ----------
+
+    // ========== CUSTOM SELECT ==========
     if ($('.catalog_sort .custom-select').length) {
       const $container = $('.catalog_sort');
       const $selectSelected = $container.find('.select-selected');
@@ -209,28 +247,12 @@
       $options.on('click', function () {
         $options.removeClass('same-as-selected');
         $(this).addClass('same-as-selected');
-
-        const text = $(this).text().trim();
-        // If selected element contains an SVG (icon) that should be preserved, keep current HTML
-        // Otherwise, replace text only (to not strip icons). We detect SVG by searching child <svg>.
-        const hasSvg = $(this).find('svg').length > 0;
-        if (hasSvg) {
-          // If you want to also copy the SVG into selected, uncomment next line and adapt markup
-          // $selectSelected.html($(this).html());
-          $selectSelected.text(text);
-        } else {
-          $selectSelected.text(text);
-        }
-
+        $selectSelected.text($(this).text().trim());
         $selectItems.removeClass('show').addClass('select-hide');
         $selectSelected.removeClass('select-arrow-active');
-
-        const value = $(this).data('value');
-        // Fire custom event for other parts of code to listen to
-        $container.trigger('custom-select:changed', [value]);
+        $container.trigger('custom-select:changed', [$(this).data('value')]);
       });
 
-      // Close dropdown when clicking outside
       $(document).on('click.catalogSelect', function () {
         if ($selectItems.hasClass('show')) {
           $selectItems.removeClass('show').addClass('select-hide');
@@ -239,19 +261,15 @@
       });
     }
 
-    // ---------- TEAM SLIDER (small-screen only) ----------
-    // Note: team slider already handled via SWIPER_CONFIG. Keep for backward compatibility.
+    // ========== ACCORDION ==========
+    $('.accordion-button').on('click', function () {
+      $('.accordion-button').not(this).addClass('collapsed');
+    });
 
-    // ---------- INPUT MASK ----------
-    if (typeof $.fn.inputmask === 'function' && $('#phone_number').length) {
-      $('#phone_number').inputmask('+7 (999) 999-99-99');
-    }
-
-    // ---------- QUICK UTILITY: toggle catalog active ----------
+    // ========== CATALOG TOGGLE ==========
     window.catalog_toggleActive = function () {
       const $section = $('.catalog_category');
-      if ($section.length === 0) { console.warn('.catalog_category topilmadi'); return; }
-      $section.toggleClass('active');
+      if ($section.length) $section.toggleClass('active');
     };
 
   });
