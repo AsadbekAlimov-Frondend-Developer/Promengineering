@@ -5279,7 +5279,7 @@ textarea {
   border-radius: 0;
 }
 @media screen and (max-width: 480px) {
-  .faq-accordion .accordion-item:first-child .accordion-button {
+  .faq-accordion .accordion-item:nth-child(2) .accordion-button {
     padding-top: 0 !important;
   }
 }
@@ -5367,7 +5367,7 @@ textarea {
   }
 }
 .card-service_page .header {
-  margin-bottom: 81px;
+  margin-bottom: 78px;
 }
 @media screen and (max-width: 480px) {
   .card-service_page .header {
@@ -5375,11 +5375,11 @@ textarea {
   }
 }
 .card-service_page .card-product {
-  margin-bottom: 96px;
+  margin-bottom: 164px;
 }
 @media screen and (max-width: 768px) {
   .card-service_page .card-product {
-    margin-bottom: 72px;
+    margin-bottom: 130px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -5583,6 +5583,11 @@ textarea {
   line-height: 150%;
   /* 24px */
 }
+@media screen and (max-width: 480px) {
+  .card-service_page .card-product .card_page-info .info_item p br {
+    display: none;
+  }
+}
 .card-service_page .card-product .card_page-info .info_item .download_block {
   display: flex;
   align-items: center;
@@ -5669,8 +5674,9 @@ textarea {
   flex-direction: column;
   align-items: flex-start;
   border-radius: 25px;
-  border: 1px solid #0D0D0D;
+  border: 1px solid rgba(249, 245, 245, 0.3);
   background: rgba(0, 0, 0, 0.44);
+  position: relative;
   /* Checked holat — rasmni shu yerga qo'yamiz */
 }
 @media screen and (max-width: 480px) {
@@ -5680,11 +5686,40 @@ textarea {
     padding: 0;
   }
 }
+.card-service_page .card-product .card_contact-block::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  /* border qalinligi */
+  background: linear-gradient(180deg, rgba(249, 245, 245, 0.3) 0%, rgb(0, 0, 0) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 0;
+}
+@media screen and (max-width: 480px) {
+  .card-service_page .card-product .card_contact-block::before {
+    background-color: transparent;
+    border: none;
+    position: unset;
+    display: none;
+  }
+}
 .card-service_page .card-product .card_contact-block .contact_item {
   width: 100%;
 }
 .card-service_page .card-product .card_contact-block .contact_title {
   margin-bottom: 38px;
+}
+@media screen and (max-width: 480px) {
+  .card-service_page .card-product .card_contact-block .contact_title {
+    margin-bottom: 20px;
+  }
 }
 .card-service_page .card-product .card_contact-block .contact_title h2 {
   color: #FFF;
@@ -5694,6 +5729,12 @@ textarea {
   font-weight: 400;
   line-height: 150%;
   /* 36px */
+}
+@media screen and (max-width: 480px) {
+  .card-service_page .card-product .card_contact-block .contact_title h2 {
+    line-height: 120%;
+    font-family: "Sora", sans-serif;
+  }
 }
 .card-service_page .card-product .card_contact-block .contact_input {
   display: flex;
@@ -5770,7 +5811,7 @@ textarea {
   cursor: pointer;
   background-color: #E1E1E1;
   background-repeat: no-repeat;
-  background-position: 3px 4px;
+  background-position: 2px 4px;
 }
 @media screen and (max-width: 768px) {
   .card-service_page .card-product .card_contact-block #contact-checkbox {
@@ -5945,5 +5986,213 @@ textarea {
     padding: 0 3.5px;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+}
+
+.contact-page .header {
+  margin-bottom: 96px;
+}
+@media screen and (max-width: 480px) {
+  .contact-page .header {
+    margin-bottom: 36px;
+  }
+}
+.contact-page .contact-page_block {
+  margin-bottom: 156px;
+}
+@media screen and (max-width: 660px) {
+  .contact-page .contact-page_block .container {
+    padding: 0 !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contact-page .contact-page_block {
+    margin-bottom: 62px;
+  }
+}
+.contact-page .contact-page_block .block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 660px) {
+  .contact-page .contact-page_block .block {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+.contact-page .contact-page_block .contend {
+  width: 26.1363636364%;
+}
+@media screen and (max-width: 660px) {
+  .contact-page .contact-page_block .contend {
+    width: 100%;
+    padding: 0 16px;
+  }
+}
+.contact-page .contact-page_block .contend .title {
+  color: var(--2, #83CACC);
+  font-family: "Sora", sans-serif;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  margin-bottom: 17px;
+}
+@media screen and (max-width: 480px) {
+  .contact-page .contact-page_block .contend .title {
+    font-size: 28px;
+    line-height: 120%;
+    margin-bottom: 20px;
+  }
+}
+.contact-page .contact-page_block .contend .description {
+  width: 334px;
+  color: #FFF;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  margin-bottom: 43px;
+}
+@media screen and (max-width: 480px) {
+  .contact-page .contact-page_block .contend .description {
+    margin-bottom: 36px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
+.contact-page .contact-page_block .contend .contacts_icons .email {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  color: #FFF;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 16px;
+}
+.contact-page .contact-page_block .contend .contacts_icons .email svg {
+  min-width: 30px;
+  min-height: 30px;
+  aspect-ratio: 1/1;
+}
+@media screen and (max-width: 660px) {
+  .contact-page .contact-page_block .contend .contacts_icons .email svg path {
+    fill: white;
+  }
+}
+.contact-page .contact-page_block .contend .contacts_icons .tel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #FFF;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 16px;
+}
+.contact-page .contact-page_block .contend .contacts_icons .tel svg {
+  width: 30px;
+  height: 30px;
+  aspect-ratio: 1/1;
+}
+@media screen and (max-width: 660px) {
+  .contact-page .contact-page_block .contend .contacts_icons .tel svg path {
+    fill: white;
+  }
+}
+.contact-page .contact-page_block .contend .contacts_icons .main-icons {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 82px;
+}
+@media screen and (max-width: 480px) {
+  .contact-page .contact-page_block .contend .contacts_icons .main-icons {
+    margin-bottom: 36px;
+    gap: 11px;
+  }
+}
+.contact-page .contact-page_block .contend .location {
+  color: #FFF;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.contact-page .contact-page_block .contend .location br {
+  display: none;
+}
+@media screen and (max-width: 660px) {
+  .contact-page .contact-page_block .contend .location br {
+    display: block;
+  }
+}
+.contact-page .contact-page_block .map {
+  width: 40%;
+  border-radius: 32px;
+  border: 1px solid #1BB1B7;
+  box-shadow: 0 3px 0 0 #036E6E;
+  overflow: hidden;
+  padding: 9px 10px;
+}
+@media screen and (max-width: 660px) {
+  .contact-page .contact-page_block .map {
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+  }
+}
+.contact-page .contact-page_block .map .maping {
+  height: 434px;
+}
+@media screen and (max-width: 660px) {
+  .contact-page .contact-page_block .map .maping {
+    height: 383px;
+  }
+}
+.contact-page .contact-page_block .map .map_item {
+  width: 100%;
+  border-radius: 26px;
+}
+@media screen and (max-width: 660px) {
+  .contact-page .contact-page_block .map .map_item {
+    border-radius: 0;
+  }
+}
+.contact-page .contact .contact_block .contact_title br {
+  display: none;
+}
+.contact-page .contact .contact_block .contact_title br:nth-child(2) {
+  display: block;
+}
+@media screen and (max-width: 660px) {
+  .contact-page .contact .contact_block .contact_title {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 120%;
+  }
+  .contact-page .contact .contact_block .contact_title br:nth-child(2) {
+    display: none;
+  }
+  .contact-page .contact .contact_block .contact_title br {
+    display: block;
+  }
+}
+@media screen and (max-width: 660px) {
+  .contact-page .contact .contact_block .contact_description {
+    width: 100%;
   }
 }/*# sourceMappingURL=index.css.map */

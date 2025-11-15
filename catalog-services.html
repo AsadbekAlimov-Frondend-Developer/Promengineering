@@ -19,9 +19,10 @@
 </head>
 
 <body>
-    <div class="wrapper card-service_page">
+    <div class="wrapper services">
         <div class="bg_big_images">
             <div class="image_1"></div>
+            <div class="catalog_footer_bg-fon"></div>
             <div class="footer_mobile-fon"></div>
         </div>
         <!--  -->
@@ -153,300 +154,152 @@
                                 <img src="assets/images/nav_menu-border.png" alt="nav_menu-border">
                             </li>
                         </ul>
-                        <!-- <div class="nav_contacts">
-                            <div class="phone">
-                                <span>+7 958 642-73-92</span>
-                            </div>
-                            <div class="icons">
-                                 <div class="icon">
-                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <mask id="mask0_0_192" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5"
-                                            y="5" width="24" height="24">
-                                            <rect x="5" y="5" width="24" height="23.7241" fill="url(#pattern0_0_192)" />
-                                        </mask>
-                                        <g mask="url(#mask0_0_192)">
-                                            <rect x="5" y="5" width="24" height="24" fill="white" />
-                                        </g>
-                                        <defs>
-                                            <pattern id="pattern0_0_192" patternContentUnits="objectBoundingBox"
-                                                width="1" height="1">
-                                                <use xlink:href="#image0_0_192"
-                                                    transform="matrix(0.0114943 0 0 0.0116279 -0.091954 -0.0813953)" />
-                                            </pattern>
-                                            <image id="image0_0_192" width="100" height="100" preserveAspectRatio="none"
-                                                xlink:href="data:image/png;base64,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" />
-                                        </defs>
-                                    </svg>
-                                </div>
-                                <div class="icon">
-                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <mask id="mask0_0_196" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5"
-                                            y="4" width="24" height="24">
-                                            <rect x="5" y="4" width="24" height="24" fill="url(#pattern0_0_196)" />
-                                        </mask>
-                                        <g mask="url(#mask0_0_196)">
-                                            <rect x="5" y="4" width="24" height="24" fill="white" />
-                                        </g>
-                                        <defs>
-                                            <pattern id="pattern0_0_196" patternContentUnits="objectBoundingBox"
-                                                width="1" height="1">
-                                                <use xlink:href="#image0_0_196"
-                                                    transform="translate(-0.0319149 -0.0319149) scale(0.0106383)" />
-                                            </pattern>
-                                            <image id="image0_0_196" width="100" height="100" preserveAspectRatio="none"
-                                                xlink:href="data:image/png;base64,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" />
-                                        </defs>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div> -->
+
                     </div>
                 </div>
             </div>
         </header>
-
-
-
-        <!-- catalog end -->
-        <section class="card-product">
+        <section class="card_products-block">
             <div class="container">
-                <div class="page_title">
-                    <div class="items">
-                        <a class="old-page" href="#">Услуги</a>
-                        <span class="middle" href="#">/</span>
-                        <a class="current" href="#">Лаб. испытания</a>
-                    </div>
-                    <div class="item_2">
-
-                        <div class="back_page">
-                            <a href="#" class="btn">Назад в каталог <svg xmlns="http://www.w3.org/2000/svg" width="21"
-                                    height="21" viewBox="0 0 21 21" fill="none">
-                                    <path d="M6.499 6.49799L3.5 9.49999L6.5 12.5" stroke="#1BB1B7"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M8.5 15.5H13.5C15.5 15.5 16.5 14.5 16.5 12.5C16.5 9.5 15.5 9.5 13.5 9.5H3.5"
-                                        stroke="#1BB1B7" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg></a>
-                        </div>
-                    </div>
+                <div class="block_title">
+                    <h2>Услуги</h2>
+                    <p>Промминжиниринг предлагает комплексные услуги: подбор, консультации, испытания и сервис. Всё,
+                        чтобы ваша продукция работала без сбоев.</p>
                 </div>
-                <div class="card_block">
-                    <div class="card_slider-block">
-                        <div class="card_slider-main">
-                            <!-- Main Slider -->
-                            <div class="main-img">
-                                <div class="swiper-slide"><img src="assets/images/card-service-page_main-img.png"></div>
-                            </div>
-                            <div class="faq-accordion accordion" id="faqAccordion">
-                                <h2 class="faq_title">
-                                    Частые вопросы:
-                                </h2>
-
-                                <!-- Accordion 1 -->
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#item1">
-                                            <span>Нужен ли минимальный объём пробы?</span>
-                                        </button>
-                                    </h2>
-                                    <div id="item1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                        <div class="accordion-body">
-                                            <p>Да, минимальный объём пробы составляет 1 литр. Этого достаточно для
-                                                проведения всех необходимых испытаний.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Accordion 2 -->
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#item2">
-                                            <span>Нужен ли минимальный объём пробы?</span>
-                                        </button>
-                                    </h2>
-                                    <div id="item2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                        <div class="accordion-body">
-                                            <p>Да, минимальный объём пробы составляет 1 литр. Этого достаточно для
-                                                проведения всех необходимых испытаний.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Accordion 3 -->
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#item3">
-                                            <span>Нужен ли минимальный объём пробы?</span>
-                                        </button>
-                                    </h2>
-                                    <div id="item3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                        <div class="accordion-body">
-                                            <p>Да, минимальный объём пробы составляет 1 литр. Этого достаточно для
-                                                проведения всех необходимых испытаний.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Accordion 4 -->
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#item4">
-                                            <span>Нужен ли минимальный объём пробы?</span>
-                                        </button>
-                                    </h2>
-                                    <div id="item4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                        <div class="accordion-body">
-                                            <p>Да, минимальный объём пробы составляет 1 литр. Этого достаточно для
-                                                проведения всех необходимых испытаний.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
+                <div class="main_products_block">
+                    <div class="box">
+                        <div class="img">
+                            <picture>
+                                <source media="(min-width:768px)" srcset="assets/images/services_block.png">
+                                <source media="(max-width:768px)" srcset="assets/images/services_block-mobile.png">
+                                <img src="assets/images/services_block.png" alt="Flowers">
+                            </picture>
+                        </div>
+                        <div class="content">
+                            <h2 class="products_title">Лабораторные испытания</h2>
+                            <p class="products_description">Проверка смазок и СОЖ в условиях производства, составление
+                                протоколов испытаний.</p>
 
                         </div>
+                        <a href="#" class="product_btn">Подробнее</a>
                     </div>
-
-                    <div class="card_item2">
-                        <div class="card_page-info">
-
-                            <div class="info_year">
-                                <h2>Лабораторные испытания</h2>
-                            </div>
-                            <p class="info_description">Лабораторные испытания позволяют проверить свойства
-                                смазочно-охлаждающих жидкостей и смазок в контролируемых условиях. Мы анализируем
-                                соответствие стандартам, подбираем оптимальные режимы эксплуатации и подтверждаем
-                                качество документально.</p>
-                            <div class="info_items">
-                                <div class="info_item">
-                                    <h2>Этапы:</h2>
-                                    <ul>
-                                        <li><span>1.</span> Приём и регистрация образцов продукции или проб.</li>
-                                        <li><span>2. </span> Проведение анализа (вязкость, устойчивость к окислению,
-                                            коррозионная активность и др.).</li>
-                                        <li><span>3. </span> Подготовка протоколов испытаний.</li>
-                                        <li><span>4. </span> Формирование рекомендаций по применению.</li>
-                                    </ul>
-                                </div>
-                                <!--  -->
-                                <div class="info_item">
-                                    <h2>Сроки:</h2>
-                                    <p>От 5 до 10 рабочих дней в зависимости от типа <br> продукта и объёма испытаний.
-                                    </p>
-                                </div>
-                                <!--  -->
-                                <div class="info_item">
-                                    <h2>Результаты:</h2>
-                                    <ul>
-                                        <li><span>• </span> Получение официального протокола испытаний.</li>
-                                        <li><span>• </span> Снижение рисков выхода оборудования из строя.</li>
-                                        <li><span>• </span> Оптимизация расхода и увеличение межсервисных интервалов
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                    <div class="box">
+                        <div class="img">
+                            <picture>
+                                <source media="(min-width:768px)" srcset="assets/images/services_block.png">
+                                <source media="(max-width:768px)" srcset="assets/images/services_block-mobile.png">
+                                <img src="assets/images/services_block.png" alt="Flowers">
+                            </picture>
                         </div>
-                        <div class="faq-accordion accordion" id="faqAccordion">
-                            <h2 class="faq_title">
-                                Частые вопросы:
-                            </h2>
+                        <div class="content">
+                            <h2 class="products_title">Лабораторные испытания</h2>
+                            <p class="products_description">Проверка смазок и СОЖ в условиях производства, составление
+                                протоколов испытаний.</p>
 
-                            <!-- Accordion 1 -->
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#item1">
-                                        <span>Нужен ли минимальный объём пробы?</span>
-                                    </button>
-                                </h2>
-                                <div id="item1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        <p>Да, минимальный объём пробы составляет 1 литр. Этого достаточно для
-                                            проведения всех необходимых испытаний.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Accordion 2 -->
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#item2">
-                                        <span>Нужен ли минимальный объём пробы?</span>
-                                    </button>
-                                </h2>
-                                <div id="item2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        <p>Да, минимальный объём пробы составляет 1 литр. Этого достаточно для
-                                            проведения всех необходимых испытаний.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Accordion 3 -->
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#item3">
-                                        <span>Нужен ли минимальный объём пробы?</span>
-                                    </button>
-                                </h2>
-                                <div id="item3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        <p>Да, минимальный объём пробы составляет 1 литр. Этого достаточно для
-                                            проведения всех необходимых испытаний.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Accordion 4 -->
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#item4">
-                                        <span>Нужен ли минимальный объём пробы?</span>
-                                    </button>
-                                </h2>
-                                <div id="item4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        <p>Да, минимальный объём пробы составляет 1 литр. Этого достаточно для
-                                            проведения всех необходимых испытаний.</p>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-
-                        <div class="card_contact-block">
-                            <div class="contact_title">
-                                <h2>Оставить заявку на лабораторное испытание</h2>
-                            </div>
-                            <form action="" class="contact_item">
-                                <div class="name">
-                                    <input type="text" class="contact_input" placeholder="Имя" id="name">
-                                </div>
-                                <div class="tel">
-                                    <input type="text" class="contact_input" placeholder="Телефон" id="phone_number">
-                                </div>
-                                <div class="checkbox">
-                                    <input id="contact-checkbox" type="checkbox" required>
-                                    <label for="contact-checkbox">Согласие на обработку данных</label>
-                                </div>
-                                <button type="submit" class="contact_btn"><span>Получить консультацию</span></button>
-                            </form>
+                        <a href="#" class="product_btn">Подробнее</a>
+                    </div>
+                    <div class="box">
+                        <div class="img">
+                            <picture>
+                                <source media="(min-width:768px)" srcset="assets/images/services_block.png">
+                                <source media="(max-width:768px)" srcset="assets/images/services_block-mobile.png">
+                                <img src="assets/images/services_block.png" alt="Flowers">
+                            </picture>
                         </div>
+                        <div class="content">
+                            <h2 class="products_title">Лабораторные испытания</h2>
+                            <p class="products_description">Проверка смазок и СОЖ в условиях производства, составление
+                                протоколов испытаний.</p>
+
+                        </div>
+                        <a href="#" class="product_btn">Подробнее</a>
+                    </div>
+                    <div class="box">
+                        <div class="img">
+                            <picture>
+                                <source media="(min-width:768px)" srcset="assets/images/services_block.png">
+                                <source media="(max-width:768px)" srcset="assets/images/services_block-mobile.png">
+                                <img src="assets/images/services_block.png" alt="Flowers">
+                            </picture>
+                        </div>
+                        <div class="content">
+                            <h2 class="products_title">Лабораторные испытания</h2>
+                            <p class="products_description">Проверка смазок и СОЖ в условиях производства, составление
+                                протоколов испытаний.</p>
+
+                        </div>
+                        <a href="#" class="product_btn">Подробнее</a>
+                    </div>
+                    <div class="box">
+                        <div class="img">
+                            <picture>
+                                <source media="(min-width:768px)" srcset="assets/images/services_block.png">
+                                <source media="(max-width:768px)" srcset="assets/images/services_block-mobile.png">
+                                <img src="assets/images/services_block.png" alt="Flowers">
+                            </picture>
+                        </div>
+                        <div class="content">
+                            <h2 class="products_title">Лабораторные испытания</h2>
+                            <p class="products_description">Проверка смазок и СОЖ в условиях производства, составление
+                                протоколов испытаний.</p>
+
+                        </div>
+                        <a href="#" class="product_btn">Подробнее</a>
+                    </div>
+                    <div class="box">
+                        <div class="img">
+                            <picture>
+                                <source media="(min-width:768px)" srcset="assets/images/services_block.png">
+                                <source media="(max-width:768px)" srcset="assets/images/services_block-mobile.png">
+                                <img src="assets/images/services_block.png" alt="Flowers">
+                            </picture>
+                        </div>
+                        <div class="content">
+                            <h2 class="products_title">Лабораторные испытания</h2>
+                            <p class="products_description">Проверка смазок и СОЖ в условиях производства, составление
+                                протоколов испытаний.</p>
+
+                        </div>
+                        <a href="#" class="product_btn">Подробнее</a>
+                    </div>
+                    <div class="box">
+                        <div class="img">
+                            <picture>
+                                <source media="(min-width:768px)" srcset="assets/images/services_block.png">
+                                <source media="(max-width:768px)" srcset="assets/images/services_block-mobile.png">
+                                <img src="assets/images/services_block.png" alt="Flowers">
+                            </picture>
+                        </div>
+                        <div class="content">
+                            <h2 class="products_title">Лабораторные испытания</h2>
+                            <p class="products_description">Проверка смазок и СОЖ в условиях производства, составление
+                                протоколов испытаний.</p>
+
+                        </div>
+                        <a href="#" class="product_btn">Подробнее</a>
+                    </div>
+                    <div class="box">
+                        <div class="img">
+                            <picture>
+                                <source media="(min-width:768px)" srcset="assets/images/services_block.png">
+                                <source media="(max-width:768px)" srcset="assets/images/services_block-mobile.png">
+                                <img src="assets/images/services_block.png" alt="Flowers">
+                            </picture>
+                        </div>
+                        <div class="content">
+                            <h2 class="products_title">Лабораторные испытания</h2>
+                            <p class="products_description">Проверка смазок и СОЖ в условиях производства, составление
+                                протоколов испытаний.</p>
+
+                        </div>
+                        <a href="#" class="product_btn">Подробнее</a>
                     </div>
 
                 </div>
             </div>
         </section>
-
+        <!--  -->
         <!-- card_products end -->
         <footer class="footer">
             <div class="container">
