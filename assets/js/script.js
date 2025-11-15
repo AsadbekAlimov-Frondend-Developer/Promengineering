@@ -27,7 +27,7 @@
         return {
           slidesPerView: perView,
           spaceBetween: 30,
-          loop:true,
+          loop: true,
           loop: slideCount >= perView * 2,
           pagination: { el: '.product_swiper-pagination', clickable: true }
         };
@@ -40,10 +40,11 @@
         return {
           slidesPerView: perView,
           spaceBetween: 30,
-          loop: slideCount >= perView * 2,
+          loop: slideCount > perView,
           pagination: { el: '.certificate_swiper-pagination', clickable: true }
         };
       },
+
       '.results_slider': function () {
         const $slider = document.querySelector('.results_slider');
         if (!$slider) return null;
