@@ -4326,6 +4326,10 @@ textarea {
                             border: solid white; // Oq galochka
                             border-width: 0 2px 2px 0;
                             transform: rotate(45deg);
+                            // 
+                            @media screen and (max-width: 480px) {
+                                top: 3px;
+                            }
                         }
                     }
                 }
@@ -7049,7 +7053,7 @@ textarea {
                 background-color: #E1E1E1;
 
                 background-repeat: no-repeat;
-                background-position: 2px 4px;
+                background-position: 3px 4px;
 
                 // 
                 @media screen and (max-width: 768px) {

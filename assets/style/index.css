@@ -3599,6 +3599,11 @@ textarea {
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
+@media screen and (max-width: 480px) {
+  .catalog .catalog_about .catalog_category .checkbox input[type=checkbox]:checked::after {
+    top: 3px;
+  }
+}
 .catalog .catalog_about .catalog_category .checkbox label {
   color: #FFF;
   font-family: "Manrope", sans-serif;
@@ -5819,7 +5824,7 @@ textarea {
   cursor: pointer;
   background-color: #E1E1E1;
   background-repeat: no-repeat;
-  background-position: 2px 4px;
+  background-position: 3px 4px;
 }
 @media screen and (max-width: 768px) {
   .card-service_page .card-product .card_contact-block #contact-checkbox {
