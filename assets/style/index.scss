@@ -43,9 +43,8 @@ body {
         background-image: url(../images/navbar-hero_bg.png);
         background-repeat: no-repeat;
         background-position: center;
-        background-size: cover;
-
         z-index: -1;
+        background-size: cover;
 
         // 
         @media screen and (max-width: 768px) {
@@ -223,8 +222,7 @@ textarea {
 }
 
 .container {
-    width: 100% !important;
-    width: 100% !important;
+    width: 1320px !important;
     margin: 0 auto;
     padding: 0 16px !important;
 
