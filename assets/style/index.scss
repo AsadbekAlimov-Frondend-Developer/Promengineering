@@ -79,6 +79,7 @@ body {
         background-image: url(../images/product-bg.png);
         background-repeat: no-repeat;
         background-position: center;
+        background-size: cover;
         z-index: -2;
 
         @media screen and (max-width: 768px) {
@@ -106,6 +107,7 @@ body {
         background-repeat: no-repeat;
         background-position: center;
         z-index: -1;
+        background-size: cover;
 
         // 
         @media screen and (max-width: 768px) {
@@ -126,6 +128,7 @@ body {
         background-repeat: no-repeat;
         background-position: center;
         z-index: -1;
+        background-size: cover;
 
         // 
         @media screen and (max-width: 768px) {
@@ -3102,7 +3105,9 @@ textarea {
             background-image: url(../images/about-page_reason-bg-fon.png);
             background-repeat: no-repeat;
             background-position: center;
-            background-size: 1183px;
+            // background-size: 1183px;
+            background-size: cover;
+
             z-index: -1;
 
             @media screen and (max-width: 768px) {
@@ -4327,6 +4332,7 @@ textarea {
                             border: solid white; // Oq galochka
                             border-width: 0 2px 2px 0;
                             transform: rotate(45deg);
+
                             // 
                             @media screen and (max-width: 480px) {
                                 top: 3px;
@@ -7629,23 +7635,24 @@ textarea {
             background: none;
         }
     }
-     .image_404 {
-            position: absolute;
-            width: 100%;
-            height: 873px;
-            flex-shrink: 0;
-            background-image: url(../images/catalog_footer-bg.png);
-            flex-shrink: 0;
-            left: 0;
-            bottom: 0;
-            background-repeat: no-repeat;
-            background-position: center;
-            z-index: -1;
 
-            @media screen and (max-width: 768px) {
-                display: none;
-            }
+    .image_404 {
+        position: absolute;
+        width: 100%;
+        height: 873px;
+        flex-shrink: 0;
+        background-image: url(../images/catalog_footer-bg.png);
+        flex-shrink: 0;
+        left: 0;
+        bottom: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: -1;
+
+        @media screen and (max-width: 768px) {
+            display: none;
         }
+    }
 
     .header {
         margin-bottom: 152px;
@@ -7719,7 +7726,7 @@ textarea {
             height: 390.316px;
             flex-shrink: 0;
             margin-bottom: 81px;
- 
+
             // 
             @media screen and (max-width: 480px) {
                 width: 100%;

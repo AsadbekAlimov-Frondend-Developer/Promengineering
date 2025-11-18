@@ -76,6 +76,7 @@ body {
   background-image: url(../images/product-bg.png);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   z-index: -2;
 }
 @media screen and (max-width: 768px) {
@@ -102,6 +103,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   z-index: -1;
+  background-size: cover;
 }
 @media screen and (max-width: 768px) {
   .bg_big_images .image_4 {
@@ -119,6 +121,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   z-index: -1;
+  background-size: cover;
 }
 @media screen and (max-width: 768px) {
   .bg_big_images .image_5 {
@@ -2602,7 +2605,7 @@ textarea {
   background-image: url(../images/about-page_reason-bg-fon.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1183px;
+  background-size: cover;
   z-index: -1;
 }
 @media screen and (max-width: 768px) {
