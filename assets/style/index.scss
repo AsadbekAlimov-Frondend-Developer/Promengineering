@@ -4129,6 +4129,7 @@ textarea {
             bottom: 0;
             background-repeat: no-repeat;
             background-position: center;
+            background-size: cover;
             z-index: -1;
 
             @media screen and (max-width: 768px) {
@@ -6133,6 +6134,7 @@ textarea {
             height: 873px;
             flex-shrink: 0;
             background-image: url(../images/catalog_footer-bg.png);
+            background-size: cover;
             flex-shrink: 0;
             left: 0;
             bottom: 0;
@@ -7330,6 +7332,7 @@ textarea {
         bottom: 0;
         top: auto;
         background-image: url(../images/card-service-bg-fon.png);
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         z-index: -1;
@@ -7642,6 +7645,7 @@ textarea {
         height: 873px;
         flex-shrink: 0;
         background-image: url(../images/catalog_footer-bg.png);
+        background-size: cover;
         flex-shrink: 0;
         left: 0;
         bottom: 0;
